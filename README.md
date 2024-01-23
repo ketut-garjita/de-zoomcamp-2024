@@ -109,7 +109,7 @@ terraform plan
 terraform apply
 ```
 
-# Delete infra after your work, to avoid costs on any running services
+#### Delete infra after your work, to avoid costs on any running services
 ```
 terraform destroy
 ```
