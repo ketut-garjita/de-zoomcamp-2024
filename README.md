@@ -1,7 +1,7 @@
-# de-zoocamp-2024-homework
-
 # DTC (Data Talks Club) Data Engineering Zoomcamp 2024
 ### Week 1 : 01-docker-terraform
+
+## LEARNING
 
 ## 1_terraform_gcp
 
