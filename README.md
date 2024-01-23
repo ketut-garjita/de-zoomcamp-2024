@@ -89,21 +89,22 @@ variable "gcs_storage_class" {
 
 
 ### Execution
-# Refresh service-account's auth-token for this session
+#### Refresh service-account's auth-token for this session
 ```
 gcloud auth application-default login
 ```
 
-# Initialize state file (.tfstate)
+#### Initialize state file (.tfstate)
 ```
 terraform init
 ```
 
-# Check changes to new infra plan
-```terraform plan
+#### Check changes to new infra plan
+```
+terraform plan
 ```
 
-# Create new infra
+#### Create new infra
 ```
 terraform apply
 ```
