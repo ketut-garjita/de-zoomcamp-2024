@@ -5,6 +5,10 @@
 
 ## 1_terraform_gcp
 
+Pre-Requisites
+Terraform client installation: https://www.terraform.io/downloads
+Cloud Provider account: https://console.cloud.google.com/
+
 main.tf
 ```
 terraform {
