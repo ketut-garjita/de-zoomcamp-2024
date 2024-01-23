@@ -11,6 +11,7 @@ Terraform client installation: https://www.terraform.io/downloads
 
 Cloud Provider account: https://console.cloud.google.com/
 
+
 ### Terraform file structure
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3d39b819-4cab-4f11-a844-49491e3d1555)
 
