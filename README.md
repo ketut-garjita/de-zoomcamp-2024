@@ -110,6 +110,10 @@ terraform plan
 ```
 terraform apply
 ```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8d7c612f-2866-4d6c-8017-7635da52b469)
+
+Check bucket on google storage
+
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/cee940d8-399b-4d5d-8ec1-1fe89cff39c6)
 
 #### Delete infra after your work, to avoid costs on any running services
