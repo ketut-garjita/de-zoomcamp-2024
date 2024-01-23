@@ -127,6 +127,7 @@ Check bucket on google storage
 ```
 terraform destroy
 ```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9a51f967-bb04-4044-8e5f-f867149a388f)
 
 
 ## 2_docker_sql
