@@ -255,4 +255,4 @@ variable "gcs_storage_class" {
 
 Questions : https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01
 
-Solutions : https://github.com/garjita63/de-zoomcamp-2024/blob/main/homework1.ipynb
+Solutions : https://github.com/garjita63/de-zoomcamp-2024/blob/main/solutions-hw-1.ipynb
