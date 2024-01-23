@@ -249,3 +249,8 @@ variable "gcs_storage_class" {
   Password:
   select count(*) from green_taxi_trips ;
   ```
+
+
+## HOMEWORK
+
+Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/main/homework1.ipynb
