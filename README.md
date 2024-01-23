@@ -5,7 +5,7 @@
 
 ## 1_terraform_gcp
 
-Pre-Requisites
+### Pre-Requisites
 
 Terraform client installation: https://www.terraform.io/downloads
 
