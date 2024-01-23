@@ -98,11 +98,13 @@ gcloud auth application-default login
 ```
 terraform init
 ```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a5bc06c5-4a54-450f-85d3-c19bef2a9dd5)
 
 #### Check changes to new infra plan
 ```
 terraform plan
 ```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9ade04cd-e767-464b-86a7-e46314b2198c)
 
 #### Create new infra
 ```
