@@ -308,4 +308,4 @@ terraform destroy
 
 Questions : https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01
 
-Solution Codes : https://github.com/garjita63/de-zoomcamp-2024/blob/main/solutions-hw-01.ipynb
+Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/main/solutions-hw-01.ipynb
