@@ -302,13 +302,12 @@ terraform destroy
   select count(*) from green_taxi_trips ;
   ```
 
-### Test connection Postgres through Jupyter Notebook (screeshot)
+### Test connection Postgres through Jupyter Notebook
+- https://github.com/garjita63/de-zoomcamp-2024/blob/8eaba2cfb8770032ff8352bfadebc7127f9f4b1a/pg-test-connection.ipynb
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/2e642801-c43b-425d-b64a-da2874e7ed54)
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bd0d8edb-5780-41e1-bf7b-53c8653f4ab5)
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ee26213a-9c65-4f1c-8b13-8a4e21909412)
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/267ae99a-464c-439a-8684-5c83a45fe0b4)
-
+### Test Upload Data to Postgres through Jupyter Notebook
+- https://github.com/garjita63/de-zoomcamp-2024/blob/8eaba2cfb8770032ff8352bfadebc7127f9f4b1a/upload-data.ipynb
+  
 
 ## HOMEWORK
 
