@@ -308,6 +308,7 @@ terraform destroy
 ### Test Upload Data to Postgres through Jupyter Notebook
 - https://github.com/garjita63/de-zoomcamp-2024/blob/8eaba2cfb8770032ff8352bfadebc7127f9f4b1a/upload-data.ipynb
   
+  
 
 ## HOMEWORK
 
