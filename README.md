@@ -303,8 +303,8 @@ terraform destroy
   ```
 
 ### Test connection Postgres through Jupyter Notebook
-- https://github.com/garjita63/de-zoomcamp-2024/blob/8eaba2cfb8770032ff8352bfadebc7127f9f4b1a/pg-test-connection.ipynb
-
+- https://github.com/garjita63/de-zoomcamp-2024/blob/19a4fb71b4a210688ba01a08e36814a6ae43f2b4/pg-test-connection.ipynb
+  
 ### Test Upload Data to Postgres through Jupyter Notebook
 - https://github.com/garjita63/de-zoomcamp-2024/blob/8eaba2cfb8770032ff8352bfadebc7127f9f4b1a/upload-data.ipynb
   
