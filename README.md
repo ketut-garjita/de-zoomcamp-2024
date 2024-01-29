@@ -8,8 +8,13 @@
 ### Pre-Requisites
 
 Terraform client installation: https://www.terraform.io/downloads
-
+- Put terraform.exe file in Terraform Home
+  
 Cloud Provider account: https://console.cloud.google.com/
+- Create Project Name
+- Create Service Account (IAM & Admin --> Service Account)
+- Assign Roles : BigQuery Admin, Compute Admin, Storage Admin
+- Create new key, and then upload and save local directory
 
 
 ### Terraform file structure
