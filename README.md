@@ -258,7 +258,11 @@ terraform destroy
   Password:
   select count(*) from yellow_taxi_trips;
   ```
-
+  OR using pgcli:
+  ```
+  pgcli -h localhost -p 5432 -U root -d  ny_taxi --password
+  ```
+  
 ### - Next another table ingestion
 
 - Build the image for taxi_ingest_2.sql (using Dockerfile).
@@ -300,6 +304,10 @@ terraform destroy
   docker exec -it 2_docker_sql_pgdatabase_1 psql -U root -d ny_taxi --password
   Password:
   select count(*) from green_taxi_trips ;
+  ```
+  OR using pgcli:
+  ```
+  pgcli -h localhost -p 5432 -U root -d  ny_taxi --password
   ```
 
 ### Test connection Postgres through Jupyter Notebook
