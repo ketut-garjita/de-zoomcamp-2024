@@ -212,6 +212,10 @@ terraform destroy
   	Password: 
 	select count(*) from yellow_taxi_trips;
   	```
+   	OR using pgcli:
+  	```
+  	pgcli -h localhost -p 5432 -U root -d  ny_taxi --password
+  	```
 
 - Stop database and pgAdmin dockers
   	```
