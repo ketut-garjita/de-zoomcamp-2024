@@ -219,7 +219,7 @@ terraform destroy
 	docker stop pgadmin
  	 ```
 
-### - Setup Postgres and pgAdmin with Docker-Compose (.yaml file)
+### - Setup Postgres and pgAdmin with Docker-Compose (.yaml or .yml file)
 
 - Run it:
   	```
