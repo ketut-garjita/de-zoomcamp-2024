@@ -14,7 +14,7 @@ Cloud Provider account: https://console.cloud.google.com/
 - Create New Project
 - Create Project Service Account (IAM & Admin --> Service Account)
 - Assign Roles : BigQuery Admin, Compute Admin, Storage Admin
-- Create new key, then upload and save local directory
+- Create new key, then upload and save to local directory
 
 
 ### Terraform file structure
