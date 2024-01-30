@@ -356,7 +356,8 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 Sample loading block (load_nyc_taxi_data.py)
 
 ```
-# _program name: load_nyc_taxi_data.py_
+# program name: load_nyc_taxi_data.py
+
 import io
 import pandas as pd
 import requests
@@ -432,6 +433,12 @@ Additional Mage Guides
 ## Homework
 
 We've prepared a short exercise to test you on what you've learned this week. You can find the homework here. This follows closely from the contents of the course and shouldn't take more than an hour or two to complete. 😄
+
+
+📑Additional Resources
+- Mage Docs
+- Mage Guides
+- Mage Slack
 
 
 
