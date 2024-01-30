@@ -332,6 +332,10 @@ Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ff
 `#ffffff`
 # Week 2 : 02-workflow-orchestration
 `#ffffff`
+
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+
+
 ## LEARNING
 
 ###  Intro to Orchestration
