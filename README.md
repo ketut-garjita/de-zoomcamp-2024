@@ -332,7 +332,8 @@ Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ff
 
 # Week 2 : 02-workflow-orchestration
 
-`rgb(9, 105, 218)
+`rgb(9, 105, 218)`
+	`#0969DA`
 
 
 ## LEARNING
