@@ -417,9 +417,9 @@ Resources
 
 [Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
-[Installing gcloud CLI]https://cloud.google.com/sdk/docs/install
+[Installing gcloud CLI](https://cloud.google.com/sdk/docs/install)
 
-[Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates
+[Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates)
 
 
 Additional Mage Guides
