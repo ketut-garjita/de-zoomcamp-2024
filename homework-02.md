@@ -230,7 +230,8 @@
   
   ### GCS Bucket Files
 
-  - ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8b52fd31-502a-4f83-87aa-c826bbf89238)
+  -
+    ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8b52fd31-502a-4f83-87aa-c826bbf89238)
 
   - green_taxi table partitions list
     
