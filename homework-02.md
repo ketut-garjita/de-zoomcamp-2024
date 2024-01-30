@@ -1,7 +1,8 @@
-# Homework Solution Structure
+# Homework Solution
 - Pipeline Tree
 - Blocks List
 - Execution
+- GCS Bucket Files
 - Answering
   
 
@@ -228,7 +229,7 @@
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5292bbcb-a0b4-49ab-b040-1eea17488bc1)
 
   
-  ### GCS Bucket Files
+  ## GCS Bucket Files
 
   -
     ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8b52fd31-502a-4f83-87aa-c826bbf89238)
