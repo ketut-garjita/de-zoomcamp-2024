@@ -1,7 +1,9 @@
 
 ## Pipeline Tree
 
-![pipeline-tree](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f9514f92-ce71-4e92-8cd9-2b5fa4c03be4)
+
+![hw02-pipeline-tree](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/536f5c4e-a7aa-4176-8251-e8b1bc529695)
+
 
 ## Blocks
 
