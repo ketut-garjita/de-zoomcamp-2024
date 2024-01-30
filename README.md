@@ -404,9 +404,8 @@ By now you're familiar with building pipelines, but what about adding parameters
 
 Resources
 
-[Mage Variables Overview](https://docs.mage.ai/development/variables/overview)
-
-[Mage Runtime Variables](https://docs.mage.ai/getting-started/runtime-variable)
+- [Mage Variables Overview](https://docs.mage.ai/development/variables/overview)
+- [Mage Runtime Variables](https://docs.mage.ai/getting-started/runtime-variable)
 
 
 ### Deployment (Optional)
@@ -416,26 +415,26 @@ In this section, we'll cover deploying Mage using Terraform and Google Cloud. Th
 
 Resources
 
-[Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-
-[Installing gcloud CLI](https://cloud.google.com/sdk/docs/install)
-
-[Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates)
+- [Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Installing gcloud CLI](https://cloud.google.com/sdk/docs/install)
+- [Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates)
 
 
 Additional Mage Guides
 
-[Terraform](https://docs.mage.ai/production/deploying-to-cloud/using-terraform)
-
-[Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup)
+- [Terraform](https://docs.mage.ai/production/deploying-to-cloud/using-terraform)
+- [Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup)
 
 
 📑Additional Resources
 
-- Mage Docs
-- Mage Guides
-- Mage Slack
+- [Mage Docs](https://docs.mage.ai/introduction/overview)
+- [Mage Guides](https://docs.mage.ai/guides/overview)
+- [Mage Slack](https://mageai.slack.com/ssb/redirect)
  
+
+[Notes from Jonah Oliver](https://www.jonahboliver.com/blog/de-zc-w2)
+
 
 ## Homework
 
