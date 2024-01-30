@@ -353,8 +353,7 @@ Resources
 
 Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
 
-Sample loading block
-program name : load_nyc_taxi_data.py
+Sample loading block (load_nyc_taxi_data.py)
 
 ```
 # program name: load_nyc_taxi_data.py
@@ -386,3 +385,11 @@ def test_output(df) -> None:
     """
     assert df is not None, 'The output is undefined'
 ```
+
+###  ETL: API to GCS
+
+Ok, so we've written data locally to a database, but what about the cloud? In this tutorial, we'll walk through the process of using Mage to extract, transform, and load data from an API to Google Cloud Storage (GCS).
+
+We'll cover both writing partitioned and unpartitioned data to GCS and discuss why you might want to do one over the other. Many data teams start with extracting data from a source and writing it to a data lake before loading it to a structured data source, like a database.
+
+
