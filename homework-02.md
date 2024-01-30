@@ -75,7 +75,7 @@
       return df
   ```
 
-- hw2_transform_taxi.py
+  ### hw2_transform_taxi.py
   
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f6673752-1e4f-4bb9-aa0f-ec189da7e310)
   
@@ -112,7 +112,7 @@
       return data
   ```
 
-- hw2_export_taxi_postgres.py
+  ### hw2_export_taxi_postgres.py
   
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bf0e24d3-1b82-48a4-a876-a6a02eac264b)
 
@@ -151,7 +151,7 @@
           )
   ```
 
-- hw2_query_taxi.py
+  ### hw2_query_taxi.py
   
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3594a846-8e66-4582-a0b6-eea148c9336c)
 
@@ -160,7 +160,7 @@
   select count(*) from mage.green_taxi;
   ```
 
-- hw2_export_to_gcs_partition.py
+  ### hw2_export_to_gcs_partition.py
   
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3d18b83f-f044-47fd-889f-450ed55b5f66)
 
@@ -181,7 +181,7 @@
   if 'data_exporter' not in globals():
       from mage_ai.data_preparation.decorators import data_exporter
   
-  os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/dtc-de-course-2024-411803-122da5536446.json"
+  os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/<my key>.json"
   
   project_id = 'dtc-de-course-2024-411803'
   bucket_name = 'de-zoomcamp-garjita-bucket'
@@ -210,6 +210,28 @@
   ### hw2-extract-taxi.py
   
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6d0a58ca-ede9-4b4b-9cdf-019a083e021c)
+
+  ### hw2_transform_taxi.py
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c52da6ed-e9ec-4f67-a7ef-8aa6d790f0f3)
+
+  ### hw2_export_taxi_postgres.py
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/92ebc389-990c-4288-82f6-41a7db484f9a)
+
+  ### hw2_query_taxi.py
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bb61e606-ef7e-4ecd-819f-ca5cb1b9033b)
+
+  ### hw2_export_to_gcs_partition.py
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5292bbcb-a0b4-49ab-b040-1eea17488bc1)
+
+
+
+  
+
+  
 
   
 
