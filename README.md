@@ -335,9 +335,6 @@ Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ff
 ## LEARNING
 
 ###  Intro to Orchestration
-What is Orchestration?
 
-> A large part of data engineering is extracting, transforming, and loading data between sources.	
-> Orchestration is a process of dependency management, facilitated through automation.	 
-> The data orchestrator manages scheduling, triggering, monitoring, and even resource allocation.	
 
+[Intro to Orchestration.pptx](https://github.com/garjita63/de-zoomcamp-2024/files/14094284/Intro.to.Orchestration.pptx)
