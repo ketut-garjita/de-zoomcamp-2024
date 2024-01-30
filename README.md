@@ -430,16 +430,15 @@ Additional Mage Guides
 [Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup)
 
 
-## Homework
-
-We've prepared a short exercise to test you on what you've learned this week. You can find the homework here. This follows closely from the contents of the course and shouldn't take more than an hour or two to complete. 😄
-
-
 📑Additional Resources
+
 - Mage Docs
 - Mage Guides
 - Mage Slack
+ 
 
+## Homework
 
+We've prepared a short exercise to test you on what you've learned this week. You can find the homework here. This follows closely from the contents of the course and shouldn't take more than an hour or two to complete. 😄
 
 
