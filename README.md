@@ -392,4 +392,19 @@ Ok, so we've written data locally to a database, but what about the cloud? In th
 
 We'll cover both writing partitioned and unpartitioned data to GCS and discuss why you might want to do one over the other. Many data teams start with extracting data from a source and writing it to a data lake before loading it to a structured data source, like a database.
 
+### ETL: GCS to BigQuery
+
+Now that we've written data to GCS, let's load it into BigQuery. In this section, we'll walk through the process of using Mage to load our data from GCS to BigQuery. This closely mirrors a very common data engineering workflow: loading data from a data lake into a data warehouse.
+
+
+### Parameterized Execution
+
+By now you're familiar with building pipelines, but what about adding parameters? In this video, we'll discuss some built-in runtime variables that exist in Mage and show you how to define your own! We'll also cover how to use these variables to parameterize your pipelines. Finally, we'll talk about what it means to backfill a pipeline and how to do it in Mage.
+
+Resources
+
+[Mage Variables Overview](https://docs.mage.ai/development/variables/overview)
+[Mage Runtime Variables](https://docs.mage.ai/getting-started/runtime-variable)
+
+
 
