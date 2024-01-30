@@ -3,13 +3,11 @@
 - Blocks List
 - Execution
 - Answering
-- 
+  
 
 ## Pipeline Tree
 
-
 ![hw02-pipeline-tree](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/536f5c4e-a7aa-4176-8251-e8b1bc529695)
-
 
 ## Blocks List
 - hw2-extract-taxi.py
