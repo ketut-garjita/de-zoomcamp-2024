@@ -226,12 +226,3 @@
   ### hw2_export_to_gcs_partition.py
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5292bbcb-a0b4-49ab-b040-1eea17488bc1)
-
-
-
-  
-
-  
-
-  
-
