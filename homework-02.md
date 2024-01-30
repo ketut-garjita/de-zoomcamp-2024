@@ -334,3 +334,9 @@
     gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2021-01-01/
     ```
     
+    -- Number of partitions folder
+
+    ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
+
+    
+
