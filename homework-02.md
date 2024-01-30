@@ -1,6 +1,6 @@
 # Homework Solution
 1. Pipeline Tree
-2. Blocks List
+2. Blocks Script
 3. Execution
 4. GCS Bucket Files
 5. Answering
@@ -10,7 +10,7 @@
 
 ![hw02-pipeline-tree](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/536f5c4e-a7aa-4176-8251-e8b1bc529695)
 
-## 2. Blocks List
+## 2. Blocks Script
   ### hw2-extract-taxi.py
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bb56f5a3-b85d-441a-97d6-ce027ec0186c)
