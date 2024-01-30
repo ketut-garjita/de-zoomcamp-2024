@@ -329,9 +329,9 @@ Questions : https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01
 Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ffc1a05209bdd43e8f4d5d3a/HW-01-solution.ipynb
 
 
-
-### Week 1 : 02-workflow-orchestration
-
+`#ffffff`
+# Week 2 : 02-workflow-orchestration
+`#ffffff`
 ## LEARNING
 
 ###  Intro to Orchestration
