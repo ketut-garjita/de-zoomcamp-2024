@@ -1,16 +1,16 @@
 # Homework Solution
-- Pipeline Tree
-- Blocks List
-- Execution
-- GCS Bucket Files
-- Answering
+- 1. Pipeline Tree
+- 2. Blocks List
+- 3. Execution
+- 4. GCS Bucket Files
+- 5. Answering
   
 
-## Pipeline Tree
+## 1. Pipeline Tree
 
 ![hw02-pipeline-tree](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/536f5c4e-a7aa-4176-8251-e8b1bc529695)
 
-## Blocks List
+## 2. Blocks List
   ### hw2-extract-taxi.py
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bb56f5a3-b85d-441a-97d6-ce027ec0186c)
@@ -206,7 +206,7 @@
       )
   ```
   
-  ## Execution
+  ## 3. Execution
 
   ### hw2-extract-taxi.py
   
@@ -229,7 +229,7 @@
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5292bbcb-a0b4-49ab-b040-1eea17488bc1)
 
   
-  ## GCS Bucket Files
+  ## 4. GCS Bucket Files
 
   -
     ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8b52fd31-502a-4f83-87aa-c826bbf89238)
@@ -341,7 +341,7 @@
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
 
 
-## Answering
+## 5. Answering
 
   ```
   Question 1. Data Loading
