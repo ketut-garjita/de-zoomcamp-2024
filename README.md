@@ -404,7 +404,35 @@ By now you're familiar with building pipelines, but what about adding parameters
 Resources
 
 [Mage Variables Overview](https://docs.mage.ai/development/variables/overview)
+
 [Mage Runtime Variables](https://docs.mage.ai/getting-started/runtime-variable)
+
+
+### Deployment (Optional)
+
+In this section, we'll cover deploying Mage using Terraform and Google Cloud. This section is optional— it's not necessary to learn Mage, but it might be helpful if you're interested in creating a fully deployed project. If you're using Mage in your final project, you'll need to deploy it to the cloud.
+
+
+Resources
+
+[Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
+[Installing gcloud CLI]https://cloud.google.com/sdk/docs/install
+
+[Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates
+
+
+Additional Mage Guides
+
+[Terraform](https://docs.mage.ai/production/deploying-to-cloud/using-terraform)
+
+[Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup)
+
+
+## Homework
+
+We've prepared a short exercise to test you on what you've learned this week. You can find the homework here. This follows closely from the contents of the course and shouldn't take more than an hour or two to complete. 😄
+
 
 
 
