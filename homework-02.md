@@ -72,6 +72,7 @@
   ```
 
 - hw2_transform_taxi.py
+  
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f6673752-1e4f-4bb9-aa0f-ec189da7e310)
   
   ```
@@ -108,6 +109,7 @@
   ```
 
 - hw2_export_taxi_postgres.py
+  
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bf0e24d3-1b82-48a4-a876-a6a02eac264b)
 
   ```
@@ -146,6 +148,7 @@
   ```
 
 - hw2_query_taxi.py
+  
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3594a846-8e66-4582-a0b6-eea148c9336c)
 
   ```
@@ -154,6 +157,7 @@
   ```
 
 - hw2_export_to_gcs_partition.py
+  
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3d18b83f-f044-47fd-889f-450ed55b5f66)
 
   ```
