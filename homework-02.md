@@ -226,3 +226,108 @@
   ### hw2_export_to_gcs_partition.py
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5292bbcb-a0b4-49ab-b040-1eea17488bc1)
+
+  
+  ### GCS Bucket Files
+
+  - ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8b52fd31-502a-4f83-87aa-c826bbf89238)
+
+  - green_taxi table partitions list
+
+    garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ gcloud storage ls  gs://de-zoomcamp-garjita-bucket/green_taxi 
+    gs://de-zoomcamp-garjita-bucket/green_taxi/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2009-01-01/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-09-30/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-01/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-02/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-03/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-04/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-05/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-06/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-07/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-08/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-09/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-10/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-11/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-12/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-13/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-14/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-15/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-16/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-17/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-18/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-19/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-20/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-21/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-22/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-23/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-24/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-25/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-26/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-27/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-28/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-29/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-30/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-10-31/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-01/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-02/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-03/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-04/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-05/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-06/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-07/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-08/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-09/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-10/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-11/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-12/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-13/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-14/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-15/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-16/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-17/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-18/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-19/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-20/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-21/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-22/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-23/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-24/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-25/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-26/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-27/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-28/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-29/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-11-30/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-01/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-02/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-03/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-04/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-05/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-06/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-07/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-08/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-09/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-10/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-11/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-12/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-13/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-14/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-15/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-16/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-17/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-18/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-19/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-20/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-21/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-22/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-23/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-24/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-25/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-26/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-27/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-28/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-29/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-30/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-31/
+    gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2021-01-01/
