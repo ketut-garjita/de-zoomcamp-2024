@@ -1,9 +1,9 @@
 # Homework Solution
-- 1 Pipeline Tree
-- 2 Blocks List
-- 3 Execution
-- 4 GCS Bucket Files
-- 5 Answering
+1. Pipeline Tree
+2. Blocks List
+3. Execution
+4. GCS Bucket Files
+5. Answering
   
 
 ## 1. Pipeline Tree
