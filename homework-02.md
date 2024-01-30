@@ -1,3 +1,9 @@
+# Homework Solution Structure
+- Pipeline Tree
+- Blocks List
+- Execution
+- Answering
+- 
 
 ## Pipeline Tree
 
@@ -5,7 +11,7 @@
 ![hw02-pipeline-tree](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/536f5c4e-a7aa-4176-8251-e8b1bc529695)
 
 
-## Blocks
+## Blocks List
 - hw2-extract-taxi.py
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bb56f5a3-b85d-441a-97d6-ce027ec0186c)
