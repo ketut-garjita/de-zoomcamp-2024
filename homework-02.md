@@ -347,9 +347,7 @@
   
   Once the dataset is loaded, what's the shape of the data?
   
-  Answering 1
-  
-  266,855 rows x 20 columns
+  Answering 1 : 266,855 rows x 20 columns
   
   Note: Available on execution result of hw2-extract-taxi.py block
   
@@ -360,9 +358,7 @@
   
   Upon filtering the dataset where the passenger count is greater than 0 and the trip distance is greater than zero, how many rows are left?
   
-  Answering 2
-  
-  139,370 rows
+  Answering 2 : 139,370 rows
   
   Note: Available on execution result of hw2_transform_taxi.py block
   
@@ -373,9 +369,7 @@
   
   Which of the following creates a new column lpep_pickup_date by converting lpep_pickup_datetime to a date?
   
-  Answering 3
-  
-  data['lpep_pickup_date'] = data['lpep_pickup_datetime'].dt.date
+  Answering 3 : data['lpep_pickup_date'] = data['lpep_pickup_datetime'].dt.date
   
   Note: Used on hw2_transform_taxi.py block
   
@@ -386,9 +380,7 @@
   
   What are the existing values of VendorID in the dataset?
   
-  Answering 4
-  
-  1 or 2
+  Answering 4 : 1 or 2
   
   Note:
   
@@ -399,9 +391,7 @@
   
   How many columns need to be renamed to snake case?
   
-  Anqwering 5
-  
-  2
+  Answering 5 : 2
   
   Note: lpep_pickup_datetime --> lpep_pickup_date
   
@@ -412,9 +402,7 @@
   
   Once exported, how many partitions (folders) are present in Google Cloud?
   
-  Answering 6
-  
-  96
+  Answering 6 : 96
   
   Note:  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
   
