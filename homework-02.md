@@ -6,6 +6,9 @@
 
 
 ## Blocks
+- hw2-extract-taxi.py
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bb56f5a3-b85d-441a-97d6-ce027ec0186c)
 
 ```
 import io
@@ -66,5 +69,123 @@ def load_data_from_api(*args, **kwargs):
 
     # Return output    
     return df
+```
+
+- hw2_transform_taxi.py
+```
+if 'transformer' not in globals():
+    from mage_ai.data_preparation.decorators import transformer
+if 'test' not in globals():
+    from mage_ai.data_preparation.decorators import test
+
+
+@transformer
+def transform(data, *args, **kwargs):
+    """ Using Numpy
+    data = data[np.logical_not(data['passenger_count'].isin([0]))]
+    df = data[np.logical_not(data['trip_distance'].isin([0]))]
+    return df
+    """
+    # Replace NaN value into 0 (zero) in passenger_count & trip_distance columns 
+    data['passenger_count'] = data['passenger_count'].fillna(0)
+    data['trip_distance'] = data['trip_distance'].fillna(0)
+
+    # Remove rows tha have 0 (zero) values
+    data = data[data['passenger_count'] != 0]
+    data = data[data['trip_distance'] != 0]
+    
+    # Create a new column lpep_pickup_date by converting lpep_pickup_datetime to a date
+    from datetime import date
+    data['lpep_pickup_date'] = data['lpep_pickup_datetime'].dt.date
+    
+    # Rename column VendorID to vendor_id
+    data.columns = data.columns.str.replace("VendorID", "vendor_id")
+
+    # Return output
+    return data
+```
+
+- hw2_export_taxi_postgres.ps
+```
+from mage_ai.settings.repo import get_repo_path
+from mage_ai.io.config import ConfigFileLoader
+from mage_ai.io.postgres import Postgres
+from pandas import DataFrame
+from os import path
+
+if 'data_exporter' not in globals():
+    from mage_ai.data_preparation.decorators import data_exporter
+
+
+@data_exporter
+def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
+    """
+    Template for exporting data to a PostgreSQL database.
+    Specify your configuration settings in 'io_config.yaml'.
+
+    Docs: https://docs.mage.ai/design/data-loading#postgresql
+    """
+    # by default database_name = 'postgres' ==> io_config.yaml
+    schema_name = 'mage'  # Specify the name of the schema to export data to
+    table_name = 'green_taxi'  # Specify the name of the table to export data to
+    config_path = path.join(get_repo_path(), 'io_config.yaml')
+    config_profile = 'dev'
+
+    with Postgres.with_config(ConfigFileLoader(config_path, config_profile)) as loader:
+        loader.export(
+            df,
+            schema_name,
+            table_name,
+            index=False,  # Specifies whether to include index in exported table
+            if_exists='replace',  # Specify resolution policy if table name already exists
+        )
+```
+
+- hw2_query_taxi.py
+```
+-- Docs: https://docs.mage.ai/guides/sql-blocks
+select count(*) from mage.green_taxi;
+```
+
+- hw2_export_to_gcs_partition.py
+```
+from mage_ai.settings.repo import get_repo_path
+from mage_ai.io.config import ConfigFileLoader
+from mage_ai.io.google_cloud_storage import GoogleCloudStorage
+import os
+import pandas as pd
+from pandas import DataFrame
+from os import path
+import pyarrow as pa
+import pyarrow.parquet as pq 
+import datetime as dt
+from datetime import date
+
+
+if 'data_exporter' not in globals():
+    from mage_ai.data_preparation.decorators import data_exporter
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/dtc-de-course-2024-411803-122da5536446.json"
+
+project_id = 'dtc-de-course-2024-411803'
+bucket_name = 'de-zoomcamp-garjita-bucket'
+table_name = "green_taxi"
+root_path = f'{bucket_name}/{table_name}'
+
+config_path = path.join(get_repo_path(), 'io_config.yaml')
+config_profile = 'default'
+
+@data_exporter
+def export_data(data, *args, **kwargs):
+    data['lpep_pickup_date'] = data['lpep_pickup_datetime'].dt.date 
+   
+    table = pa.Table.from_pandas(data)
+    gcs = pa.fs.GcsFileSystem()
+    pq.write_to_dataset(
+        table,
+        root_path=root_path,
+        partition_cols=['lpep_pickup_date'],
+        filesystem=gcs
+    )
 ```
 
