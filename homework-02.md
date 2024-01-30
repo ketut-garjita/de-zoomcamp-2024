@@ -406,6 +406,8 @@
   
   **Answering 6 : 96**
   
-  Note:  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
+  Note:  
+  
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
   
 
