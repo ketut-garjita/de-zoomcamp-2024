@@ -327,3 +327,16 @@ terraform destroy
 Questions : https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01
 
 Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ffc1a05209bdd43e8f4d5d3a/HW-01-solution.ipynb
+
+
+
+### Week 1 : 02-workflow-orchestration
+
+## LEARNING
+
+###  Intro to Orchestration
+What is Orchestration?
+A large part of data engineering is extracting, transforming, and loading data between sources.
+Orchestration is a process of dependency management, facilitated through automation. 
+The data orchestrator manages scheduling, triggering, monitoring, and even resource allocation. 
+
