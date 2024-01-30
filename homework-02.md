@@ -10,7 +10,7 @@
 ![hw02-pipeline-tree](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/536f5c4e-a7aa-4176-8251-e8b1bc529695)
 
 ## Blocks List
-- hw2-extract-taxi.py
+  ### hw2-extract-taxi.py
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bb56f5a3-b85d-441a-97d6-ce027ec0186c)
 
@@ -204,4 +204,12 @@
           filesystem=gcs
       )
   ```
+  
+  ## Execution
+
+  ### hw2-extract-taxi.py
+  
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6d0a58ca-ede9-4b4b-9cdf-019a083e021c)
+
+  
 
