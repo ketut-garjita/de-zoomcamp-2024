@@ -233,7 +233,7 @@
   - ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8b52fd31-502a-4f83-87aa-c826bbf89238)
 
   - green_taxi table partitions list
-
+    ```
     garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ gcloud storage ls  gs://de-zoomcamp-garjita-bucket/green_taxi 
     gs://de-zoomcamp-garjita-bucket/green_taxi/
     gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2009-01-01/
@@ -331,3 +331,5 @@
     gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-30/
     gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2020-12-31/
     gs://de-zoomcamp-garjita-bucket/green_taxi/lpep_pickup_date=2021-01-01/
+    ```
+    
