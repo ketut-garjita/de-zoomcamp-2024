@@ -107,7 +107,7 @@
       return data
   ```
 
-- hw2_export_taxi_postgres.ps
+- hw2_export_taxi_postgres.py
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bf0e24d3-1b82-48a4-a876-a6a02eac264b)
 
   ```
