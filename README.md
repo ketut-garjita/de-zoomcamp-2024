@@ -336,5 +336,19 @@ Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ff
 
 ###  Intro to Orchestration
 
-
 [Intro to Orchestration.pptx](https://github.com/garjita63/de-zoomcamp-2024/files/14094284/Intro.to.Orchestration.pptx)
+
+
+### Intro to Mage
+In this section, we'll introduce the Mage platform. We'll cover what makes Mage different from other orchestrators, the fundamental concepts behind Mage, and how to get started. To cap it off, we'll spin Mage up via Docker 🐳 and run a simple pipeline.
+
+[Intro to Mage.pptx](https://github.com/garjita63/de-zoomcamp-2024/files/14094325/Intro.to.Mage.pptx)
+
+
+###  ETL: API to Postgres
+We'll build a simple ETL pipeline that loads data from an API into a Postgres database. Our database will be built using Docker— it will be running locally, but it's the same as if it were running in the cloud.
+
+Resources
+
+Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
+Sample loading block
