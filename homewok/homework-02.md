@@ -3,7 +3,7 @@
 2. Blocks Script
 3. Execution
 4. GCS Bucket Files
-5. Answering
+5. Answers
   
 
 ## 1. Pipeline Tree
@@ -341,7 +341,7 @@
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
 
 
-## 5. Answering
+## 5. Answers
 
   Question 1. Data Loading
   
