@@ -657,7 +657,6 @@ Cover deploying Mage using Terraform and Google Cloud.
 
 [Questions - Week 2 Homework](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/02-workflow-orchestration/homework.md)
 
-[Answers - Week 2 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/f2f3afda3fa278b795dbe60a840e7f3523ac6459/homework-02.md)
-
+[Answers - Week 2 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/4fc9caf6a4a7aca7dca6de304260997b87ca6acb/homewok/homework-02.md)
 
 
