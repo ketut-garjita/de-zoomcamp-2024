@@ -372,7 +372,7 @@ _load_taxi_data_
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
 
-	```
+```
 	import io
 	import pandas as pd
 	import requests
@@ -418,7 +418,7 @@ _load_taxi_data_
 	    Template code for testing the output of the block.
 	    """
 	    assert output is not None, 'The output is undefined'
-	```
+```
 
 _transform_taxi_data_
 
