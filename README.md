@@ -370,7 +370,7 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 
 _load_taxi_data_
 
-  	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
 
 	```
 	import io
@@ -422,7 +422,7 @@ _load_taxi_data_
 
 _transform_taxi_data_
 
- 	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/29b597ec-2114-44ee-adf4-020be4903c9b)
+ ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/29b597ec-2114-44ee-adf4-020be4903c9b)
 
  	```
 	 if 'transformer' not in globals():
@@ -444,7 +444,7 @@ _transform_taxi_data_
 
 _taxi_data_to_pg_
 
-  	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfb5ac42-6768-4181-a2e6-27667e74a5bf)
+ ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfb5ac42-6768-4181-a2e6-27667e74a5bf)
 
 	```
 	from mage_ai.settings.repo import get_repo_path
@@ -484,7 +484,7 @@ _taxi_data_to_pg_
 
  _sql_taxi_data_
 
-	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7a372683-e31a-4d67-b519-363e12792018)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7a372683-e31a-4d67-b519-363e12792018)
 
 	```
 	SELECT * FROM ny_taxi.yellow_cab_data LIMIT 10
@@ -499,12 +499,12 @@ In this tutorial will walk through the process of using Mage to extract, transfo
 
 **Pipeline Tree**
 
-	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a7e76d24-2020-416f-8318-ef764dc64240)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a7e76d24-2020-416f-8318-ef764dc64240)
 
 **Blok Lsit**
 
 	```
-	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6511f061-ee57-4461-a36b-f130ad9bd74e)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6511f061-ee57-4461-a36b-f130ad9bd74e)
 	
 	from mage_ai.settings.repo import get_repo_path
 	from mage_ai.io.config import ConfigFileLoader
@@ -560,7 +560,7 @@ Now that we've written data to GCS, let's load it into BigQuery. In this section
 *extract_taxi_gcs*
 
 	```
-	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1b084c7f-31c5-451a-a85c-171630252950)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1b084c7f-31c5-451a-a85c-171630252950)
 	
 	from mage_ai.settings.repo import get_repo_path
 	from mage_ai.io.config import ConfigFileLoader
@@ -603,7 +603,7 @@ Now that we've written data to GCS, let's load it into BigQuery. In this section
 *transform_taxi_gcs*
 
 	```
-	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/672a906a-7760-49e3-b9d3-368c5258ebbf)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/672a906a-7760-49e3-b9d3-368c5258ebbf)
 	
 	if 'transformer' not in globals():
 	    from mage_ai.data_preparation.decorators import transformer
@@ -624,7 +624,7 @@ Now that we've written data to GCS, let's load it into BigQuery. In this section
 *load_to_bigquery*
 
 	```
-	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f699fdfd-1634-4c51-b028-c1a580627956)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f699fdfd-1634-4c51-b028-c1a580627956)
 	
 	from mage_ai.settings.repo import get_repo_path
 	from mage_ai.io.bigquery import BigQuery
