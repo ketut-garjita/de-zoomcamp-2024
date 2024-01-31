@@ -1,0 +1,119 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/hw2_extract_taxi.py
+  downstream_blocks:
+  - hw2_transform_taxi
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hw2_extract_taxi
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: hw2_extract_taxi
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/hw2_export_to_gcs_partitions.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hw2_export_to_gcs_partitions
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hw2_transform_taxi
+  uuid: hw2_export_to_gcs_partitions
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/hw2_query_taxi.sql
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: sql
+  name: hw2_query_taxi
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hw2_export_taxi_postgres
+  uuid: hw2_query_taxi
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/hw2_export_taxi_postgres.py
+  downstream_blocks:
+  - hw2_query_taxi
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hw2_export_taxi_postgres
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hw2_transform_taxi
+  uuid: hw2_export_taxi_postgres
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: transformers/hw2_transform_taxi.py
+  downstream_blocks:
+  - hw2_export_taxi_postgres
+  - hw2_export_to_gcs_partitions
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hw2_transform_taxi
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - hw2_extract_taxi
+  uuid: hw2_transform_taxi
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-01-24 13:16:33.435705+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: hw2 etl to postgres to gcp
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+updated_at: '2024-01-26 13:38:50'
+uuid: hw2_etl_to_postgres_to_gcp
+variables_dir: /home/src/mage_data/magic-zoomcamp
+widgets: []

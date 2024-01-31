@@ -1,0 +1,81 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/hw2_transform_to_bigquery.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hw2_transform_to_bigquery
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hw2_transform_taxi
+  uuid: hw2_transform_to_bigquery
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/hw2_extract_taxi.py
+  downstream_blocks:
+  - hw2_transform_taxi
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hw2_extract_taxi
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: hw2_extract_taxi
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: transformers/hw2_transform_taxi.py
+  downstream_blocks:
+  - hw2_transform_to_bigquery
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hw2_transform_taxi
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - hw2_extract_taxi
+  uuid: hw2_transform_taxi
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-01-25 13:19:27.732238+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: hw2_etl_api_to_bigquery
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+updated_at: '2024-01-30 04:53:33'
+uuid: hw2_etl_api_to_bigquery
+variables_dir: /home/src/mage_data/magic-zoomcamp
+widgets: []
