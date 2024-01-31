@@ -359,14 +359,14 @@ _Resources_
 
 Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
 
-- Building pipeline
+**Building pipeline**
 
-	**Pipeline Tree**
+**Pipeline Tree**
   
-	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1c62a297-eea5-4fef-8bfc-5e28816ebbdd)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1c62a297-eea5-4fef-8bfc-5e28816ebbdd)
 
 
-    **Blocks List**
+**Blocks List**
 
 	load_taxi_data
 
@@ -480,7 +480,7 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 	            index=False,  # Specifies whether to include index in exported table
 	            if_exists='replace',  # Specify resolution policy if table name already exists
 	        )
-	    ```
+	```
 
  	sql_taxi_data
 
@@ -489,19 +489,15 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 	```
 	SELECT * FROM ny_taxi.yellow_cab_data LIMIT 10
 	```
-
- 	
-		
-
-
-
  
 
 ###  ETL: API to GCS
 
-Ok, so we've written data locally to a database, but what about the cloud? In this tutorial, we'll walk through the process of using Mage to extract, transform, and load data from an API to Google Cloud Storage (GCS).
+In this tutorial will walk through the process of using Mage to extract, transform, and load data from an API to Google Cloud Storage (GCS).
 
-We'll cover both writing partitioned and unpartitioned data to GCS and discuss why you might want to do one over the other. Many data teams start with extracting data from a source and writing it to a data lake before loading it to a structured data source, like a database.
+Covering both writing partitioned and unpartitioned data to GCS and discuss why you might want to do one over the other. Many data teams start with extracting data from a source and writing it to a data lake before loading it to a structured data source, like a database.
+
+
 
 ### ETL: GCS to BigQuery
 
