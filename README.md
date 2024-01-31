@@ -372,8 +372,8 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 
   	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
 
-		```
-	 import io
+	```
+	import io
 	import pandas as pd
 	import requests
 	if 'data_loader' not in globals():
@@ -424,7 +424,7 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 
  	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/29b597ec-2114-44ee-adf4-020be4903c9b)
 
- 	'''
+ 	```
 	 if 'transformer' not in globals():
 	    from mage_ai.data_preparation.decorators import transformer
 	if 'test' not in globals():
@@ -446,8 +446,8 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 
   	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfb5ac42-6768-4181-a2e6-27667e74a5bf)
 
-	  ```
-	  from mage_ai.settings.repo import get_repo_path
+	```
+	from mage_ai.settings.repo import get_repo_path
 	from mage_ai.io.config import ConfigFileLoader
 	from mage_ai.io.postgres import Postgres
 	from pandas import DataFrame
