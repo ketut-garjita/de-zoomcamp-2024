@@ -341,51 +341,161 @@ Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ff
 
 
 ### Intro to Mage
-In this section, we'll introduce the Mage platform. We'll cover what makes Mage different from other orchestrators, the fundamental concepts behind Mage, and how to get started. To cap it off, we'll spin Mage up via Docker 🐳 and run a simple pipeline.
+- Mage platform introduction
+- The fundamental concepts behind Mage
+- Get started
+- Spin Mage up via Docker 🐳
+- Run a simple pipeline
 
 [Intro to Mage.pptx](https://github.com/garjita63/de-zoomcamp-2024/files/14094325/Intro.to.Mage.pptx)
 
 
 ###  ETL: API to Postgres
-We'll build a simple ETL pipeline that loads data from an API into a Postgres database. Our database will be built using Docker— it will be running locally, but it's the same as if it were running in the cloud.
+- Build a simple ETL pipeline that loads data from an API into a Postgres database
+- Database will be built using Docker
+- It will be running locally, but it's the same as if it were running in the cloud.
 
-Resources
+_Resources_
 
 Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
 
-Sample loading block (load_nyc_taxi_data.py)
+- Building pipeline
 
-```
-# program name: load_nyc_taxi_data.py
-
-import io
-import pandas as pd
-import requests
-from pandas import DataFrame
-
-if 'data_loader' not in globals():
-    from mage_ai.data_preparation.decorators import data_loader
-if 'test' not in globals():
-    from mage_ai.data_preparation.decorators import test
+	**Pipeline Tree**
+  
+	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1c62a297-eea5-4fef-8bfc-5e28816ebbdd)
 
 
-@data_loader
-def load_data_from_api(**kwargs) -> DataFrame:
-    """
-    Template for loading data from API
-    """
-    url = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz'
+    **Blocks List**
 
-    return pd.read_csv(url)
+	load_taxi_data
+
+  	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
+
+		```
+	 import io
+	import pandas as pd
+	import requests
+	if 'data_loader' not in globals():
+	    from mage_ai.data_preparation.decorators import data_loader
+	if 'test' not in globals():
+	    from mage_ai.data_preparation.decorators import test
+	
+	
+	@data_loader
+	def load_data_from_api(*args, **kwargs):
+	    """
+	    Template for loading data from API
+	    """
+	    url = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz'
+	   
+	    taxi_dtypes = {
+	                    'VendorID': pd.Int64Dtype(),
+	                    'pasangger_count': pd.Int64Dtype(),
+	                    'trip_distance': float,
+	                    'RateCodeID': pd.Int64Dtype(),
+	                    'store_and_fwd+flag': str,
+	                    'PULocationID': pd.Int64Dtype(),
+	                    'DOLocationID': pd.Int64Dtype(),
+	                    'payment_type': pd.Int64Dtype(),
+	                    'fare_mount': float,
+	                    'extra': float,
+	                    'mta_tax': float,
+	                    'tip_amount': float,
+	                    'tolls_amount': float,
+	                    'improvement_surcharge': float,
+	                    'total_amount': float,
+	                    'congestion_surcharge': float
+	                }
+	
+	    parse_dates = ['tpep_pickup_datetime', 'tpep_dropoff_datetime']
+	
+	    return pd.read_csv(url, sep=',', compression='gzip', dtype=taxi_dtypes, parse_dates=parse_dates)
+	
+	@test
+	def test_output(output, *args) -> None:
+	    """
+	    Template code for testing the output of the block.
+	    """
+	    assert output is not None, 'The output is undefined'
+	```
+
+	transform_taxi_data
+
+ 	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/29b597ec-2114-44ee-adf4-020be4903c9b)
+
+ 	'''
+	 if 'transformer' not in globals():
+	    from mage_ai.data_preparation.decorators import transformer
+	if 'test' not in globals():
+	    from mage_ai.data_preparation.decorators import test
+	
+	
+	@transformer
+	def transform(data, *args, **kwargs):
+	    print("Rows with zero passengers:", data['passenger_count'].isin([0]).sum())
+	    
+	    return data[data['passenger_count'] > 0]
+	
+	@test
+	def test_output(output, *args):
+	    assert output ['passenger_count'].isin([0]).sum() == 0, 'There are rides with zero passengers'
+ 	```
+
+ 	taxi_data_to_pg
+
+  	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfb5ac42-6768-4181-a2e6-27667e74a5bf)
+
+	  ```
+	  from mage_ai.settings.repo import get_repo_path
+	from mage_ai.io.config import ConfigFileLoader
+	from mage_ai.io.postgres import Postgres
+	from pandas import DataFrame
+	from os import path
+	
+	if 'data_exporter' not in globals():
+	    from mage_ai.data_preparation.decorators import data_exporter
+	
+	
+	@data_exporter
+	#def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
+	def export_data_to_postgres(df: DataFrame, kwargs) -> None:
+	    
+	    """
+	    Template for exporting data to a PostgreSQL database.
+	    Specify your configuration settings in 'io_config.yaml'.
+	
+	    Docs: https://docs.mage.ai/design/data-loading#postgresql
+	    """
+	    schema_name = 'ny_taxi'  # Specify the name of the schema to export data to
+	    table_name = 'yellow_cab_data'  # Specify the name of the table to export data to
+	    config_path = path.join(get_repo_path(), 'io_config.yaml')
+	    config_profile = 'dev'
+	
+	    with Postgres.with_config(ConfigFileLoader(config_path, config_profile)) as loader:
+	        loader.export(
+	            df,
+	            schema_name,
+	            table_name,
+	            index=False,  # Specifies whether to include index in exported table
+	            if_exists='replace',  # Specify resolution policy if table name already exists
+	        )
+	    ```
+
+ 	sql_taxi_data
+
+	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7a372683-e31a-4d67-b519-363e12792018)
+
+	```
+	SELECT * FROM ny_taxi.yellow_cab_data LIMIT 10
+	```
+
+ 	
+		
 
 
-@test
-def test_output(df) -> None:
-    """
-    Template code for testing the output of the block.
-    """
-    assert df is not None, 'The output is undefined'
-```
+
+ 
 
 ###  ETL: API to GCS
 
