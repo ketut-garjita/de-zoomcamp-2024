@@ -368,7 +368,7 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 
 **Blocks List**
 
-	load_taxi_data
+_load_taxi_data_
 
   	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
 
@@ -420,7 +420,7 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 	    assert output is not None, 'The output is undefined'
 	```
 
-	transform_taxi_data
+_transform_taxi_data_
 
  	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/29b597ec-2114-44ee-adf4-020be4903c9b)
 
@@ -442,7 +442,7 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 	    assert output ['passenger_count'].isin([0]).sum() == 0, 'There are rides with zero passengers'
  	```
 
- 	taxi_data_to_pg
+_taxi_data_to_pg_
 
   	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfb5ac42-6768-4181-a2e6-27667e74a5bf)
 
@@ -479,10 +479,10 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 	            table_name,
 	            index=False,  # Specifies whether to include index in exported table
 	            if_exists='replace',  # Specify resolution policy if table name already exists
-	        )
-	```
+	        )	 
+  	```
 
- 	sql_taxi_data
+ _sql_taxi_data_
 
 	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7a372683-e31a-4d67-b519-363e12792018)
 
@@ -493,22 +493,172 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 
 ###  ETL: API to GCS
 
-In this tutorial will walk through the process of using Mage to extract, transform, and load data from an API to Google Cloud Storage (GCS).
+In this tutorial will walk through the process of using Mage to extract, transform, and load data from an API to Google Cloud Storage (GCS). Covering both writing partitioned and unpartitioned data to GCS and discuss why you might want to do one over the other. Many data teams start with extracting data from a source and writing it to a data lake before loading it to a structured data source, like a database.
 
-Covering both writing partitioned and unpartitioned data to GCS and discuss why you might want to do one over the other. Many data teams start with extracting data from a source and writing it to a data lake before loading it to a structured data source, like a database.
+**Building pipeline**
 
+**Pipeline Tree**
+
+	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a7e76d24-2020-416f-8318-ef764dc64240)
+
+**Blok Lsit**
+
+	```
+	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6511f061-ee57-4461-a36b-f130ad9bd74e)
+	
+	from mage_ai.settings.repo import get_repo_path
+	from mage_ai.io.config import ConfigFileLoader
+	from mage_ai.io.google_cloud_storage import GoogleCloudStorage
+	from os import path
+	if 'data_loader' not in globals():
+	    from mage_ai.data_preparation.decorators import data_loader
+	if 'test' not in globals():
+	    from mage_ai.data_preparation.decorators import test
+	
+	
+	@data_loader
+	def load_from_google_cloud_storage(*args, **kwargs):
+	    """
+	    Template for loading data from a Google Cloud Storage bucket.
+	    Specify your configuration settings in 'io_config.yaml'.
+	
+	    Docs: https://docs.mage.ai/design/data-loading#googlecloudstorage
+	    """
+	    config_path = path.join(get_repo_path(), 'io_config.yaml')
+	    config_profile = 'default'
+	
+	    bucket_name = 'mage-zoomcamp-ketut-1'
+	    object_key = 'yellow_tripdata_2021-01.csv'
+	
+	    return GoogleCloudStorage.with_config(ConfigFileLoader(config_path, config_profile)).load(
+	        bucket_name,
+	        object_key,
+	    )
+	
+	
+	@test
+	def test_output(output, *args) -> None:
+	    """
+	    Template code for testing the output of the block.
+	    """
+	    assert output is not None, 'The output is undefined'
+	```
 
 
 ### ETL: GCS to BigQuery
 
 Now that we've written data to GCS, let's load it into BigQuery. In this section, we'll walk through the process of using Mage to load our data from GCS to BigQuery. This closely mirrors a very common data engineering workflow: loading data from a data lake into a data warehouse.
 
+**Building pipeline**
+
+**Pileline Tree**
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1ee38674-46c4-43bc-8633-373ff41436c4)
+
+**Blocks List**
+
+*extract_taxi_gcs*
+
+	```
+	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1b084c7f-31c5-451a-a85c-171630252950)
+	
+	from mage_ai.settings.repo import get_repo_path
+	from mage_ai.io.config import ConfigFileLoader
+	from mage_ai.io.google_cloud_storage import GoogleCloudStorage
+	from os import path
+	if 'data_loader' not in globals():
+	    from mage_ai.data_preparation.decorators import data_loader
+	if 'test' not in globals():
+	    from mage_ai.data_preparation.decorators import test
+	
+	
+	@data_loader
+	def load_from_google_cloud_storage(*args, **kwargs):
+	    """
+	    Template for loading data from a Google Cloud Storage bucket.
+	    Specify your configuration settings in 'io_config.yaml'.
+	
+	    Docs: https://docs.mage.ai/design/data-loading#googlecloudstorage
+	    """
+	    config_path = path.join(get_repo_path(), 'io_config.yaml')
+	    config_profile = 'default'
+	
+	    bucket_name = 'de-zoomcamp-garjita-bucket'
+	    object_key = 'yellow_tripdata_2023-11.parquet'
+	
+	    return GoogleCloudStorage.with_config(ConfigFileLoader(config_path, config_profile)).load(
+	        bucket_name,
+	        object_key,
+	    )
+	
+	
+	@test
+	def test_output(output, *args) -> None:
+	    """
+	    Template code for testing the output of the block.
+	    """
+	    assert output is not None, 'The output is undefined'
+	```
+
+*transform_taxi_gcs*
+
+	```
+	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/672a906a-7760-49e3-b9d3-368c5258ebbf)
+	
+	if 'transformer' not in globals():
+	    from mage_ai.data_preparation.decorators import transformer
+	if 'test' not in globals():
+	    from mage_ai.data_preparation.decorators import test
+	
+	
+	@transformer
+	def transform(data, *args, **kwargs):
+	    data.columns = (data.columns
+	                    .str.replace(' ', '_')
+	                    .str.lower()
+	    )
+	    
+	    return data
+	```
+
+*load_to_bigquery*
+
+	```
+	![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f699fdfd-1634-4c51-b028-c1a580627956)
+	
+	from mage_ai.settings.repo import get_repo_path
+	from mage_ai.io.bigquery import BigQuery
+	from mage_ai.io.config import ConfigFileLoader
+	from pandas import DataFrame
+	from os import path
+	
+	if 'data_exporter' not in globals():
+	    from mage_ai.data_preparation.decorators import data_exporter
+	
+	
+	@data_exporter
+	def export_data_to_big_query(df: DataFrame, **kwargs) -> None:
+	    """
+	    Template for exporting data to a BigQuery warehouse.
+	    Specify your configuration settings in 'io_config.yaml'.
+	
+	    Docs: https://docs.mage.ai/design/data-loading#bigquery
+	    """
+	    table_id = 'dtc-de-course-2024-411803.taxidataset.yellow_tripdata_2023-11'
+	    config_path = path.join(get_repo_path(), 'io_config.yaml')
+	    config_profile = 'default'
+	
+	    BigQuery.with_config(ConfigFileLoader(config_path, config_profile)).export(
+	        df,
+	        table_id,
+	        if_exists='replace',  # Specify resolution policy if table name already exists
+	    )
+	```
+
 
 ### Parameterized Execution
 
-By now you're familiar with building pipelines, but what about adding parameters? In this video, we'll discuss some built-in runtime variables that exist in Mage and show you how to define your own! We'll also cover how to use these variables to parameterize your pipelines. Finally, we'll talk about what it means to backfill a pipeline and how to do it in Mage.
-
-Resources
+*Resources*
 
 - [Mage Variables Overview](https://docs.mage.ai/development/variables/overview)
 - [Mage Runtime Variables](https://docs.mage.ai/getting-started/runtime-variable)
@@ -516,23 +666,22 @@ Resources
 
 ### Deployment (Optional)
 
-In this section, we'll cover deploying Mage using Terraform and Google Cloud. This section is optional— it's not necessary to learn Mage, but it might be helpful if you're interested in creating a fully deployed project. If you're using Mage in your final project, you'll need to deploy it to the cloud.
+Cover deploying Mage using Terraform and Google Cloud.
 
-
-Resources
+*Resources*
 
 - [Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - [Installing gcloud CLI](https://cloud.google.com/sdk/docs/install)
 - [Mage Terraform Templates](https://github.com/mage-ai/mage-ai-terraform-templates)
 
 
-Additional Mage Guides
+### Additional Mage Guides
 
 - [Terraform](https://docs.mage.ai/production/deploying-to-cloud/using-terraform)
 - [Deploying to GCP with Terraform](https://docs.mage.ai/production/deploying-to-cloud/gcp/setup)
 
 
-📑Additional Resources
+### 📑Additional Resources
 
 - [Mage Docs](https://docs.mage.ai/introduction/overview)
 - [Mage Guides](https://docs.mage.ai/guides/overview)
