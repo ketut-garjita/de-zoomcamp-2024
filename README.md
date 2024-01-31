@@ -325,11 +325,9 @@ terraform destroy
 
 ## HOMEWORK
 
-Questions : https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01
+[Questions - Week 1 Homework](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
 
-Solution : https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ffc1a05209bdd43e8f4d5d3a/HW-01-solution.ipynb
-
-
+[Answers - Week 1 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ffc1a05209bdd43e8f4d5d3a/HW-01-solution.ipynb)
 
 # Week 2 : 02-workflow-orchestration
 
@@ -659,7 +657,7 @@ Cover deploying Mage using Terraform and Google Cloud.
 
 [Questions - Week 2 Homework](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/02-workflow-orchestration/homework.md)
 
-[Answers- Week 2 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/f2f3afda3fa278b795dbe60a840e7f3523ac6459/homework-02.md)
+[Answers - Week 2 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/f2f3afda3fa278b795dbe60a840e7f3523ac6459/homework-02.md)
 
 
 
