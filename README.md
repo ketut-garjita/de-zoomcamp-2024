@@ -361,7 +361,8 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
 
 **Pipeline Tree**
   
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1c62a297-eea5-4fef-8bfc-5e28816ebbdd)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0db37fd2-02d1-4bea-b97c-cc10b55c8979)
+
 
 
 **Blocks List**
@@ -441,7 +442,47 @@ def test_output(output, *args):
 
 ```
 
- _sql_taxi_data_
+*taxi_data_to_pg*
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1e263fcc-576f-4b87-8559-fc7141992706)
+
+```
+from mage_ai.settings.repo import get_repo_path
+from mage_ai.io.config import ConfigFileLoader
+from mage_ai.io.postgres import Postgres
+from pandas import DataFrame
+from os import path
+
+if 'data_exporter' not in globals():
+    from mage_ai.data_preparation.decorators import data_exporter
+
+
+@data_exporter
+def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
+    
+    """
+    Template for exporting data to a PostgreSQL database.
+    Specify your configuration settings in 'io_config.yaml'.
+
+    Docs: https://docs.mage.ai/design/data-loading#postgresql
+    """
+    schema_name = 'ny_taxi'  # Specify the name of the schema to export data to
+    table_name = 'yellow_cab_data'  # Specify the name of the table to export data to
+    config_path = path.join(get_repo_path(), 'io_config.yaml')
+    config_profile = 'dev'
+
+    with Postgres.with_config(ConfigFileLoader(config_path, config_profile)) as loader:
+        loader.export(
+            df,
+            schema_name,
+            table_name,
+            index=False,  # Specifies whether to include index in exported table
+            if_exists='replace',  # Specify resolution policy if table name already exists
+        )
+```
+
+    
+*sql_taxi_data*
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7a372683-e31a-4d67-b519-363e12792018)
 
