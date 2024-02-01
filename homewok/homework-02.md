@@ -342,7 +342,7 @@
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
 
 
-## 6. Pipeline Scheduling
+## 5. Pipeline Scheduling
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0bcbc63f-d314-416b-8354-fd69f7528b3c)
 
@@ -352,7 +352,7 @@
 
 
 
-## 5. Answers
+## 6. Answers
 
   Question 1. Data Loading
   
