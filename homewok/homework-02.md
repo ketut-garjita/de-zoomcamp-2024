@@ -3,7 +3,8 @@
 2. Blocks Script
 3. Execution
 4. GCS Bucket Files
-5. Answers
+5. Pipeline Scheduling
+6. Answers
   
 
 ## 1. Pipeline Tree
@@ -339,6 +340,16 @@
 - Number of partitions folder
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9073ce1-d74c-4e81-8cf5-d31f3cc48091)
+
+
+## 6. Pipeline Scheduling
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0bcbc63f-d314-416b-8354-fd69f7528b3c)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfde1515-d956-43ae-abab-5fbc61f804e7)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d2374f7f-96db-4ae5-8185-064f70b833b6)
+
 
 
 ## 5. Answers
