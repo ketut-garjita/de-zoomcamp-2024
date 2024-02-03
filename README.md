@@ -1,4 +1,4 @@
-# **DTC (Data Talks Club) Data Engineering Zoomcamp 2024**
+# **Data Talks Club (DTC) Data Engineering Zoomcamp 2024**
 
 # Week 1 : 01-docker-terraform
 
@@ -333,6 +333,10 @@ terraform destroy
 
 ## LEARNING
 
+# Week 2 : Workflow Orchestration
+
+## LEARNING
+
 ###  Intro to Orchestration
 
 [Intro to Orchestration.pptx](https://github.com/garjita63/de-zoomcamp-2024/files/14094284/Intro.to.Orchestration.pptx)
@@ -347,13 +351,17 @@ terraform destroy
 
 [Intro to Mage.pptx](https://github.com/garjita63/de-zoomcamp-2024/files/14094325/Intro.to.Mage.pptx)
 
+**Mage and Postgres on Docker Desktop**
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/d294708d-5c98-428f-a5e9-76560f0b8812)
+
 
 ###  ETL: API to Postgres
 - Build a simple ETL pipeline that loads data from an API into a Postgres database
 - Database will be built using Docker
 - It will be running locally, but it's the same as if it were running in the cloud.
 
-_Resources_
+*Resources*
 
 Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
 
@@ -363,13 +371,11 @@ Taxi Dataset https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yel
   
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0db37fd2-02d1-4bea-b97c-cc10b55c8979)
 
-
-
 **Blocks List**
 
-_load_taxi_data_
+*load_taxi_data*
 
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/09e0f165-1beb-4943-9c9f-b92526feb0fd)
 
 ```
 import io
@@ -419,16 +425,14 @@ def test_output(output, *args) -> None:
     assert output is not None, 'The output is undefined'
 ```
 
-_transform_taxi_data_
+*transform_taxi_data*
 
- ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/29b597ec-2114-44ee-adf4-020be4903c9b)
-
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/29b597ec-2114-44ee-adf4-020be4903c9b)
  ```
 if 'transformer' not in globals():
     from mage_ai.data_preparation.decorators import transformer
 if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
-
 
 @transformer
 def transform(data, *args, **kwargs):
@@ -445,7 +449,6 @@ def test_output(output, *args):
 *taxi_data_to_pg*
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1e263fcc-576f-4b87-8559-fc7141992706)
-
 ```
 from mage_ai.settings.repo import get_repo_path
 from mage_ai.io.config import ConfigFileLoader
@@ -455,7 +458,6 @@ from os import path
 
 if 'data_exporter' not in globals():
     from mage_ai.data_preparation.decorators import data_exporter
-
 
 @data_exporter
 def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
@@ -485,11 +487,20 @@ def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
 *sql_taxi_data*
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7a372683-e31a-4d67-b519-363e12792018)
+```
+SELECT count(*) FROM ny_taxi.yellow_cab_data;
+```
 
-```
-SELECT * FROM ny_taxi.yellow_cab_data LIMIT 10
-```
- 
+**API to Postgres Pipeline Execution**
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/c5dd6d0d-d5bb-43c4-baf3-b3ffae8e4661)
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/7f459fd0-dbcd-4567-84b8-5311f7425d59)
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/40917bb8-92a7-442e-afaf-5d921a0b2ba9)
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/e8251772-fd90-40ae-ab05-99d0e19ff32f)
+
 
 ###  ETL: API to GCS
 
@@ -506,7 +517,6 @@ In this tutorial will walk through the process of using Mage to extract, transfo
 *api_to_gcs*
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6511f061-ee57-4461-a36b-f130ad9bd74e)
-
 ```
 from mage_ai.settings.repo import get_repo_path
 from mage_ai.io.config import ConfigFileLoader
@@ -516,7 +526,6 @@ if 'data_loader' not in globals():
     from mage_ai.data_preparation.decorators import data_loader
 if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
-
 
 @data_loader
 def load_from_google_cloud_storage(*args, **kwargs):
@@ -544,26 +553,30 @@ def test_output(output, *args) -> None:
     Template code for testing the output of the block.
     """
     assert output is not None, 'The output is undefined'
-
 ```
+
+**API to GCS Pipeline Execution**
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/867a3dc4-0f74-4f23-b064-74b37e84a2ee)
 
 
 ### ETL: GCS to BigQuery
 
 Now that we've written data to GCS, let's load it into BigQuery. In this section, we'll walk through the process of using Mage to load our data from GCS to BigQuery. This closely mirrors a very common data engineering workflow: loading data from a data lake into a data warehouse.
+Here I try using another source file format (.parquet) that has been uploaded manually to GCS bucket.
 
 **Building pipeline**
 
 **Pileline Tree**
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1ee38674-46c4-43bc-8633-373ff41436c4)
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/dbc6d773-65c0-44fd-8062-9cbbf10770ac)
+
 
 **Blocks List**
 
 *extract_taxi_gcs*
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1b084c7f-31c5-451a-a85c-171630252950)
-
 ```
 from mage_ai.settings.repo import get_repo_path
 from mage_ai.io.config import ConfigFileLoader
@@ -603,31 +616,10 @@ def test_output(output, *args) -> None:
     assert output is not None, 'The output is undefined'
 ```
 
-*transform_taxi_gcs*
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/672a906a-7760-49e3-b9d3-368c5258ebbf)
-
-```
-if 'transformer' not in globals():
-    from mage_ai.data_preparation.decorators import transformer
-if 'test' not in globals():
-    from mage_ai.data_preparation.decorators import test
-
-
-@transformer
-def transform(data, *args, **kwargs):
-    data.columns = (data.columns
-                    .str.replace(' ', '_')
-                    .str.lower()
-    )
-    
-    return data
-```
 
 *load_to_bigquery*
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e664aafb-06ab-4ca9-b088-74bd1e33812b)
-
 ```
 from mage_ai.settings.repo import get_repo_path
 from mage_ai.io.bigquery import BigQuery
@@ -657,6 +649,13 @@ def export_data_to_big_query(df: DataFrame, **kwargs) -> None:
         if_exists='replace',  # Specify resolution policy if table name already exists
     )
 ```
+
+**GCS to BigQuery Pipeline Execution**
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/ae982bf6-b5a5-4956-a7c0-4c734d4191cc)
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week2/assets/157445647/849b1eb1-68f2-4042-8d38-067c73b50583)
+
 
 
 ### Parameterized Execution
