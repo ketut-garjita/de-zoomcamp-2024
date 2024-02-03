@@ -331,8 +331,6 @@ terraform destroy
 
 # Week 2 : 02-workflow-orchestration
 
-## LEARNING
-
 # Week 2 : Workflow Orchestration
 
 ## LEARNING
