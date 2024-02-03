@@ -561,7 +561,8 @@ def test_output(output, *args) -> None:
 ### ETL: GCS to BigQuery
 
 Now that we've written data to GCS, let's load it into BigQuery. In this section, we'll walk through the process of using Mage to load our data from GCS to BigQuery. This closely mirrors a very common data engineering workflow: loading data from a data lake into a data warehouse.
-Here I try using another source file format (.parquet) that has been uploaded manually to GCS bucket.
+Here I use another source file format (.parquet) that has been uploaded manually to GCS bucket. 
+[yellow_tripdata_2023-11.parquet](https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-11.parquet)
 
 **Building pipeline**
 
