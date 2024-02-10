@@ -77,3 +77,29 @@
 
 - #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module3-datawarehouse.md)
 
+
+### Module 4 : Analytics Engineering
+
+- #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/04-analytics-engineering/homework.md)
+
+- #### [Form for Submitting](
+
+- #### [Solution/Answers]()
+
+
+### Module 5 : Batch
+
+- #### [Questions](
+
+- #### [Form for Submitting]()
+
+- #### [Solution/Answers]()
+
+### Module 6 : Streaming
+
+- #### [Questions]()
+
+- #### [Form for Submitting]()
+
+- #### [Solution/Answers]()
+
