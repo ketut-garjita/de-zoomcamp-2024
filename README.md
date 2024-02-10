@@ -57,14 +57,14 @@
 
 - #### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw2)
 
-- #### [Solution/Answers]()
+- #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/homework-02.md)
 
 
 ### [Workshop 1: Data Ingestion]()
 
-- #### [Questions]()
+- #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/workshops/dlt.md)
 
-- #### [Form for Submitting]()
+- #### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/workshop1)
 
 - #### [Solution/Answers]()
 
