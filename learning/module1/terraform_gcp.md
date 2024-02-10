@@ -1,4 +1,4 @@
-## 1_terraform_gcp
+## 1.1 terraform-gcp
 
 ### Pre-Requisites
 
