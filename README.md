@@ -325,9 +325,9 @@ terraform destroy
 
 ## HOMEWORK
 
-[Questions - Week 1 Homework](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
+### [Questions - Week 1 Homework](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
 
-[Answers - Week 1 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ffc1a05209bdd43e8f4d5d3a/HW-01-solution.ipynb)
+### [Answers - Week 1 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/a1607fbef5d5d4b7ffc1a05209bdd43e8f4d5d3a/HW-01-solution.ipynb)
 
 
 # Week 2 : Workflow Orchestration
@@ -693,9 +693,9 @@ Cover deploying Mage using Terraform and Google Cloud.
 
 ## HOMEWORK
 
-[Questions - Week 2 Homework](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/02-workflow-orchestration/homework.md)
+### [Questions - Week 2 Homework](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/02-workflow-orchestration/homework.md)
 
-[Answers - Week 2 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/4fc9caf6a4a7aca7dca6de304260997b87ca6acb/homewok/homework-02.md)
+### [Answers - Week 2 Homework](https://github.com/garjita63/de-zoomcamp-2024/blob/4fc9caf6a4a7aca7dca6de304260997b87ca6acb/homewok/homework-02.md)
 
 
 # Week 3 - Data Warehouse
