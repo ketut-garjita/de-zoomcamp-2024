@@ -700,6 +700,8 @@ Cover deploying Mage using Terraform and Google Cloud.
 
 # Week 3 - Data Warehouse
 
+## LEARNING
+
 ## Data Warehouse
 
 ### What is a Data Warehouse?
@@ -1694,6 +1696,7 @@ Question 1: What is count of records for the 2022 Green Taxi Data??
 - 840,402
 - 1,936,423
 - 253,647
+  
 
 ### Question 2:
 Write a query to count the distinct number of PULocationIDs for the entire dataset on both the tables.</br> 
@@ -1712,12 +1715,14 @@ How many records have a fare_amount of 0?
 - 112
 - 1,622
 
+
 ### Question 4:
 What is the best strategy to make an optimized table in Big Query if your query will always order the results by PUlocationID and filter based on lpep_pickup_datetime? (Create a new table with this strategy)
 - Cluster on lpep_pickup_datetime Partition by PUlocationID
 - Partition by lpep_pickup_datetime  Cluster on PUlocationID
 - Partition by lpep_pickup_datetime and Partition by PUlocationID
 - Cluster on by lpep_pickup_datetime and Cluster on PUlocationID
+
 
 ### Question 5:
 Write a query to retrieve the distinct PULocationID between lpep_pickup_datetime
