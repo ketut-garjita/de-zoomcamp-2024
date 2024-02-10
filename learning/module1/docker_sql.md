@@ -1,4 +1,4 @@
-## 2_docker_sql
+## 1.2 docker-sql
 
 ### - Installation
 
