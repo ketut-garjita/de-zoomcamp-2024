@@ -56,15 +56,34 @@
 
 #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/01-docker-terraform/homework.md)
 
-### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
+#### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
 
-### [Solution/Answers](
+#### [Solution/Answers]()
 
 
 ### [Module 2 : Workflow Orchestartion]()
 
+#### [Questions]()
+
+#### [Form for Submitting]()
+
+#### [Solution/Answers]()
+
 
 ### [Workshop 1: Data Ingestion]()
 
+#### [Questions]()
+
+#### [Form for Submitting]()
+
+#### [Solution/Answers]()
+
+
 ### [Module 3 : Data Warehouse]()
+
+#### [Questions]()
+
+#### [Form for Submitting]()
+
+#### [Solution/Answers]()
 
