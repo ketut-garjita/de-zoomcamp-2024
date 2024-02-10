@@ -691,7 +691,7 @@ Cover deploying Mage using Terraform and Google Cloud.
 [Notes from Jonah Oliver](https://www.jonahboliver.com/blog/de-zc-w2)
 
 
-## Homework
+## HOMEWORK
 
 [Questions - Week 2 Homework](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/02-workflow-orchestration/homework.md)
 
@@ -1674,7 +1674,7 @@ Example:
 ```
 
 
-## Week 3 Homework
+## HOMEWORK
 ATTENTION: At the end of the submission form, you will be required to include a link to your GitHub repository or other public code-hosting site. This repository should contain your code for solving the homework. If your solution includes code that is not in file format (such as SQL queries or shell commands), please include these directly in the README file of your repository.
 
 <b><u>Important Note:</b></u> <p> For this homework we will be using the 2022 Green Taxi Trip Record Parquet Files from the New York
@@ -1754,4 +1754,4 @@ No Points: Write a `SELECT count(*)` query FROM the materialized table you creat
  
 ### Submitting the solutions
 
-* Form for submitting: https://courses.datatalks.club/de-zoomcamp-2024/homework/hw3
+* Form for submitting: https://courses.datatalks.club/de-zoomcamp-2024//hw3
