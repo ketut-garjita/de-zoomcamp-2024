@@ -19,15 +19,15 @@
 
 ### Module 0 : .devcontainer
 
-### Module 1 : Docker & Terraform
+### [Module 1 : Docker & Terraform](https://github.com/garjita63/de-zoomcamp-2024/tree/main/learning/module1)
 
-#### 1.1 Terraform - GCP
+#### [1.1 Terraform - GCP]
 
-#### 1.2 Docker - SQL
+#### [1.2 Docker - SQL]
 
-### Module 2 : Workflow Orchestartion
+### [Module 2 : Workflow Orchestartion]
 
-### Module 3 : Data Warehouse
+### [Module 3 : Data Warehouse]
 
 ### Module 4 : Analytics Engineering
 
