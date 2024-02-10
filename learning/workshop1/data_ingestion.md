@@ -278,5 +278,5 @@ info = pipeline.run(data, table_name="users", write_disposition="merge", merge_k
 ```
 to
 ```
-info = pipeline.run(data, table_name="users", write_disposition="merge", primary_keym="ID")
+info = pipeline.run(data, table_name="users", write_disposition="merge", primary_key="ID")
 ```
