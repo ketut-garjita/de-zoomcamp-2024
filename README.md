@@ -19,21 +19,13 @@
 
 ### Module 0 - .devcontainer
 
-#### Source : 
-
 ### Module 1 - Docker & Terraform
 
-#### Source : 
+#### 1.1 Docker - SQL
 
-### Learning
+#### 1.2 Terraform - GCP
 
-#### Docker - SQL
-
-#### Terraform - GCP
-
-### Module 2 - Terraform & GCP
-
-### Module 3 - 
+### Module 2 - 
 
 
 ## HOMEWORK
