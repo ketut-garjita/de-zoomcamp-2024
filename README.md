@@ -27,7 +27,7 @@
 
 ### [Module 2 : Workflow Orchestartion]
 
-### [Module 3 : Data Warehouse]
+### [Module 3 : Data Warehouse](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module2/mage-workflow-orchestration.md)
 
 ### Module 4 : Analytics Engineering
 
