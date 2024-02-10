@@ -75,5 +75,5 @@
 
 - #### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw3)
 
-- #### [Solution/Answers]()
+- #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module3-datawarehouse.md)
 
