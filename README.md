@@ -33,16 +33,6 @@
 
 ### [Module 3 : Data Warehouse](https://github.com/garjita63/de-zoomcamp-2024/tree/main/learning/module3)
 
-#### [1.1 Terraform - GCP](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module1/terraform_gcp.md)
-
-#### [1.2 Docker - SQL](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module1/docker_sql.md)
-
-### [Module 2 : Workflow Orchestartion](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module2/mage-workflow-orchestration.md)
-
-### [Workshop 1: Data Ingestion](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/workshop1/data_ingestion.md)
-
-### [Module 3 : Data Warehouse](https://github.com/garjita63/de-zoomcamp-2024/tree/main/learning/module3)
-
 ### Module 4 : Analytics Engineering
 
 ### Module 5 : Batch
