@@ -25,9 +25,9 @@
 
 #### [1.2 Docker - SQL](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module1/docker_sql.md)
 
-### [Module 2 : Workflow Orchestartion]
+### [Module 2 : Workflow Orchestartion](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module2/mage-workflow-orchestration.md)
 
-### [Module 3 : Data Warehouse](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module2/mage-workflow-orchestration.md)
+### [Module 3 : Data Warehouse]
 
 ### Module 4 : Analytics Engineering
 
