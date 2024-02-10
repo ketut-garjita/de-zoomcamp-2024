@@ -270,5 +270,13 @@ print(info)
 Note:<br>
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/77d224af-d5f0-496c-bdfe-2808aa0c0fc1)
 
+Solved : 
 
-
+Change 
+```
+info = pipeline.run(data, table_name="users", write_disposition="merge", merge_key="record_hash")
+```
+to
+```
+info = pipeline.run(data, table_name="users", write_disposition="merge", primary_keym="ID")
+```
