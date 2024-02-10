@@ -21,9 +21,9 @@
 
 ### Module 1 : Docker & Terraform
 
-#### 1.1 Docker - SQL
+#### 1.1 Terraform - GCP
 
-#### 1.2 Terraform - GCP
+#### 1.2 Docker - SQL
 
 ### Module 2 : Workflow Orchestartion
 
