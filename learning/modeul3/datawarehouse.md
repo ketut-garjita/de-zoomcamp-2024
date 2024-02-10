@@ -972,13 +972,3 @@ Example:
     ]
 }
 ```
-
-
-## HOMEWORK
-
-### [Questions - Week 3 Homework](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/03-data-warehouse/homework.md)
-
-### [Answers - Week 3 Homework](https://github.com/garjita63/dezoomcamp-2024-homework03)
-
-
-
