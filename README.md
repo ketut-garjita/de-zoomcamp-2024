@@ -29,7 +29,7 @@
 
 ### [Module 2 : Workflow Orchestartion](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module2/mage-workflow-orchestration.md)
 
-### [Workshop 1: Data Ingestion]()
+### [Workshop 1: Data Ingestion](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/workshop1/data_ingestion.md)
 
 ### [Module 3 : Data Warehouse](https://github.com/garjita63/de-zoomcamp-2024/tree/main/learning/module3)
 
