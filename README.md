@@ -48,14 +48,14 @@
 
 - #### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
 
-- #### [Solution/Answers]()
+- #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/HW-01-solution.ipynb)
 
 
 ### [Module 2 : Workflow Orchestartion]()
 
-- #### [Questions]()
+- #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/02-workflow-orchestration/homework.md)
 
-- #### [Form for Submitting]()
+- #### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw2)
 
 - #### [Solution/Answers]()
 
