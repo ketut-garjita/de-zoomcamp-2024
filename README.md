@@ -17,15 +17,25 @@
 
 ## LEARNING
 
-### Module 0 - .devcontainer
+### Module 0 : .devcontainer
 
-### Module 1 - Docker & Terraform
+### Module 1 : Docker & Terraform
 
 #### 1.1 Docker - SQL
 
 #### 1.2 Terraform - GCP
 
-### Module 2 - 
+### Module 2 : Workflow Orchestartion
+
+### Module 3 : Data Warehouse
+
+### Module 4 : Analytics Engineering
+
+### Module 5 : Batch
+
+### Module 6 : Streaming
+
+
 
 
 ## HOMEWORK
