@@ -1,4 +1,4 @@
-## SOURCES
+## RESOURCES
 
 ### [Module 0 : .devcontainer](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/.devcontainer) 
 
