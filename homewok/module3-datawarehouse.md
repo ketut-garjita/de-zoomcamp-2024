@@ -104,8 +104,7 @@ Answer --> <code style="color:green">1,622</code>
 ## Question 4:
 What is the best strategy to make an optimized table in Big Query if your query will always order the results by PUlocationID and filter based on lpep_pickup_datetime? (Create a new table with this strategy)
 - Cluster on lpep_pickup_datetime Partition by PUlocationID
-- Partition by lpep_pickup_datetime  Cluster on PUlocationID
-- <code style="color:green">Partition by lpep_pickup_datetime  Cluster on PUlocationID</code>
+- <code style="color:green">Partition by lpep_pickup_datetime Cluster on PUlocationID</code>
 - Partition by lpep_pickup_datetime and Partition by PUlocationID
 - Cluster on by lpep_pickup_datetime and Cluster on PUlocationID
 
