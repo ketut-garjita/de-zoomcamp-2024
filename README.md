@@ -66,10 +66,11 @@
 
 - #### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/workshop1)
 
-- #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/workshop1-data-ingestion.md)
+- #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/workshop1-data-ingestion.ipynb)
 
 
 ### [Module 3 : Data Warehouse]()
+
 
 - #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/03-data-warehouse/homework.md)
 
