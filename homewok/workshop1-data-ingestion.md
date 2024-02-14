@@ -92,7 +92,7 @@ def people_1():
     for i in range(1, 6):
         yield {"ID": i, "Name": f"Person_{i}", "Age": 25 + i, "City": "City_A"}
 
-info = pipeline.run(people_1(),, table_name="person", write_disposition="replace")
+info = pipeline.run(people_1(), table_name="person", write_disposition="replace")
 print(info)
 
 def people_2():
