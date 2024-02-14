@@ -92,19 +92,9 @@ OS prompt :
 dlt pipeline taxi_data show
 ```
 
-Output<br>
-
-![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/b886eb22-c09e-4a82-941c-8e5f29605e6e)
-
 Browser http://localhost:8501/
 
 Navigation --> Explore data
-
-![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/d264acee-5d51-46b5-8417-821aa8238e0d)
-
-Navigation --> Load info
-
-![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/fbbb0ef6-96d7-4784-9c41-b38326a58241)
 
 
 ## Incremental loading
