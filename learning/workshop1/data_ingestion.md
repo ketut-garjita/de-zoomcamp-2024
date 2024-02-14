@@ -11,7 +11,6 @@ cd /mnt/e/dlt
 python -m venv ./env
 source ./env/bin/activate
 pip install dlt[duckdb]
-
 ```
 
 ```
