@@ -1,56 +1,34 @@
 Source : <br>
 https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/workshops/dlt_resources/data_ingestion_workshop.md
 
-## Introducing dlt (data load tool)
-
-dlt is a python library created for the purpose of assisting data engineers to build simpler, faster and more robust pipelines with minimal effort.
-
-You can think of dlt as a loading tool that implements the best practices of data pipelines enabling you to just “use” those best practices in your own pipelines, in a declarative way.
-
-This enables you to stop reinventing the flat tyre, and leverage dlt to build pipelines much faster than if you did everything from scratch.
-
-dlt automates much of the tedious work a data engineer would do, and does it in a way that is robust. dlt can handle things like:
-
-Schema: Inferring and evolving schema, alerting changes, using schemas as data contracts.
-Typing data, flattening structures, renaming columns to fit database standards. In our example we will pass the “data” you can see above and see it normalised.
-Processing a stream of events/rows without filling memory. This includes extraction from generators.
-Loading to a variety of dbs or file formats.
-Let’s use it to load our nested json to duckdb:
-
 Here’s how you would do that on your local machine. I will walk you through before showing you in colab as well.
 
-First, install dlt
+First, install dlt in new OS environment
 
 Command prompt
 ```
+cd /mnt/e/dlt
 python -m venv ./env
 source ./env/bin/activate
 pip install dlt[duckdb]
 
-Successfully installed PyYAML-6.0.1 SQLAlchemy-2.0.25 astunparse-1.6.3 certifi-2024.2.2 charset-normalizer-3.3.2 click-8.1.7 dlt-0.4.2 duckdb-0.9.2 fsspec-2024.2.0 gitdb-4.0.11 gitpython-3.1.41 giturlparse-0.12.0 greenlet-3.0.3 hexbytes-1.0.0 humanize-4.9.0 idna-3.6 jsonpath-ng-1.6.1 makefun-1.15.2 orjson-3.9.13 packaging-23.2 pathvalidate-3.2.0 pendulum-3.0.0 ply-3.11 python-dateutil-2.8.2 pytz-2024.1 requests-2.31.0 requirements-parser-0.5.0 semver-3.0.2 setuptools-69.0.3 simplejson-3.19.2 six-1.16.0 smmap-5.0.1 tenacity-8.2.3 time-machine-2.13.0 tomlkit-0.12.3 types-setuptools-69.0.0.20240125 typing-extensions-4.9.0 tzdata-2023.4 urllib3-2.2.0 wheel-0.42.0
+```
 
 ```
-Open other OS session<br>
-Command prompt<br>
-```
 source ./env/bin/activate
-```
-```
-# for first, time install pandas
+
+# for first, time install pandas, streamlist
 pip install pandas
-```
-```
-# for first, time install streamlit
 pip install streamlit
 ```
 
-
-Command prompt
+Create python script : people_append.py
 ```
-python
+cd /mnt/e/dlt/scripts
+vi people_append.py
+Edit people_append.py as below :
 ```
 
-Python prompt
 ```
 data = [
     {
@@ -94,32 +72,22 @@ data = [
     },
 ]
 
-
 # define the connection to load to. 
 # We now use duckdb, but you can switch to Bigquery later
 
 import dlt
 import duckdb 
 
-pipeline = dlt.pipeline(pipeline_name="taxi_data",
-						destination='duckdb', 
-						dataset_name='taxi_rides')
+pipeline = dlt.pipeline(pipeline_name="taxi_data", destination='duckdb', dataset_name='taxi_rides')
 
 # run the pipeline with default settings, and capture the outcome
-info = pipeline.run(data, 
-                    table_name="users", 
-                    write_disposition="replace")
+info = pipeline.run(data, table_name="users", write_disposition="replace")
 
 # show the outcome
 print(info)
 ```
 
-Output<br>
-Pipeline taxi_data load step completed in 1.69 seconds<br>
-1 load package(s) were loaded to destination duckdb and into dataset taxi_rides<br>
-The duckdb destination used duckdb:////mnt/c/WINDOWS/system32/taxi_data.duckdb location to store data<br>
-Load package 1707269084.1495888 is LOADED and contains no failed jobs<br>
-
+OS prompt :
 ```
 dlt pipeline taxi_data show
 ```
