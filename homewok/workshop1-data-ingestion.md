@@ -13,7 +13,30 @@ D: 9.123332347441762
 
 **Answer 1: C: 8.382332347441762**
 
-![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/b384c0e0-ffc4-47c6-9081-cd79094fd0ee)
+```
+def square_root_generator(limit):
+    n = 1
+    while n <= limit:
+        yield n ** 0.5
+        n += 1
+
+# Example usage:
+limit = 5
+generator = square_root_generator(limit)
+sum_gen = 0
+
+for sqrt_value in generator:
+    print(sqrt_value)
+    sum_gen =  sum_gen + sqrt_value
+
+print("sum of the outputs of the generator for limit = 5 ==>",sum_gen)
+```
+1.0
+1.4142135623730951
+1.7320508075688772
+2.0
+2.23606797749979
+sum of the outputs of the generator for limit = 5 ==> 8.382332347441762
 
 
 Question 2: What is the 13th number yielded by the generator?
@@ -29,9 +52,38 @@ D: 5.678551275463989
 
 **Answer 2: B: 3.605551275463989**
 
-![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/179ac2e1-20f2-45ac-95ab-e518a7214db8)
+```
+def square_root_generator(limit):
+    n = 1
+    while n <= limit:
+        yield n ** 0.5
+        n += 1
 
+# Example usage:
+limit = 13
+generator = square_root_generator(limit)
 
+for sqrt_value in generator:
+    print(sqrt_value)
+
+print(" 13th number yielded by the generator ==>",sqrt_value)
+```
+1.0
+1.4142135623730951
+1.7320508075688772
+2.0
+2.23606797749979
+2.449489742783178
+2.6457513110645907
+2.8284271247461903
+3.0
+3.1622776601683795
+3.3166247903554
+3.4641016151377544
+3.605551275463989
+ 13th number yielded by the generator ==> 3.605551275463989
+
+ 
 Question 3: Append the 2 generators. After correctly appending the data, calculate the sum of all ages of people.
 
 A: 353
@@ -43,6 +95,7 @@ C: 378
 D: 390
 
 **Answer 3: A: 353**
+
 ```
 import dlt
 import json
@@ -97,6 +150,7 @@ C: 241
 D: 258
 
 **Answer 4: B: 266**
+
 ```
 import dlt
 import json
