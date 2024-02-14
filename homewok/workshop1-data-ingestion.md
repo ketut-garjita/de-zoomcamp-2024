@@ -102,8 +102,6 @@ def people_2():
 info = pipeline.run(people_2(), table_name="person", write_disposition="append")
 print(info)
 ```
-![image](https://github.com/garjita63/de-zoomcamp-2024-workshop-data-ingestion/assets/77673886/cf1ae869-bd4d-4ac6-a6d0-e253e3708979)
-
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/18f2099d-f68c-4c52-8fed-f9081ea195e3)
 
 ```
