@@ -104,7 +104,19 @@ print(info)
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024-workshop-data-ingestion/assets/77673886/cf1ae869-bd4d-4ac6-a6d0-e253e3708979)
 
-**dlt pipeline person_append show**
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/18f2099d-f68c-4c52-8fed-f9081ea195e3)
+
+```
+dlt pipeline person_append info
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b6141b71-697d-40ab-a475-23f8ae339c99)
+
+
+```
+dlt pipeline person_append show
+```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/41080d85-9496-46c0-8aab-6ccca2b849c1)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/8fa657c2-f741-43d6-b0b6-d723ca27f814)
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/80f7a893-ca33-4ff0-9656-6c8526856edd)
