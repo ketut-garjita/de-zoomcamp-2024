@@ -111,6 +111,9 @@ Browser http://localhost:8501/
 
 Navigation --> Explore data
 
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/98a3ae44-bf03-4397-8c03-9005daf527d3)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b2865fc6-0bc1-4ac0-a53b-09c0219052a1)
+
 
 ## Incremental loading
 
@@ -189,3 +192,19 @@ Pipeline taxi_incremental_loading load step completed in 2.74 seconds
 The duckdb destination used duckdb:////mnt/e/dlt/taxi_incremental_loading.duckdb location to store data
 Load package 1707887509.7438598 is LOADED and contains no failed jobs
 ```
+
+dlt pipeline taxi_incremental_loading show
+
+Found pipeline taxi_incremental_loading in /var/dlt/pipelines
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8502
+  
+  Network URL: http://172.25.243.204:8502
+
+Navigation Sample
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/25cbf8fc-de04-4830-88d8-3325f1cf3648)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/73414c34-23ea-4fcb-934e-e93c56dda5f5)
+
