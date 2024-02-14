@@ -68,7 +68,7 @@ people = '[' + people + ']'
 people = people.replace("\'", "\"")
 people = json.loads(people)
 
-info = pipeline.run(people, table_name="person", write_disposition="replace")
+info = pipeline.run(people_1(),, table_name="person", write_disposition="replace")
 print(info)
 
 ## Data Dictionary 2
@@ -76,17 +76,7 @@ def people_2():
     for i in range(3, 9):
         yield {"ID": i, "Name": f"Person_{i}", "Age": 30 + i, "City": "City_B", "Occupation": f"Job_{i}"}
 
-people = ""
-for person in people_2():
-    person
-    people = people + str(person) + ','
-
-people = people[:-1]
-people = '[' + people + ']'
-people = people.replace("\'", "\"")
-people = json.loads(people)
-
-info = pipeline.run(people, table_name="person", write_disposition="append")
+info = pipeline.run(people_2(), table_name="person", write_disposition="append")
 print(info)
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024-workshop-data-ingestion/assets/77673886/cf1ae869-bd4d-4ac6-a6d0-e253e3708979)
@@ -117,41 +107,18 @@ pipeline = dlt.pipeline(pipeline_name='person_merge',
 
 from typing import AsyncGenerator
 
-## Data D(ictionary) 1
 def people_1():
     for i in range(1, 6):
         yield {"ID": i, "Name": f"Person_{i}", "Age": 25 + i, "City": "City_A"}
 
-people = ""
-for person in people_1():
-    person
-    people = people + str(person) + ','
- 
-people = people[:-1]
-people = '[' + people + ']'
-people = people.replace("\'", "\"")
-people = json.loads(people) 
-
-info = pipeline.run(people, table_name="person", write_disposition="replace")
+info = pipeline.run(people_1(), table_name="person", write_disposition="replace")
 print(info)   
-
-## Data (Dictionary) 2
 
 def people_2():
     for i in range(3, 9):
         yield {"ID": i, "Name": f"Person_{i}", "Age": 30 + i, "City": "City_B", "Occupation": f"Job_{i}"}
 
-people = ""
-for person in people_2():
-    person
-    people = people + str(person) + ','
-
-people = people[:-1]
-people = '[' + people + ']'
-people = people.replace("\'", "\"")
-people = json.loads(people) 
-
-info = pipeline.run(people, table_name="person", write_disposition="merge", primary_key="ID")
+info = pipeline.run(people_2(), table_name="person", write_disposition="merge", primary_key="ID")
 print(info)   
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/f26afce3-bbb8-4416-a741-b7317a828449)
@@ -159,5 +126,3 @@ print(info)
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/f912dd3e-731c-4e7f-8378-6ec48b2f3dcc)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/5379a33b-05ec-401e-9e20-875fb4dbcce9)
-
-
