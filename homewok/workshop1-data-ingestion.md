@@ -156,9 +156,17 @@ def people_2():
 info = pipeline.run(people_2(), table_name="person", write_disposition="merge", primary_key="ID")
 print(info)   
 ```
-![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/f26afce3-bbb8-4416-a741-b7317a828449)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c9261431-5d6a-4831-b35c-3617ec8e0dad)
 
-**dlt pipeline person_merge show**
+```
+dlt pipeline person_merge info
+```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/edd65aa3-af16-4d5c-94e8-47e2b85ffa05)
+
+```
+dlt pipeline person_merge show
+```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/796e3057-e290-43a5-8a9b-ddf515ea0d7a)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/f912dd3e-731c-4e7f-8378-6ec48b2f3dcc)
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/5379a33b-05ec-401e-9e20-875fb4dbcce9)
