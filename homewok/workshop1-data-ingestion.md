@@ -103,6 +103,9 @@ info = pipeline.run(people_2(), table_name="person", write_disposition="append")
 print(info)
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024-workshop-data-ingestion/assets/77673886/cf1ae869-bd4d-4ac6-a6d0-e253e3708979)
+
+**dlt pipeline person_append show**
+
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/8fa657c2-f741-43d6-b0b6-d723ca27f814)
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/80f7a893-ca33-4ff0-9656-6c8526856edd)
 
@@ -144,5 +147,8 @@ info = pipeline.run(people_2(), table_name="person", write_disposition="merge", 
 print(info)   
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/f26afce3-bbb8-4416-a741-b7317a828449)
+
+**dlt pipeline person_merge show**
+
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/f912dd3e-731c-4e7f-8378-6ec48b2f3dcc)
 ![image](https://github.com/garjita63/de-zoomcamp-2024-homework-workshop-data-ingestion/assets/77673886/5379a33b-05ec-401e-9e20-875fb4dbcce9)
