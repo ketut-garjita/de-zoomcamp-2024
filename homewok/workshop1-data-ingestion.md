@@ -31,12 +31,7 @@ for sqrt_value in generator:
 
 print("sum of the outputs of the generator for limit = 5 ==>",sum_gen)
 ```
-1.0
-1.4142135623730951
-1.7320508075688772
-2.0
-2.23606797749979
-sum of the outputs of the generator for limit = 5 ==> 8.382332347441762
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9ec78d5b-bd6a-4ae8-bc98-cb238e154600)
 
 
 Question 2: What is the 13th number yielded by the generator?
@@ -68,20 +63,7 @@ for sqrt_value in generator:
 
 print(" 13th number yielded by the generator ==>",sqrt_value)
 ```
-1.0
-1.4142135623730951
-1.7320508075688772
-2.0
-2.23606797749979
-2.449489742783178
-2.6457513110645907
-2.8284271247461903
-3.0
-3.1622776601683795
-3.3166247903554
-3.4641016151377544
-3.605551275463989
- 13th number yielded by the generator ==> 3.605551275463989
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/16de0689-456a-4e54-9488-efd97d027a79)
 
  
 Question 3: Append the 2 generators. After correctly appending the data, calculate the sum of all ages of people.
