@@ -89,8 +89,9 @@ print(info)
 ```
 
 Run script:
-
+```
 (env) root@Desktop-Gar:/mnt/e/dlt# python scripts/taxi_data_loading.py
+```
 
 Output:
 ```
@@ -99,7 +100,6 @@ Pipeline taxi_data_loading load step completed in 2.29 seconds
 The duckdb destination used duckdb:////mnt/e/dlt/taxi_data_loading.duckdb location to store data
 Load package 1707886397.1636 is LOADED and contains no failed jobs
 ```
-
 
 OS prompt :
 ```
@@ -177,8 +177,9 @@ print(info)
 ```
 
 Run script:
-
-(env) root@Desktop-Gar:/mnt/e/dlt# python scripts/taxi_incremental_loading.py
+```
+ktop-Gar:/mnt/e/dlt# python scripts/taxi_incremental_loading.py
+```
 
 Output:
 ```
