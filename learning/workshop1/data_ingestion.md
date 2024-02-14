@@ -1,3 +1,5 @@
+Source : https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/workshops/dlt_resources/data_ingestion_workshop.md
+
 ## Introducing dlt (data load tool)
 
 dlt is a python library created for the purpose of assisting data engineers to build simpler, faster and more robust pipelines with minimal effort.
