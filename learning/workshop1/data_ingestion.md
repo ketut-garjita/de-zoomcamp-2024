@@ -32,6 +32,9 @@ Edit taxi_data_loading.py as below :
 ```
 
 ```
+import dlt
+import duckdb
+
 data = [
     {
         "vendor_name": "VTS",
@@ -74,24 +77,33 @@ data = [
     },
 ]
 
-# define the connection to load to. 
+# Define the connection to load to. 
 # We now use duckdb, but you can switch to Bigquery later
-
-import dlt
-import duckdb 
-
 pipeline = dlt.pipeline(pipeline_name="taxi_data_loading", destination='duckdb', dataset_name='taxi_rides')
 
-# run the pipeline with default settings, and capture the outcome
+# Run the pipeline with default settings, and capture the outcome
 info = pipeline.run(data, table_name="users", write_disposition="replace")
 
-# show the outcome
+# Show the outcome
 print(info)
 ```
 
+Run script:
+
+(env) root@Desktop-Gar:/mnt/e/dlt# python scripts/taxi_data_loading.py
+
+Output:
+```
+Pipeline taxi_data_loading load step completed in 2.29 seconds
+1 load package(s) were loaded to destination duckdb and into dataset taxi_rides
+The duckdb destination used duckdb:////mnt/e/dlt/taxi_data_loading.duckdb location to store data
+Load package 1707886397.1636 is LOADED and contains no failed jobs
+```
+
+
 OS prompt :
 ```
-dlt pipeline taxi_data show
+dlt pipeline taxi_data_loading show
 ```
 
 Open other session
@@ -106,12 +118,15 @@ Navigation --> Explore data
 Create python script : taxi_incremental_loading.py
 ```
 cd /mnt/e/dlt/scripts
-vi taxi_data.py
-Edit taxi_data.py as below :
+vi taxi_incremental_loading.py
+Edit taxi_incremental_loading.py as below :
 ```
 
 Python prompt
 ```
+import dlt
+import duckdb 
+
 data = [
     {
         "vendor_name": "VTS",
@@ -154,13 +169,23 @@ data = [
     },
 ]
 
-# define the connection to load to. 
-# We now use duckdb, but you can switch to Bigquery later
 pipeline = dlt.pipeline(pipeline_name='taxi_incremental_loading', destination='duckdb', dataset_name='taxi_rides')
-
-# run the pipeline with default settings, and capture the outcome
 info = pipeline.run(data, table_name="users", write_disposition="merge", primary_key="ID")
 
 # show the outcome
 print(info)
+```
+
+Run script:
+
+(env) root@Desktop-Gar:/mnt/e/dlt# python scripts/taxi_incremental_loading.py
+
+Output:
+```
+2024-02-14 12:11:50,609|[WARNING              ]|3864|140488174792704|dlt|reference.py|_verify_schema:357|A column id in table users in schema taxi_incremental_loading is incomplete. It was not bound to the data during normalizations stage and its data type is unknown. Did you add this column manually in code ie. as a merge key?
+2024-02-14 12:11:51,046|[WARNING              ]|3864|140488174792704|dlt|reference.py|_verify_schema:357|A column id in table users in schema taxi_incremental_loading is incomplete. It was not bound to the data during normalizations stage and its data type is unknown. Did you add this column manually in code ie. as a merge key?
+Pipeline taxi_incremental_loading load step completed in 2.74 seconds
+1 load package(s) were loaded to destination duckdb and into dataset taxi_rides
+The duckdb destination used duckdb:////mnt/e/dlt/taxi_incremental_loading.duckdb location to store data
+Load package 1707887509.7438598 is LOADED and contains no failed jobs
 ```
