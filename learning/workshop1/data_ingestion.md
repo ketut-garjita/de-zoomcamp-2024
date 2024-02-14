@@ -178,7 +178,7 @@ print(info)
 
 Run script:
 ```
-ktop-Gar:/mnt/e/dlt# python scripts/taxi_incremental_loading.py
+(env) root@Desktop-Gar:/mnt/e/dlt# python scripts/taxi_incremental_loading.py
 ```
 
 Output:
