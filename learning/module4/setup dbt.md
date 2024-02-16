@@ -51,6 +51,55 @@ Now that the service account has been created we need to add and download a JSON
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/540a028f-f0d5-4bc5-8c4d-7d1ddf3bdd3d)
 
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/df246baf-2a23-479d-82ca-efb6ea394b24)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/970d66b2-66b2-4c1a-8582-fe7fe0108c62)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/79c89797-6acf-44b8-973b-9e2d19950014)
+
+
+## Create a dbt cloud project
+
+1. Create a dbt cloud account from their website (free for solo developers)
+
+   https://www.getdbt.com/pricing
+
+   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ecfc1202-4369-4f08-8d68-cae28b75c9d0)
+   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b3894c65-5142-4d25-96bd-9fbefe792ade)
+
+
+
+
+
+3. Once you have logged in into dbt cloud you will be prompt to create a new project
+
+You are going to need:
+
+- access to your data warehouse (bigquery - set up in weeks 2 and 3)
+- admin access to your repo, where you will have the dbt project.
+
+*Note: For the sake of showing the creation of a project from scratch I've created a new empty repository just for this week project.*
+
+
+https://cloud.getdbt.com/244669/projects/348761/setup
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a2e87d94-f221-4907-8390-cb390827aa0a)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/992b91ee-2a21-4be9-bf89-f0d1b5a109f8)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/39f00f6b-ccbd-4b7f-a49a-e16036539946)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/cfc59392-e08a-4f3e-a816-25681fa1dead)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9074222b-4c23-4cee-97b8-59ef2dac0069)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3c62b4e3-0265-4b78-8665-6b83da66670d)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4c682103-099e-4e7e-acb9-c7ae73bea7b6)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/68e288aa-4370-47da-8c83-eb1162d86d09)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/02c2f62b-ce3e-4d5c-a263-e5ac5151bce2)
 
 
 
