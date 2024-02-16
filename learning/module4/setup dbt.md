@@ -1,3 +1,44 @@
+Source : https://docs.getdbt.com/guides/bigquery?step=1
+
+## 1. Introduction
+
+In this quickstart guide, you'll learn how to use dbt Cloud with BigQuery. It will show you how to:
+
+- Create a Google Cloud Platform (GCP) project.
+- Access sample data in a public dataset.
+- Connect dbt Cloud to BigQuery.
+- Take a sample query and turn it into a model in your dbt project. A model in dbt is a select statement.
+- Add tests to your models.
+- Document your models.
+- Schedule a job to run.
+
+
+VIDEOS FOR YOU
+You can check out [dbt Fundamentals](https://courses.getdbt.com/courses/fundamentals) for free if you're interested in course learning with videos.
+
+
+Prerequisites​
+
+- You have a [dbt Cloud account](https://www.getdbt.com/signup/).
+- You have a [Google account](https://support.google.com/accounts/answer/27441?hl=en).
+- You can use a personal or work account to set up BigQuery through [Google Cloud Platform (GCP)](https://cloud.google.com/free).
+
+
+Related content
+
+- Learn more with [dbt Courses](https://courses.getdbt.com/collections)
+- [CI jobs](https://docs.getdbt.com/docs/deploy/continuous-integration)
+- [Deploy jobs](https://docs.getdbt.com/docs/deploy/deploy-jobs)
+- [Job notifications](https://docs.getdbt.com/docs/deploy/job-notifications)
+- [Source freshness](https://docs.getdbt.com/docs/deploy/source-freshness)
+
+
+## 2. Create a new GCP project​
+
+- Go to the [BigQuery Console](https://console.cloud.google.com/bigquery) after you log in to your Google account. If you have multiple Google accounts, make sure you’re using the correct one.
+- Create a new project from the [Manage resources](https://console.cloud.google.com/projectcreate?previousPage=%2Fcloud-resource-manager%3Fwalkthrough_id%3Dresource-manager--create-project%26project%3D%26folder%3D%26organizationId%3D%23step_index%3D1&walkthrough_id=resource-manager--create-project) page. For more information, refer to [Creating a project](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project) in the Google Cloud docs. GCP automatically populates the Project name field for you. You can change it to be more descriptive for your use. For example, dbt Learn - BigQuery Setup.
+
+
 ## Setup dbt cloud with BigQuery
 
 ### Create a BigQuery service account
