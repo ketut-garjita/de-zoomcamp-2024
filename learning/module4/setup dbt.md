@@ -403,5 +403,139 @@ Now you can experiment by separating the logic out into separate models and usin
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/39f2092d-350e-4a81-b5b4-d4243994d3f5)
 
+- Create a new SQL file, models/stg_customers.sql, with the SQL from the customers CTE in our original query.
+
+- Create a second new SQL file, models/stg_orders.sql, with the SQL from the orders CTE in our original query.
+
+  ```
+  select
+    id as customer_id,
+    first_name,
+    last_name
+
+   from `dbt-tutorial`.jaffle_shop.customers
+   ```
+
+   ```
+   select
+       id as order_id,
+       user_id as customer_id,
+       order_date,
+       status
+   
+   from `dbt-tutorial`.jaffle_shop.orders
+   ```
+
+Edit the SQL in your models/customers.sql file as follows:
+
+```
+with customers as (
+
+    select * from {{ ref('stg_customers') }}
+
+),
+
+orders as (
+
+    select * from {{ ref('stg_orders') }}
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders
+
+    from orders
+
+    group by 1
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders
+
+    from customers
+
+    left join customer_orders using (customer_id)
+
+)
+
+select * from final
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7b4295bf-3545-4e46-8bf9-a351d9098f64)
+
+- Execute dbt run.
+
+This time, when you performed a dbt run, separate views/tables were created for stg_customers, stg_orders and customers. dbt inferred the order to run these models. Because customers depends on stg_customers and stg_orders, dbt builds customers last. You do not need to explicitly define these dependencies.
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/78ce562e-ef3a-459f-9c7c-940a6eeccb42)
+
+
+## 12. Add tests to your models
+
+Adding tests to a project helps validate that your models are working correctly.
+
+To add tests to your project:
+
+- Create a new YAML file in the models directory, named models/schema.yml
+- Add the following contents to the file:
+
+```
+version: 2
+
+models:
+  - name: customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+   ```
+
+- Run dbt test, and confirm that all your tests passed.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/77d9923f-de99-4bc3-ab60-a76b4ef03340)
+
+
+
+
+
 
   
