@@ -101,5 +101,6 @@ https://cloud.getdbt.com/244669/projects/348761/setup
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/02c2f62b-ce3e-4d5c-a263-e5ac5151bce2)
 
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ef1f2763-7612-4828-8ed4-7496fd552e92)
 
 
