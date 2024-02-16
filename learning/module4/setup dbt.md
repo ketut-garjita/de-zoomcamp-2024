@@ -153,7 +153,7 @@ In order to let dbt connect to your warehouse, you'll need to generate a keyfile
 - Click Next if the test succeeded. If it failed, you might need to go back and regenerate your BigQuery credentials.
 
 
-1. Create a dbt cloud account from their website (free for solo developers)
+**Create a dbt cloud account from their website (free for solo developers)**
 
    https://www.getdbt.com/pricing
 
@@ -161,7 +161,7 @@ In order to let dbt connect to your warehouse, you'll need to generate a keyfile
    ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b3894c65-5142-4d25-96bd-9fbefe792ade)
 
 
-3. Once you have logged in into dbt cloud you will be prompt to create a new project
+**Once you have logged in into dbt cloud you will be prompt to create a new project**
 
 You are going to need:
 
@@ -191,4 +191,34 @@ https://cloud.getdbt.com/244669/projects/348761/setup
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/02c2f62b-ce3e-4d5c-a263-e5ac5151bce2)
 
 
+## 6. Set up a dbt Cloud managed repository
 
+When you develop in dbt Cloud, you can leverage Git to version control your code.
+
+To connect to a repository, you can either set up a dbt Cloud-hosted managed repository or directly connect to a supported git provider. Managed repositories are a great way to trial dbt without needing to create a new repository. In the long run, it's better to connect to a supported git provider to use features like automation and continuous integration.
+
+To set up a managed repository:
+
+- Under "Setup a repository", select Managed.
+- Type a name for your repo such as bbaggins-dbt-quickstart
+- Click Create. It will take a few seconds for your repository to be created and imported.
+- Once you see the "Successfully imported repository," click Continue.
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a6cea510-ecc7-4ef9-8f57-2133d4fdea4c)
+
+
+## 7. Initialize your dbt project​ and start developing
+
+Now that you have a repository configured, you can initialize your project and start development in dbt Cloud:
+
+- Click Start developing in the IDE. It might take a few minutes for your project to spin up for the first time as it establishes your git connection, clones your repo, and tests the connection to the warehouse.
+- Above the file tree to the left, click Initialize dbt project. This builds out your folder structure with example models.
+- ake your initial commit by clicking Commit and sync. Use the commit message initial commit and click Commit. This creates the first commit to your managed repo and allows you to open a branch where you can add new dbt code.
+- You can now directly query data from your warehouse and execute dbt run. You can try this out now:
+   - Click + Create new file, add this query to the new file, and click Save as to save the new file:
+
+  ```
+  select * from `dbt-tutorial.jaffle_shop.customers`
+  ```
+  
+   - In the command line bar at the bottom, enter **dbt run** and click Enter. You should see a dbt run succeeded message.
