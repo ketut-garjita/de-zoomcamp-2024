@@ -534,6 +534,134 @@ models:
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/77d9923f-de99-4bc3-ab60-a76b4ef03340)
 
 
+## 13. Document your models
+
+Adding documentation to your project allows you to describe your models in rich detail, and share that information with your team. Here, we're going to add some basic documentation to our project.
+
+- Update your models/schema.yml file to include some descriptions, such as those below.
+
+```
+version: 2
+
+models:
+  - name: customers
+    description: One record per customer
+    columns:
+      - name: customer_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: first_order_date
+        description: NULL when a customer has not yet placed an order.
+
+  - name: stg_customers
+    description: This model cleans up customer data
+    columns:
+      - name: customer_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    description: This model cleans up order data
+    columns:
+      - name: order_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+```
+
+- Run dbt docs generate to generate the documentation for your project. dbt introspects your project and your warehouse to generate a JSON file with rich documentation about your project.
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a03f18e5-21f9-4e17-9c1e-41f1bd60ec3c)
+
+
+- Click the book icon in the Develop interface to launch documentation in a new tab.
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ab319582-7c2f-4e92-9099-ff66da5f46b5)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/746bfe29-9f8c-47d5-8362-b1687cff2b3e)
+
+
+## 14. Commit your changes
+
+Now that you've built your customer model, you need to commit the changes you made to the project so that the repository has your latest code.
+
+- Under Version Control on the left, click Commit and sync and add a message. For example, "Add customers model, tests, docs."
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d5981dc2-a09e-41c0-8da0-b83f23843fd2)
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f48df51d-3ac6-4ed0-910e-b1e88612a4e6)
+
+- Click Merge this branch to main to add these changes to the main branch on your repo.
+   
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/23f65259-d6ab-4a99-8314-6b41f0fb378b)
+
+
+  ## 15. Deploy dbt
+
+Use dbt Cloud's Scheduler to deploy your production jobs confidently and build observability into your processes. You'll learn to create a deployment environment and run a job in the following steps.
+
+### Create a deployment environment
+
+- In the upper left, select Deploy, then click Environments.
+- Click Create Environment.
+- In the Name field, write the name of your deployment environment. For example, "Production."
+- In the dbt Version field, select the latest version from the dropdown.
+- Under Deployment Credentials, enter the name of the dataset you want to use as the target, such as "Analytics". This will allow dbt to build and work with that dataset. For some data warehouses, the target dataset may be referred to as a "schema".
+- Click Save.
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/de124e55-aab6-4cf3-b54b-66ff21ee34a8)
+
+
+### Create and run a job
+
+Jobs are a set of dbt commands that you want to run on a schedule. For example, dbt build.
+
+As the jaffle_shop business gains more customers, and those customers create more orders, you will see more records added to your source data. Because you materialized the customers model as a table, you'll need to periodically rebuild your table to ensure that the data stays up-to-date. This update will happen when you run a job.
+
+- After creating your deployment environment, you should be directed to the page for a new environment. If not, select Deploy in the upper left, then click Jobs.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/87ba82c3-986d-41f4-be47-f58562bb1179)
+
+- Click Create one and provide a name, for example, "Production run", and link to the Environment you just created.
+- Scroll down to the Execution Settings section.
+- Under Commands, add this command as part of your job if you don't see it:
+dbt build
+- Select the Generate docs on run checkbox to automatically generate updated project docs each time your job runs.
+- For this exercise, do not set a schedule for your project to run — while your organization's project should run regularly, there's no need to run this example project on a schedule. Scheduling a job is sometimes referred to as deploying a project.
+- Select Save, then click Run now to run your job.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f2abf315-5393-451b-baa3-ef2a0676c25f)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/db90ca71-409d-4433-94db-9ad0d53971ba)
+
+
+- Click the run and watch its progress under "Run history."
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/aef46f7f-8aac-4961-b8d5-6b7a52307220)
+
+- Once the run is complete, click View Documentation to see the docs for your project.
+
+https://cloud.getdbt.com/accounts/244669/runs/252607919/docs/#!/overview
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/27d45a15-7a68-410f-aa6c-bcf71c7a1705)
+
+**Congratulations 🎉! You've just deployed your first dbt project!**
+
 
 
 
