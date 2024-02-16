@@ -21,7 +21,6 @@ https://console.cloud.google.com/apis/library?project=dtc-de-dbt-bigquery-414501
 
 #### Open the [BigQuery credential wizard](https://console.cloud.google.com/projectselector2/apis/credentials/wizard?supportedpurview=project) to create a service account in your taxi project
 
-https://console.cloud.google.com/apis/library?project=dtc-de-dbt-bigquery-414501&supportedpurview=project
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e7427b66-388e-4cae-bc70-5b7aa0dbf229)
 
