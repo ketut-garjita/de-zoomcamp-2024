@@ -212,7 +212,13 @@ To set up a managed repository:
 Now that you have a repository configured, you can initialize your project and start development in dbt Cloud:
 
 - Click Start developing in the IDE. It might take a few minutes for your project to spin up for the first time as it establishes your git connection, clones your repo, and tests the connection to the warehouse.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5de47ed9-3f9d-4740-8125-fc8434e1081a)
+
 - Above the file tree to the left, click Initialize dbt project. This builds out your folder structure with example models.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b62158aa-4091-42bd-a5aa-b7197bae375e)
+
 - ake your initial commit by clicking Commit and sync. Use the commit message initial commit and click Commit. This creates the first commit to your managed repo and allows you to open a branch where you can add new dbt code.
 - You can now directly query data from your warehouse and execute dbt run. You can try this out now:
    - Click + Create new file, add this query to the new file, and click Save as to save the new file:
@@ -222,3 +228,74 @@ Now that you have a repository configured, you can initialize your project and s
   ```
   
    - In the command line bar at the bottom, enter **dbt run** and click Enter. You should see a dbt run succeeded message.
+
+
+## 8. Build your first model
+
+- Under Version Control on the left, click Create branch. You can name it add-customers-model. You need to create a new branch since the main branch is set to read-only mode.
+- Click the ... next to the **models** directory, then select Create file.
+- Name the file customers.sql, then click Create.
+- Copy the following query into the file and click Save.
+
+```
+with customers as (
+
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from `dbt-tutorial`.jaffle_shop.customers
+
+),
+
+orders as (
+
+    select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status
+
+    from `dbt-tutorial`.jaffle_shop.orders
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders
+
+    from orders
+
+    group by 1
+
+),
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders
+
+    from customers
+
+    left join customer_orders using (customer_id)
+
+)
+
+select * from final
+```
+
+- Enter dbt run in the command prompt at the bottom of the screen. You should get a successful run and see the three models.
+
+Later, you can connect your business intelligence (BI) tools to these views and tables s
+
