@@ -153,20 +153,12 @@ In order to let dbt connect to your warehouse, you'll need to generate a keyfile
 - Click Next if the test succeeded. If it failed, you might need to go back and regenerate your BigQuery credentials.
 
 
-
-
-
-## Create a dbt cloud project
-
 1. Create a dbt cloud account from their website (free for solo developers)
 
    https://www.getdbt.com/pricing
 
    ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ecfc1202-4369-4f08-8d68-cae28b75c9d0)
    ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b3894c65-5142-4d25-96bd-9fbefe792ade)
-
-
-
 
 
 3. Once you have logged in into dbt cloud you will be prompt to create a new project
@@ -177,7 +169,6 @@ You are going to need:
 - admin access to your repo, where you will have the dbt project.
 
 *Note: For the sake of showing the creation of a project from scratch I've created a new empty repository just for this week project.*
-
 
 https://cloud.getdbt.com/244669/projects/348761/setup
 
