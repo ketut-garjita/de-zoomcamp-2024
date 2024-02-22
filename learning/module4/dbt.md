@@ -24,7 +24,6 @@ A model consists in:
 
 dbt has 2 main components: dbt Core and dbt Cloud with the following characteristics:
 
-
 **dbt Cloud** - SaaS application to develop and manage dbt projects
 - Web-based IDE to develop, run and test a dbt project.
 - Jobs orchestration.
