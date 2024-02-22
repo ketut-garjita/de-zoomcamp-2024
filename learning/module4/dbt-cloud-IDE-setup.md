@@ -2,7 +2,7 @@ Source : https://docs.getdbt.com/guides/bigquery?step=1
 
 ## 1. Introduction
 
-In this quickstart guide, you'll learn how to use dbt Cloud with BigQuery. It will show you how to:
+In this quickstart guide, we'll learn how to use dbt Cloud with BigQuery. It will show us how to:
 
 - Create a Google Cloud Platform (GCP) project.
 - Connect dbt Cloud to BigQuery.
@@ -17,9 +17,9 @@ In this quickstart guide, you'll learn how to use dbt Cloud with BigQuery. It wi
 
 **Prerequisites​**
 
-- You have a [dbt Cloud account](https://www.getdbt.com/signup/).
-- You have a [Google account](https://support.google.com/accounts/answer/27441?hl=en).
-- You can use a personal or work account to set up BigQuery through [Google Cloud Platform (GCP)](https://cloud.google.com/free).
+- We have a [dbt Cloud account](https://www.getdbt.com/signup/).
+- We have a [Google account](https://support.google.com/accounts/answer/27441?hl=en).
+- We can use a personal or work account to set up BigQuery through [Google Cloud Platform (GCP)](https://cloud.google.com/free).
 
 **Related contents**
 
@@ -32,8 +32,8 @@ In this quickstart guide, you'll learn how to use dbt Cloud with BigQuery. It wi
 
 ## 2. Create a new GCP project​
 
-- Go to the [BigQuery Console](https://console.cloud.google.com/bigquery) after you log in to your Google account. If you have multiple Google accounts, make sure you’re using the correct one.
-- Create a new project from the [Manage resources](https://console.cloud.google.com/projectcreate?previousPage=%2Fcloud-resource-manager%3Fwalkthrough_id%3Dresource-manager--create-project%26project%3D%26folder%3D%26organizationId%3D%23step_index%3D1&walkthrough_id=resource-manager--create-project) page. For more information, refer to [Creating a project](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project) in the Google Cloud docs. GCP automatically populates the Project name field for you. You can change it to be more descriptive for your use. For example, dbt Learn - BigQuery Setup.
+- Go to the [BigQuery Console](https://console.cloud.google.com/bigquery) after we log in to our Google account. If we have multiple Google accounts, make sure we’re using the correct one.
+- Create a new project from the [Manage resources](https://console.cloud.google.com/projectcreate?previousPage=%2Fcloud-resource-manager%3Fwalkthrough_id%3Dresource-manager--create-project%26project%3D%26folder%3D%26organizationId%3D%23step_index%3D1&walkthrough_id=resource-manager--create-project) page. For more information, refer to [Creating a project](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project) in the Google Cloud docs. GCP automatically populates the Project name field for us. We can change it to be more descriptive for our use. For example, dbt Learn - BigQuery Setup.
 
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6a03b9b6-e8c2-405f-8436-00d0a453edbf)
@@ -52,12 +52,12 @@ https://console.cloud.google.com/apis/library?project=dtc-de-dbt-bigquery-414501
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1c47e26d-23df-4e56-b832-c65eccef938e)
 
 
-#### Open the [BigQuery credential wizard](https://console.cloud.google.com/projectselector2/apis/credentials/wizard?supportedpurview=project) to create a service account in your taxi project
+#### Open the [BigQuery credential wizard](https://console.cloud.google.com/projectselector2/apis/credentials/wizard?supportedpurview=project) to create a service account in our taxi project
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d46725d2-2240-49fe-ac60-7cbe53bd06a8)
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/efe2733d-c668-4c25-b925-e84ab1a3f69f)
 
-You can either grant the specific roles the account will need or simply use bq admin, as you'll be the sole user of both accounts and data.
+We can either grant the specific roles the account will need or simply use bq admin, as we'll be the sole user of both accounts and data.
 
 https://console.cloud.google.com/apis/credentials?project=dtc-de-dbt-bigquery-414501&supportedpurview=project
 
@@ -65,7 +65,7 @@ https://console.cloud.google.com/apis/credentials?project=dtc-de-dbt-bigquery-41
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5cd1c4d0-e347-4373-a35e-702c159ac404)
 
-Now that the service account has been created we need to add and download a JSON key, go to the keys section, select "create new key". Select key type JSON and once you click on create it will get inmediately downloaded for you to use.
+Now that the service account has been created we need to add and download a JSON key, go to the keys section, select "create new key". Select key type JSON and once we click on create it will get inmediately downloaded for we to use.
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/681ad12d-b37c-4165-9041-f1752f189228)
 
@@ -81,20 +81,20 @@ Now that the service account has been created we need to add and download a JSON
 
 
 ## 3. Generate BigQuery credentials
-In order to let dbt connect to your warehouse, you'll need to generate a keyfile. This is analogous to using a database username and password with most other data warehouses.
+In order to let dbt connect to our warehouse, we'll need to generate a keyfile. This is analogous to using a database username and password with most other data warehouses.
 
-- Start the GCP credentials wizard. Make sure your new project is selected in the header. If you do not see your account or project, click your profile picture to the right and verify you are using the correct email account. For Credential Type:
+- Start the GCP credentials wizard. Make sure our new project is selected in the header. If we do not see our account or project, click our profile picture to the right and verify we are using the correct email account. For Credential Type:
    - From the Select an API dropdown, choose BigQuery API
-   - Select Application data for the type of data you will be accessing
+   - Select Application data for the type of data we will be accessing
    - Click Next to create a new service account.
      
-- Create a service account for your new project from the Service accounts page. For more information, refer to Create a service account in the Google Cloud docs. As an example for this guide, you can:
+- Create a service account for our new project from the Service accounts page. For more information, refer to Create a service account in the Google Cloud docs. As an example for this guide, we can:
    - Type dbt-user as the Service account name
    - From the Select a role dropdown, choose BigQuery Job User and BigQuery Data Editor roles and click Continue
    - Leave the Grant users access to this service account fields blank
    - Click Done
 
-- Create a service account key for your new project from the Service accounts page. For more information, refer to Create a service account key in the Google Cloud docs. When downloading the JSON file, make sure to use a filename you can easily remember. For example, dbt-user-creds.json. For security reasons, dbt Labs recommends that you protect this JSON file like you would your identity credentials; for example, don't check the JSON file into your version control software.
+- Create a service account key for ourr new project from the Service accounts page. For more information, refer to Create a service account key in the Google Cloud docs. When downloading the JSON file, make sure to use a filename  we can easily remember. For example, dbt-user-creds.json. For security reasons, dbt Labs recommends that  we protect this JSON file like  we would our identity credentials; for example, don't check the JSON file into our version control software.
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9513fb3e-c62e-49dd-9244-89e5e9f1f826)
 
@@ -107,11 +107,11 @@ In order to let dbt connect to your warehouse, you'll need to generate a keyfile
 
 - Create a new project in dbt Cloud. From Account settings (using the gear menu in the top right corner), click + New Project.
 - Enter a project name and click Continue.
-- For the warehouse, click BigQuery then Next to set up your connection.
+- For the warehouse, click BigQuery then Next to set up our connection.
 - Click Upload a Service Account JSON File in settings.
-- Select the JSON file you downloaded in Generate BigQuery credentials and dbt Cloud will fill in all the necessary fields.
-- Click Test Connection. This verifies that dbt Cloud can access your BigQuery account.
-- Click Next if the test succeeded. If it failed, you might need to go back and regenerate your BigQuery credentials.
+- Select the JSON file  we downloaded in Generate BigQuery credentials and dbt Cloud will fill in all the necessary fields.
+- Click Test Connection. This verifies that dbt Cloud can access our BigQuery account.
+- Click Next if the test succeeded. If it failed,  we might need to go back and regenerate our BigQuery credentials.
 
 
 **Create a dbt cloud account from their website (free for solo developers)**
@@ -122,12 +122,12 @@ In order to let dbt connect to your warehouse, you'll need to generate a keyfile
    ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b3894c65-5142-4d25-96bd-9fbefe792ade)
 
 
-**Once you have logged in into dbt cloud you will be prompt to create a new project**
+**Once  we have logged in into dbt cloud  we will be prompt to create a new project**
 
-You are going to need:
+ we are going to need:
 
-- access to your data warehouse (bigquery - set up in weeks 2 and 3)
-- admin access to your repo, where you will have the dbt project.
+- access to our data warehouse (bigquery - set up in weeks 2 and 3)
+- admin access to our repo, where  we will have the dbt project.
 
 *Note: For the sake of showing the creation of a project from scratch I've created a new empty repository just for this week project.*
 
@@ -154,39 +154,39 @@ https://cloud.getdbt.com/244669/projects/348761/setup
 
 ## 5. Set up a dbt Cloud managed repository
 
-When you develop in dbt Cloud, you can leverage Git to version control your code.
+When  we develop in dbt Cloud,  we can leverage Git to version control our code.
 
-To connect to a repository, you can either set up a dbt Cloud-hosted managed repository or directly connect to a supported git provider. Managed repositories are a great way to trial dbt without needing to create a new repository. In the long run, it's better to connect to a supported git provider to use features like automation and continuous integration.
+To connect to a repository,  we can either set up a dbt Cloud-hosted managed repository or directly connect to a supported git provider. Managed repositories are a great way to trial dbt without needing to create a new repository. In the long run, it's better to connect to a supported git provider to use features like automation and continuous integration.
 
 To set up a managed repository:
 
 - Under "Setup a repository", select Managed.
-- Type a name for your repo such as bbaggins-dbt-quickstart
-- Click Create. It will take a few seconds for your repository to be created and imported.
-- Once you see the "Successfully imported repository," click Continue.
+- Type a name for our repo such as bbaggins-dbt-quickstart
+- Click Create. It will take a few seconds for our repository to be created and imported.
+- Once  we see the "Successfully imported repository," click Continue.
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a6cea510-ecc7-4ef9-8f57-2133d4fdea4c)
 
 
-## 6. Initialize your dbt project​ and start developing
+## 6. Initialize our dbt project​ and start developing
 
-Now that you have a repository configured, you can initialize your project and start development in dbt Cloud:
+Now that  we have a repository configured,  we can initialize our project and start development in dbt Cloud:
 
-- Click Start developing in the IDE. It might take a few minutes for your project to spin up for the first time as it establishes your git connection, clones your repo, and tests the connection to the warehouse.
+- Click Start developing in the IDE. It might take a few minutes for our project to spin up for the first time as it establishes our git connection, clones our repo, and tests the connection to the warehouse.
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5de47ed9-3f9d-4740-8125-fc8434e1081a)
 
-- Above the file tree to the left, click Initialize dbt project. This builds out your folder structure with example models.
+- Above the file tree to the left, click Initialize dbt project. This builds out our folder structure with example models.
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b62158aa-4091-42bd-a5aa-b7197bae375e)
 
-- Make your initial commit by clicking Commit and sync. Use the commit message initial commit and click Commit. This creates the first commit to your managed repo and allows you to open a branch where you can add new dbt code.
+- Make our initial commit by clicking Commit and sync. Use the commit message initial commit and click Commit. This creates the first commit to our managed repo and allows  we to open a branch where  we can add new dbt code.
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/fbfad3d0-f74e-4047-a459-977146be6495)
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0a65f4d9-4d32-4050-890b-0ca45879750b)
 
-- You can now directly query data from your warehouse and execute dbt run.
+-  we can now directly query data from our warehouse and execute dbt run.
   
 
 ## 7. Build first model
@@ -362,7 +362,7 @@ dbt build
 Adding documentation to project allows us to describe models in rich detail, and share that information with our team. Here, we're going to add some basic documentation to our project.
 
 
-Run **dbt docs generate** to generate the documentation for your project. dbt introspects your project and your warehouse to generate a JSON file with rich documentation about your project.
+Run **dbt docs generate** to generate the documentation for our project. dbt introspects our project and our warehouse to generate a JSON file with rich documentation about our project.
 
 ```
 dbt docs generate
@@ -386,20 +386,20 @@ Now that we've built model, we need to commit the changes we made to the project
 
 - Under Version Control on the left, click Commit and sync and add a message. For example, "Add taxi_rides_ny model, tests, docs."
 
-- Click Merge this branch to main to add these changes to the main branch on your repo.
+- Click Merge this branch to main to add these changes to the main branch on our repo.
    
   
 ## 11. Deploy dbt
 
-Use dbt Cloud's Scheduler to deploy your production jobs confidently and build observability into your processes. You'll learn to create a deployment environment and run a job in the following steps.
+Use dbt Cloud's Scheduler to deploy our production jobs confidently and build observability into our processes.  we'll learn to create a deployment environment and run a job in the following steps.
 
 ### Create a deployment environment
 
 - In the upper left, select Deploy, then click Environments.
 - Click Create Environment.
-- In the Name field, write the name of your deployment environment. For example, "Production."
+- In the Name field, write the name of our deployment environment. For example, "Production."
 - In the dbt Version field, select the latest version from the dropdown.
-- Under Deployment Credentials, enter the name of the dataset you want to use as the target, such as "Analytics". This will allow dbt to build and work with that dataset. For some data warehouses, the target dataset may be referred to as a "schema".
+- Under Deployment Credentials, enter the name of the dataset  we want to use as the target, such as "Analytics". This will allow dbt to build and work with that dataset. For some data warehouses, the target dataset may be referred to as a "schema".
 - Click Save.
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/de124e55-aab6-4cf3-b54b-66ff21ee34a8)
@@ -407,21 +407,21 @@ Use dbt Cloud's Scheduler to deploy your production jobs confidently and build o
 
 ### Create and run a job
 
-Jobs are a set of dbt commands that you want to run on a schedule. For example, dbt build.
+Jobs are a set of dbt commands that  we want to run on a schedule. For example, dbt build.
 
-As the jaffle_shop business gains more customers, and those customers create more orders, you will see more records added to your source data. Because you materialized the customers model as a table, you'll need to periodically rebuild your table to ensure that the data stays up-to-date. This update will happen when you run a job.
+As the jaffle_shop business gains more customers, and those customers create more orders,  we will see more records added to our source data. Because  we materialized the customers model as a table,  we'll need to periodically rebuild our table to ensure that the data stays up-to-date. This update will happen when  we run a job.
 
-- After creating your deployment environment, you should be directed to the page for a new environment. If not, select Deploy in the upper left, then click Jobs.
+- After creating our deployment environment,  we should be directed to the page for a new environment. If not, select Deploy in the upper left, then click Jobs.
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/87ba82c3-986d-41f4-be47-f58562bb1179)
 
-- Click Create one and provide a name, for example, "Production run", and link to the Environment you just created.
+- Click Create one and provide a name, for example, "Production run", and link to the Environment  we just created.
 - Scroll down to the Execution Settings section.
-- Under Commands, add this command as part of your job if you don't see it:
+- Under Commands, add this command as part of our job if  we don't see it:
 dbt build
-- Select the Generate docs on run checkbox to automatically generate updated project docs each time your job runs.
-- For this exercise, do not set a schedule for your project to run — while your organization's project should run regularly, there's no need to run this example project on a schedule. Scheduling a job is sometimes referred to as deploying a project.
-- Select Save, then click Run now to run your job.
+- Select the Generate docs on run checkbox to automatically generate updated project docs each time our job runs.
+- For this exercise, do not set a schedule for our project to run — while our organization's project should run regularly, there's no need to run this example project on a schedule. Scheduling a job is sometimes referred to as deploying a project.
+- Select Save, then click Run now to run our job.
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f2abf315-5393-451b-baa3-ef2a0676c25f)
 
@@ -432,13 +432,13 @@ dbt build
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/aef46f7f-8aac-4961-b8d5-6b7a52307220)
 
-- Once the run is complete, click View Documentation to see the docs for your project.
+- Once the run is complete, click View Documentation to see the docs for our project.
 
 https://cloud.getdbt.com/accounts/244669/runs/252607919/docs/#!/overview
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/27d45a15-7a68-410f-aa6c-bcf71c7a1705)
 
-**Congratulations 🎉! You've just deployed your first dbt project!**
+**Congratulations 🎉!  we've just deployed our first dbt project!**
 
 
 
