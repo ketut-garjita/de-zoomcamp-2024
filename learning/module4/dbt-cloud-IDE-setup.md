@@ -5,26 +5,23 @@ Source : https://docs.getdbt.com/guides/bigquery?step=1
 In this quickstart guide, you'll learn how to use dbt Cloud with BigQuery. It will show you how to:
 
 - Create a Google Cloud Platform (GCP) project.
-- Access sample data in a public dataset.
 - Connect dbt Cloud to BigQuery.
-- Take a sample query and turn it into a model in your dbt project. A model in dbt is a select statement.
-- Add tests to your models.
-- Document your models.
-- Schedule a job to run.
+- Clobe respository of taxi_rides_ny (https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/eea22141328d3961aaaec49601598ebaa7a44689/04-analytics-engineering/taxi_rides_ny) into local machine.
+- Delet all files under analyses, macros, models, seeds and snapshots directories in dbt cloud IDE
+- Copy all files from repository cloned in local machine to the dbt cloud IDE
+- Modify models as required
+- Run: dbt seed, dbt run, dbt test (or dbt build to execute 3 steps above together)
+- Generate documentation for the project and save
 
+**Course learning video** : [dbt Fundamental](https://courses.getdbt.com/courses/fundamentals).
 
-VIDEOS FOR YOU
-You can check out [dbt Fundamentals](https://courses.getdbt.com/courses/fundamentals) for free if you're interested in course learning with videos.
-
-
-Prerequisites​
+**Prerequisites​**
 
 - You have a [dbt Cloud account](https://www.getdbt.com/signup/).
 - You have a [Google account](https://support.google.com/accounts/answer/27441?hl=en).
 - You can use a personal or work account to set up BigQuery through [Google Cloud Platform (GCP)](https://cloud.google.com/free).
 
-
-Related content
+**Related contents**
 
 - Learn more with [dbt Courses](https://courses.getdbt.com/collections)
 - [CI jobs](https://docs.getdbt.com/docs/deploy/continuous-integration)
@@ -68,7 +65,6 @@ https://console.cloud.google.com/apis/credentials?project=dtc-de-dbt-bigquery-41
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5cd1c4d0-e347-4373-a35e-702c159ac404)
 
-
 Now that the service account has been created we need to add and download a JSON key, go to the keys section, select "create new key". Select key type JSON and once you click on create it will get inmediately downloaded for you to use.
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/681ad12d-b37c-4165-9041-f1752f189228)
@@ -84,40 +80,7 @@ Now that the service account has been created we need to add and download a JSON
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/79c89797-6acf-44b8-973b-9e2d19950014)
 
 
-## 3. Create BigQuery datasets
-
-- From the BigQuery Console, click Editor. Make sure to select your newly created project, which is available at the top of the page.
-- Verify that you can run SQL queries. Copy and paste these queries into the Query Editor:
-
-```
-select * from `dbt-tutorial.jaffle_shop.customers`;
-select * from `dbt-tutorial.jaffle_shop.orders`;
-select * from `dbt-tutorial.stripe.payment`;
-```
-
-Click Run, then check for results from the queries. For example:
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/85292572-3e3d-4284-add7-ff82ff92d4ad)
-
-- Create new datasets from the BigQuery Console. For more information, refer to Create datasets in the Google Cloud docs. Datasets in BigQuery are equivalent to schemas in a traditional database. On the Create dataset page:
-
-Dataset ID — Enter a name that fits the purpose. This name is used like schema in fully qualified references to your database objects such as database.schema.table. As an example for this guide, create one for jaffle_shop and another one for stripe afterward.
-
-Data location — Leave it blank (the default). It determines the GCP location of where your data is stored. The current default location is the US multi-region. All tables within this dataset will share this location.
-
-Enable table expiration — Leave it unselected (the default). The default for the billing table expiration is 60 days. Because billing isn’t enabled for this project, GCP defaults to deprecating tables.
-
-Google-managed encryption key — This option is available under Advanced options. Allow Google to manage encryption (the default).
-
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ef1f2763-7612-4828-8ed4-7496fd552e92)
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b2f47b13-858b-4ce3-8dd3-f218fa953fd9)
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5a20a98a-f32a-40ec-a9b9-21e79e0e56f9)
-
-
-## 4. Generate BigQuery credentials
+## 3. Generate BigQuery credentials
 In order to let dbt connect to your warehouse, you'll need to generate a keyfile. This is analogous to using a database username and password with most other data warehouses.
 
 - Start the GCP credentials wizard. Make sure your new project is selected in the header. If you do not see your account or project, click your profile picture to the right and verify you are using the correct email account. For Credential Type:
@@ -140,7 +103,7 @@ In order to let dbt connect to your warehouse, you'll need to generate a keyfile
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a9ed94d2-8d51-4479-bf9e-c07462dc33f5)
 
 
-## 5. Connect dbt Cloud to BigQuery​
+## 4. Connect dbt Cloud to BigQuery​
 
 - Create a new project in dbt Cloud. From Account settings (using the gear menu in the top right corner), click + New Project.
 - Enter a project name and click Continue.
@@ -189,7 +152,7 @@ https://cloud.getdbt.com/244669/projects/348761/setup
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/02c2f62b-ce3e-4d5c-a263-e5ac5151bce2)
 
 
-## 6. Set up a dbt Cloud managed repository
+## 5. Set up a dbt Cloud managed repository
 
 When you develop in dbt Cloud, you can leverage Git to version control your code.
 
@@ -205,7 +168,7 @@ To set up a managed repository:
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a6cea510-ecc7-4ef9-8f57-2133d4fdea4c)
 
 
-## 7. Initialize your dbt project​ and start developing
+## 6. Initialize your dbt project​ and start developing
 
 Now that you have a repository configured, you can initialize your project and start development in dbt Cloud:
 
