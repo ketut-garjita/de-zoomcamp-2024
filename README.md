@@ -33,7 +33,7 @@
 
 ### [Module 3 : Data Warehouse](https://github.com/garjita63/de-zoomcamp-2024/tree/main/learning/module3)
 
-### [Module 4 : Analytics Engineering](https://github.com/garjita63/de-zoomcamp-2024/blob/69b0ac33d5d0d9a4502fe9a90⁶c7ed51352a3fa70/learning/module4/dbt.md)
+### [Module 4 : Analytics Engineering](https://github.com/garjita63/de-zoomcamp-2024/tree/cb846643497e42997d56ab32ae60992b8c207083/learning)
 
 ### Module 5 : Batch
 
