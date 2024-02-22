@@ -9,20 +9,28 @@ dbt stands for data build tool. It's a transformation tool that allows us to tra
 2. Test and document models
 3. Deploy models with version control and CI/CD.
 
-How does dbt work?
+
+### How does dbt work?
+
 dbt works by defining a modeling layer that stands on top of our Data Warehouse. Each table is turned into a model and then transformed into a derived model, that can be stored into the Data Warehouse for persistence.
+
 A model consists in:
-A *.sql file
-Select statement, no DDL or DML are used
-A file that dbt will compile and run in our Data Warehouse
-How to use dbt?
+- *.sql file
+- Select statement, no DDL or DML are used
+- File that dbt will compile and run in our Data Warehouse
+
+
+### How to use dbt?
+
 dbt has 2 main components: dbt Core and dbt Cloud with the following characteristics:
-dbt Core: open-source project that allows the data transformation
-Builds and runs a dbt project (.sql and .yaml files).
-Includes SQL compilation logic, macros and database adapters.
-Includes a CLI interface to run dbt commands locally.
-Open-source and free to use.
-dbt Cloud: SaaS application to develop and manage dbt projects
+
+**dbt Core** - open-source project that allows the data transformation
+- Builds and runs a dbt project (.sql and .yaml files).
+- Includes SQL compilation logic, macros and database adapters.
+- Includes a CLI interface to run dbt commands locally.
+- Open-source and free to use.
+
+**dbt Cloud** - SaaS application to develop and manage dbt projects
 Web-based IDE to develop, run and test a dbt project.
 Jobs orchestration.
 Logging and alerting.
