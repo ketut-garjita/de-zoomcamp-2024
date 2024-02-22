@@ -202,283 +202,183 @@ File explorer structure would be like this:
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1153911d-2e89-4ca1-962f-695677278c07)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ceae0f12-d8d8-4519-996c-8d85bc09495b)
+
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/06bed8ee-db83-438f-a1ea-802fa2706c08)
 
 
-** Models
+## 8. Project Models Testing
 
-Schema.yml lineage graph:
+Adding tests to a project helps validate that models.
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/875bf295-f237-4465-b4ba-8e85ca4602c4)
-
-
-
-## 9. Change the way your model is materialized
-
-One of the most powerful features of dbt is that you can change the way a model is materialized in your warehouse, simply by changing a configuration value. You can change things between tables and views by changing a keyword rather than writing the data definition language (DDL) to do this behind the scenes.
-
-By default, everything gets created as a view. You can override that at the directory level so everything in that directory will materialize to a different materialization.
-
-- Edit your dbt_project.yml file.
-  
-   - Update your project name to:
-     ```
-     <>dbt_project.yml
-      name: 'jaffle_shop'
-      ```
-
-   - Configure jaffle_shop so everything in it will be materialized as a table; and configure example so everything in it will be materialized as a view. Update your models config block to:
-  ```
-     models:
-  jaffle_shop:
-    +materialized: table
-  example:
-    +materialized: view
-   ```
-
-   - Click Save.
-
-- Enter the dbt run command. Your customers model should now be built as a table!
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/67bf3450-ba7f-49f2-8166-27814c969fe9)
-
-- Edit models/customers.sql to override the dbt_project.yml for the customers model only by adding the following snippet to the top, and click Save:
-
-- Enter the dbt run command. Your model, customers, should now build as a view.
-
-  - BigQuery users need to run dbt run --full-refresh instead of dbt run to full apply materialization changes.
-  
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/da1ae160-ed25-4bc1-ac04-1ab0787eac29)
-
-- Enter the dbt run --full-refresh command for this to take effect in your warehouse.
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/53017862-f799-4d33-b90a-9bdce046d1a1)
-
-
-## 10. Delete the example models
-
-You can now delete the files that dbt created when you initialized the project:
-
-- Delete the models/example/ directory.
-
-- Delete the example: key from your dbt_project.yml file, and any configurations that are listed under it.
-
-  ```
-  # before
-  models:
-    jaffle_shop:
-      +materialized: table
-      example:
-        +materialized: view
-  ```
-
-  ```
-  # after
-  models:
-    jaffle_shop:
-      +materialized: table
-  ```
-
-- Save your changes.
-
-
-## 11. Build models on top of other models
-
-As a best practice in SQL, you should separate logic that cleans up your data from logic that transforms your data. You have already started doing this in the existing query by using common table expressions (CTEs).
-
-Now you can experiment by separating the logic out into separate models and using the ref function to build models on top of other models:
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/39f2092d-350e-4a81-b5b4-d4243994d3f5)
-
-- Create a new SQL file, models/stg_customers.sql, with the SQL from the customers CTE in our original query.
-
-- Create a second new SQL file, models/stg_orders.sql, with the SQL from the orders CTE in our original query.
-
-  ```
-  select
-    id as customer_id,
-    first_name,
-    last_name
-
-   from `dbt-tutorial`.jaffle_shop.customers
-   ```
-
-   ```
-   select
-       id as order_id,
-       user_id as customer_id,
-       order_date,
-       status
-   
-   from `dbt-tutorial`.jaffle_shop.orders
-   ```
-
-Edit the SQL in your models/customers.sql file as follows:
-
-```
-with customers as (
-
-    select * from {{ ref('stg_customers') }}
-
-),
-
-orders as (
-
-    select * from {{ ref('stg_orders') }}
-
-),
-
-customer_orders as (
-
-    select
-        customer_id,
-
-        min(order_date) as first_order_date,
-        max(order_date) as most_recent_order_date,
-        count(order_id) as number_of_orders
-
-    from orders
-
-    group by 1
-
-),
-
-final as (
-
-    select
-        customers.customer_id,
-        customers.first_name,
-        customers.last_name,
-        customer_orders.first_order_date,
-        customer_orders.most_recent_order_date,
-        coalesce(customer_orders.number_of_orders, 0) as number_of_orders
-
-    from customers
-
-    left join customer_orders using (customer_id)
-
-)
-
-select * from final
-```
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7b4295bf-3545-4e46-8bf9-a351d9098f64)
-
-- Execute dbt run.
-
-This time, when you performed a dbt run, separate views/tables were created for stg_customers, stg_orders and customers. dbt inferred the order to run these models. Because customers depends on stg_customers and stg_orders, dbt builds customers last. You do not need to explicitly define these dependencies.
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/78ce562e-ef3a-459f-9c7c-940a6eeccb42)
-
-
-## 12. Add tests to your models
-
-Adding tests to a project helps validate that your models are working correctly.
-
-To add tests to your project:
-
-- Create a new YAML file in the models directory, named models/schema.yml
-- Add the following contents to the file:
+File name : models/core/schema.yml
 
 ```
 version: 2
 
 models:
-  - name: customers
-    columns:
-      - name: customer_id
-        tests:
-          - unique
-          - not_null
+  - name: dim_zones
+    description: >
+      List of unique zones idefied by locationid. 
+      Includes the service zone they correspond to (Green or yellow).
 
-  - name: stg_customers
+  - name: dm_monthly_zone_revenue
+    description: >
+      Aggregated table of all taxi trips corresponding to both service zones (Green and yellow) per pickup zone, month and service.
+      The table contains monthly sums of the fare elements used to calculate the monthly revenue. 
+      The table contains also monthly indicators like number of trips, and average trip distance. 
     columns:
-      - name: customer_id
+      - name: revenue_monthly_total_amount
+        description: Monthly sum of the the total_amount of the fare charged for the trip per pickup zone, month and service.
         tests:
-          - unique
-          - not_null
+            - not_null:
+                severity: error
+      
+  - name: fact_trips
+    description: >
+      Taxi trips corresponding to both service zones (Green and yellow).
+      The table contains records where both pickup and dropoff locations are valid and known zones. 
+      Each record corresponds to a trip uniquely identified by tripid. 
+    columns:
+      - name: tripid
+        data_type: string
+        description: "unique identifier conformed by the combination of vendorid and pickyp time"
 
-  - name: stg_orders
-    columns:
-      - name: order_id
-        tests:
-          - unique
-          - not_null
-      - name: status
-        tests:
-          - accepted_values:
-              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
-      - name: customer_id
-        tests:
-          - not_null
-          - relationships:
-              to: ref('stg_customers')
-              field: customer_id
+      - name: vendorid
+        data_type: int64
+        description: ""
+
+      - name: service_type
+        data_type: string
+        description: ""
+
+      - name: ratecodeid
+        data_type: int64
+        description: ""
+
+      - name: pickup_locationid
+        data_type: int64
+        description: ""
+
+      - name: pickup_borough
+        data_type: string
+        description: ""
+
+      - name: pickup_zone
+        data_type: string
+        description: ""
+
+      - name: dropoff_locationid
+        data_type: int64
+        description: ""
+
+      - name: dropoff_borough
+        data_type: string
+        description: ""
+
+      - name: dropoff_zone
+        data_type: string
+        description: ""
+
+      - name: pickup_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: dropoff_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: store_and_fwd_flag
+        data_type: string
+        description: ""
+
+      - name: passenger_count
+        data_type: int64
+        description: ""
+
+      - name: trip_distance
+        data_type: numeric
+        description: ""
+
+      - name: trip_type
+        data_type: int64
+        description: ""
+
+      - name: fare_amount
+        data_type: numeric
+        description: ""
+
+      - name: extra
+        data_type: numeric
+        description: ""
+
+      - name: mta_tax
+        data_type: numeric
+        description: ""
+
+      - name: tip_amount
+        data_type: numeric
+        description: ""
+
+      - name: tolls_amount
+        data_type: numeric
+        description: ""
+
+      - name: ehail_fee
+        data_type: numeric
+        description: ""
+
+      - name: improvement_surcharge
+        data_type: numeric
+        description: ""
+
+      - name: total_amount
+        data_type: numeric
+        description: ""
+
+      - name: payment_type
+        data_type: int64
+        description: ""
+
+      - name: payment_type_description
+        data_type: string
+        description: ""
    ```
 
-- Run dbt test, and confirm that all your tests passed.
+Project Models Lineage Graph
 
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/77d9923f-de99-4bc3-ab60-a76b4ef03340)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6dff6a93-0d9c-42ab-a25e-ff006ae6ceba)
 
-
-## 13. Document your models
-
-Adding documentation to your project allows you to describe your models in rich detail, and share that information with your team. Here, we're going to add some basic documentation to our project.
-
-- Update your models/schema.yml file to include some descriptions, such as those below.
+- Run dbt build, and confirm that all tests passed.
 
 ```
-version: 2
-
-models:
-  - name: customers
-    description: One record per customer
-    columns:
-      - name: customer_id
-        description: Primary key
-        tests:
-          - unique
-          - not_null
-      - name: first_order_date
-        description: NULL when a customer has not yet placed an order.
-
-  - name: stg_customers
-    description: This model cleans up customer data
-    columns:
-      - name: customer_id
-        description: Primary key
-        tests:
-          - unique
-          - not_null
-
-  - name: stg_orders
-    description: This model cleans up order data
-    columns:
-      - name: order_id
-        description: Primary key
-        tests:
-          - unique
-          - not_null
-      - name: status
-        tests:
-          - accepted_values:
-              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
-      - name: customer_id
-        tests:
-          - not_null
-          - relationships:
-              to: ref('stg_customers')
-              field: customer_id
+dbt build
 ```
 
-- Run dbt docs generate to generate the documentation for your project. dbt introspects your project and your warehouse to generate a JSON file with rich documentation about your project.
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3403ec75-9766-44e4-b416-040062600a09)
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a03f18e5-21f9-4e17-9c1e-41f1bd60ec3c)
+
+## 9. Generate Model Documentation for the Project
+
+Adding documentation to project allows us to describe models in rich detail, and share that information with our team. Here, we're going to add some basic documentation to our project.
+
+
+Run **dbt docs generate** to generate the documentation for your project. dbt introspects your project and your warehouse to generate a JSON file with rich documentation about your project.
+
+```
+dbt docs generate
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/cbec7fab-7690-4e31-a91d-ce88ef9ab11a)
 
 
 - Click the book icon in the Develop interface to launch documentation in a new tab.
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ab319582-7c2f-4e92-9099-ff66da5f46b5)
+  Example for my doc:
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/746bfe29-9f8c-47d5-8362-b1687cff2b3e)
+  https://cloud.getdbt.com/accounts/244669/develop/5651504/docs/index.html#!/overview
+  
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
+
 
 
 ## 14. Commit your changes
