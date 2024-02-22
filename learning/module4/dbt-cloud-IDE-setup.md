@@ -387,6 +387,11 @@ Now that we've built model, we need to commit the changes we made to the project
 - Under Version Control on the left, click Commit and sync and add a message. For example, "Add taxi_rides_ny model, tests, docs."
 
 - Click Merge this branch to main to add these changes to the main branch on our repo.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ad97f10b-70a6-42ba-89e1-d6c03767137d)
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f939c648-7762-4ddd-915d-282e3d018a11)
+
    
   
 ## 11. Deploy dbt
@@ -408,8 +413,6 @@ Use dbt Cloud's Scheduler to deploy our production jobs confidently and build ob
 ### Create and run a job
 
 Jobs are a set of dbt commands that  we want to run on a schedule. For example, dbt build.
-
-As the jaffle_shop business gains more customers, and those customers create more orders,  we will see more records added to our source data. Because  we materialized the customers model as a table,  we'll need to periodically rebuild our table to ensure that the data stays up-to-date. This update will happen when  we run a job.
 
 - After creating our deployment environment,  we should be directed to the page for a new environment. If not, select Deploy in the upper left, then click Jobs.
 
