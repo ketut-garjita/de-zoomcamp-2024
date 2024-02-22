@@ -77,8 +77,6 @@ Now that the service account has been created we need to add and download a JSON
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/df3a851c-41df-425b-abec-ac3e1c40dc14)
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/540a028f-f0d5-4bc5-8c4d-7d1ddf3bdd3d)
-
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/df246baf-2a23-479d-82ca-efb6ea394b24)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/970d66b2-66b2-4c1a-8582-fe7fe0108c62)
