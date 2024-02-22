@@ -186,107 +186,31 @@ Now that you have a repository configured, you can initialize your project and s
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0a65f4d9-4d32-4050-890b-0ca45879750b)
 
-- You can now directly query data from your warehouse and execute dbt run. You can try this out now:
-   - Click + Create new file, add this query to the new file, and click Save as to save the new file:
-
-     ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3099b120-9698-4f21-834b-8e7769df413c)
-
-  ```
-  select * from `dbt-tutorial.jaffle_shop.customers`
-  ```
-   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/96755161-3cd2-465d-a3af-a7f2ccb857f9)
-
-   - In the command line bar at the bottom, enter **dbt run** and click Enter. You should see a dbt run succeeded message.
-
-   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4ad891b5-8e6a-41d5-a4be-648871dd5b05)
-
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4f2d66d1-6d61-4869-82fa-b1e2a6c186eb)
+- You can now directly query data from your warehouse and execute dbt run.
   
 
-## 8. Build your first model
+## 7. Build first model
 
-- Under Version Control on the left, click Create branch. You can name it add-customers-model. You need to create a new branch since the main branch is set to read-only mode.
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0aab4a73-a054-45cf-8569-aed907bc6012)
+We will use an existing [taxi_rides_ny repository](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/eea22141328d3961aaaec49601598ebaa7a44689/04-analytics-engineering/taxi_rides_ny) from DTC DE Zoomcamp.
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4ce90955-eca0-46aa-8968-cb0bfbc8a11c)
+- Delete all files under analyses, macros, models, seeds and snapshots directories in dbt cloud IDE
+- Copy all files from repository cloned in local machine to the dbt cloud IDE
+- Modify models as required
 
-- Click the ... next to the **models** directory, then select Create file.
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d303270b-5c95-4720-a5b6-24622a6ee102)
+File explorer structure would be like this:
 
-- Name the file customers.sql, then click Create.
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/61a6b599-deb5-4a5d-b99d-dba6bcb5f217)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1153911d-2e89-4ca1-962f-695677278c07)
 
-- Copy the following query into the file and click Save.
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ceae0f12-d8d8-4519-996c-8d85bc09495b)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/06bed8ee-db83-438f-a1ea-802fa2706c08)
 
-```
-with customers as (
 
-    select
-        id as customer_id,
-        first_name,
-        last_name
+** Models
 
-    from `dbt-tutorial`.jaffle_shop.customers
+Schema.yml lineage graph:
 
-),
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/875bf295-f237-4465-b4ba-8e85ca4602c4)
 
-orders as (
-
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-
-    from `dbt-tutorial`.jaffle_shop.orders
-
-),
-
-customer_orders as (
-
-    select
-        customer_id,
-
-        min(order_date) as first_order_date,
-        max(order_date) as most_recent_order_date,
-        count(order_id) as number_of_orders
-
-    from orders
-
-    group by 1
-
-),
-
-final as (
-
-    select
-        customers.customer_id,
-        customers.first_name,
-        customers.last_name,
-        customer_orders.first_order_date,
-        customer_orders.most_recent_order_date,
-        coalesce(customer_orders.number_of_orders, 0) as number_of_orders
-
-    from customers
-
-    left join customer_orders using (customer_id)
-
-)
-
-select * from final
-```
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6cd77d1b-939e-4947-846c-fea1289b3809)
-
-- Enter dbt run in the command prompt at the bottom of the screen. You should get a successful run and see the three models.
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e6321e45-e645-465e-9417-08d5f3810b5a)
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/306c5509-7dbc-4313-a077-4c6b4c5ffaae)
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dd78bb55-a74f-4d88-99e4-3b84d4e5bcd8)
-
-Later, you can connect your business intelligence (BI) tools to these views and tables so they only read cleaned up data rather than raw data in your BI tool.
 
 
 ## 9. Change the way your model is materialized
