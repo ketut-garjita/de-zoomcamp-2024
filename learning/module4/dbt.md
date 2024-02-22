@@ -24,11 +24,6 @@ A model consists in:
 
 dbt has 2 main components: dbt Core and dbt Cloud with the following characteristics:
 
-**dbt Core** - open-source project that allows the data transformation
-- Builds and runs a dbt project (.sql and .yaml files).
-- Includes SQL compilation logic, macros and database adapters.
-- Includes a CLI interface to run dbt commands locally.
-- Open-source and free to use.
 
 **dbt Cloud** - SaaS application to develop and manage dbt projects
 - Web-based IDE to develop, run and test a dbt project.
@@ -37,15 +32,15 @@ dbt has 2 main components: dbt Core and dbt Cloud with the following characteris
 - Intregrated documentation.
 - Free for individuals (one developer seat).
 
-### How to use dbt?
+**dbt Core** - open-source project that allows the data transformation
+- Builds and runs a dbt project (.sql and .yaml files).
+- Includes SQL compilation logic, macros and database adapters.
+- Includes a CLI interface to run dbt commands locally.
+- Open-source and free to use.
 
 For this project, I use :
 - dbt Cloud (dbt Cloud IDE) + GCP BigQuery
-- dbt on Docker + BigQuery
-
-### Setting up the dbt Cloud IDE + GCP BigQuery
-
-You will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to your Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://github.com/garjita63/de-zoomcamp-2024/edit/main/learning/module4/).
+- dbt Core on Docker + BigQuery
 
 
 ## Developing with dbt
@@ -334,4 +329,10 @@ Variables can be used with the var() macro. For example:
 
 - In this example, the default value for is_test_run is true; in the absence of a variable definition either on the dbt_project.yml file or when running the project, then is_test_run would be true.
 - Since we passed the value false when runnning dbt build, then the if statement would evaluate to false and the code within would not run.
+
+
+## Setting up the dbt Cloud IDE + GCP BigQuery
+
+You will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to your Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://github.com/garjita63/de-zoomcamp-2024/edit/main/learning/module4/).
+
 
