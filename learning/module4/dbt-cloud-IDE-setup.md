@@ -381,22 +381,16 @@ dbt docs generate
 
 
 
-## 14. Commit your changes
+## 10. Commit changes
 
-Now that you've built your customer model, you need to commit the changes you made to the project so that the repository has your latest code.
+Now that we've built model, we need to commit the changes we made to the project so that the repository has latest code.
 
-- Under Version Control on the left, click Commit and sync and add a message. For example, "Add customers model, tests, docs."
-
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d5981dc2-a09e-41c0-8da0-b83f23843fd2)
-
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f48df51d-3ac6-4ed0-910e-b1e88612a4e6)
+- Under Version Control on the left, click Commit and sync and add a message. For example, "Add taxi_rides_ny model, tests, docs."
 
 - Click Merge this branch to main to add these changes to the main branch on your repo.
    
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/23f65259-d6ab-4a99-8314-6b41f0fb378b)
-
-
-  ## 15. Deploy dbt
+  
+  ## 11. Deploy dbt
 
 Use dbt Cloud's Scheduler to deploy your production jobs confidently and build observability into your processes. You'll learn to create a deployment environment and run a job in the following steps.
 
