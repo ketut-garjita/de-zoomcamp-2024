@@ -380,7 +380,6 @@ dbt docs generate
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
 
 
-
 ## 10. Commit changes
 
 Now that we've built model, we need to commit the changes we made to the project so that the repository has latest code.
@@ -390,7 +389,7 @@ Now that we've built model, we need to commit the changes we made to the project
 - Click Merge this branch to main to add these changes to the main branch on your repo.
    
   
-  ## 11. Deploy dbt
+## 11. Deploy dbt
 
 Use dbt Cloud's Scheduler to deploy your production jobs confidently and build observability into your processes. You'll learn to create a deployment environment and run a job in the following steps.
 
