@@ -31,14 +31,20 @@ dbt has 2 main components: dbt Core and dbt Cloud with the following characteris
 - Open-source and free to use.
 
 **dbt Cloud** - SaaS application to develop and manage dbt projects
-Web-based IDE to develop, run and test a dbt project.
-Jobs orchestration.
-Logging and alerting.
-Intregrated documentation.
-Free for individuals (one developer seat).
-How to use dbt?
-For this project, I'm integrating with GCP BigQuery so I'll use dbt Cloud IDE. No local installation of dbt is required.
-Setting up dbt
+- Web-based IDE to develop, run and test a dbt project.
+- Jobs orchestration.
+- Logging and alerting.
+- Intregrated documentation.
+- Free for individuals (one developer seat).
+
+### How to use dbt?
+
+For this project, I use :
+- dbt Cloud (dbt Cloud IDE) + GCP BigQuery
+- dbt on Docker + BigQuery
+
+### Setting up the dbt Cloud IDE + GCP BigQuery
+
 You will need to create a dbt cloud using this link and connect to your Data Warehouse following these instructions. More detailed instructions available in this guide.
 Developing with dbt
 Anatomy of a dbt model
