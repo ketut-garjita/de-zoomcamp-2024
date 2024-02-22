@@ -418,17 +418,18 @@ Jobs are a set of dbt commands that  we want to run on a schedule. For example, 
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/87ba82c3-986d-41f4-be47-f58562bb1179)
 
-- Click Create one and provide a name, for example, "Production run", and link to the Environment  we just created.
+- Click Create one and provide a name, for example, "Taxi-Rides-NY", and link to the Environment  we just created.
 - Scroll down to the Execution Settings section.
 - Under Commands, add this command as part of our job if  we don't see it:
 dbt build
 - Select the Generate docs on run checkbox to automatically generate updated project docs each time our job runs.
 - For this exercise, do not set a schedule for our project to run — while our organization's project should run regularly, there's no need to run this example project on a schedule. Scheduling a job is sometimes referred to as deploying a project.
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/216c7bc6-843c-4b3c-aaab-2a6aa8978fbc)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d14d3379-db26-4709-beb7-0afe2c8746b1)
+
 - Select Save, then click Run now to run our job.
-
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f2abf315-5393-451b-baa3-ef2a0676c25f)
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/db90ca71-409d-4433-94db-9ad0d53971ba)
 
 
 - Click the run and watch its progress under "Run history."
@@ -437,9 +438,9 @@ dbt build
 
 - Once the run is complete, click View Documentation to see the docs for our project.
 
-https://cloud.getdbt.com/accounts/244669/runs/252607919/docs/#!/overview
+https://cloud.getdbt.com/accounts/244669/develop/5651504/docs/index.html#!/overview
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/27d45a15-7a68-410f-aa6c-bcf71c7a1705)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
 
 **Congratulations 🎉!  we've just deployed our first dbt project!**
 
