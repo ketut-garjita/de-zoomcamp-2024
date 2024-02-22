@@ -332,6 +332,4 @@ Variables can be used with the var() macro. For example:
 
 ## Setting up the dbt Cloud IDE + GCP BigQuery
 
-You will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to your Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://github.com/garjita63/de-zoomcamp-2024/edit/main/learning/module4/).
-
-
+You will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to your Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://docs.getdbt.com/guides/bigquery?step=1)
