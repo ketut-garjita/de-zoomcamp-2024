@@ -438,11 +438,11 @@ dbt build
 
 - Once the run is complete, generate document
 
-```
-dbt docs generate
-```
+   ```
+   dbt docs generate
+   ```
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9fdec15c-ca2d-422d-a7f9-5c697f95aae6)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9fdec15c-ca2d-422d-a7f9-5c697f95aae6)
 
 - Click View Documentation to see the docs for our project.
 
