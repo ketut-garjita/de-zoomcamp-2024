@@ -41,6 +41,12 @@ You'll need to have completed the ["Build the first dbt models"](https://www.you
 
 #### **Answer 2 : The code that is behind the creation object on the dbt_cloud_pr_ schema**
 
+**NOTE :** 
+
+**Continuous integration in dbt Cloud**
+
+To implement a continuous integration (CI) workflow in dbt Cloud, you can set up automation that tests code changes by running CI jobs before merging to production. dbt Cloud tracks the state of what’s running in your production environment so, when you run a CI job, only the modified data assets in your pull request (PR) and their downstream dependencies are built and tested in a staging schema. You can also view the status of the CI checks (tests) directly from within the PR; this information is posted to your Git provider as soon as a CI job completes. Additionally, you can enable settings in your Git provider that allow PRs only with successful CI checks be approved for merging.
+
 
 ### Question 3 (2 points)
 
@@ -72,6 +78,12 @@ Create a dashboard with some tiles that you find interesting to explore the data
 - FHV and Green
 
 #### **Answer 4 : Yellow**
+
+**NOTE :**
+
+https://lookerstudio.google.com/reporting/1e23efd0-d4b3-4362-a555-9cb223dc8e42
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/53eded49-8c6c-4672-b129-be7e0311fa69)
 
 
 ## Submitting the solutions
