@@ -334,6 +334,8 @@ Variables can be used with the var() macro. For example:
 
 You will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to your Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://docs.getdbt.com/guides/bigquery?step=1)
 
+[My dbt Cloud IDE + BigQuery setup and testing](https://github.com/garjita63/de-zoomcamp-2024/blob/f20803245ace345a017a40736ee02d19d26e285e/learning/module4/dbt-cloud-IDE-setup.md) 
+
 
 # Setting up dbt on Docker + BigQuery
 
