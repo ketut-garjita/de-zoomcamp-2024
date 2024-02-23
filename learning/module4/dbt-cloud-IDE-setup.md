@@ -436,11 +436,20 @@ dbt build
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/728aaf7a-8050-4a4d-81c7-ebd7cff73576)
 
-- Once the run is complete, click View Documentation to see the docs for our project.
+- Once the run is complete, generate document
 
-https://cloud.getdbt.com/accounts/244669/develop/5651504/docs/index.html#!/overview
+```
+dbt docs generate
+```
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9fdec15c-ca2d-422d-a7f9-5c697f95aae6)
+
+- Click View Documentation to see the docs for our project.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c58030a0-f562-44e4-8954-2705cdd1807a)
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/2fa06807-1d72-4563-9846-3bc85bc19c7e)
+
 
 **Congratulations 🎉!  we've just deployed our first dbt project!**
 
