@@ -1,4 +1,4 @@
-# dbt - Data Build Tool 
+# dbt - Data Build Tool Overview
 
 ## What is dbt?
 
@@ -330,6 +330,11 @@ Variables can be used with the var() macro. For example:
 - Since we passed the value false when runnning dbt build, then the if statement would evaluate to false and the code within would not run.
 
 
-## Setting up the dbt Cloud IDE + GCP BigQuery
+# Setting up dbt Cloud IDE + GCP BigQuery
 
 You will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to your Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://docs.getdbt.com/guides/bigquery?step=1)
+
+
+# Setting up dbt on Docker + BigQuery
+
+
