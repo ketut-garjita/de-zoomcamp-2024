@@ -425,10 +425,9 @@ dbt build
 - Select the Generate docs on run checkbox to automatically generate updated project docs each time our job runs.
 - For this exercise, do not set a schedule for our project to run — while our organization's project should run regularly, there's no need to run this example project on a schedule. Scheduling a job is sometimes referred to as deploying a project.
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f34b01ae-a51f-41d3-8222-1a1088677d84)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f34b01ae-a51f-41d3-8222-1a1088677d84)
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f5f371fe-e48f-4b81-8ccb-83f52fe9fa46)
-
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f5f371fe-e48f-4b81-8ccb-83f52fe9fa46)
 
 - Select Save, then click Run now to run our job.
 
