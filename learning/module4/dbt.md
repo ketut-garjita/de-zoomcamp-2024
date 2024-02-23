@@ -580,28 +580,25 @@ Follow [dbt with BigQuery on Docker](https://github.com/DataTalksClub/data-engin
 
   ```
 
-dbt version
+  dbt version
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/01c4db71-2669-4df7-a253-973092c70ca0)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/01b1f2a6-65ec-45ce-bed3-b0dd4b7c0e6a)
 
-dbt seed
+  dbt seed
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3017cf96-41a1-406c-a9fa-964367b33ae5)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3017cf96-41a1-406c-a9fa-964367b33ae5)
 
-dbt run
+  dbt run
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e5bd1ce9-0016-4b32-b178-165811f39aea)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e5bd1ce9-0016-4b32-b178-165811f39aea)
 
-dbt test
+  dbt test
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/641d738b-ffe9-4e4b-98e4-a9f9d466fc06)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/641d738b-ffe9-4e4b-98e4-a9f9d466fc06)
 
-dbt docs generate
+  dbt docs generate
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/76fc639d-d27f-4d75-9864-cecb0d1c9bed)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/76fc639d-d27f-4d75-9864-cecb0d1c9bed)
 
+  ```
   
-  
-  
-  
-
