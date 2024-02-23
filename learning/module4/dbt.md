@@ -85,13 +85,13 @@ The following sources are available to dbt models:
 - The repo gives us version controlling along with all of its benefits.
 - Seeds are best suited to static data which changes infrequently.
 - Seed usage:
-    - Add a CSV file to your seeds folder.
+    - Add a CSV file to our seeds folder.
     - Run the [dbt seed command](https://docs.getdbt.com/reference/commands/seed) to create a table in our Data Warehouse.
-- If you update the content of a seed, running dbt seed will append the updated values to the table rather than substituing them. Running dbt seed --full-refresh instead will drop the old table and create a new one.
-    - Refer to the seed in your model with the ref() function.
+- If we update the content of a seed, running dbt seed will append the updated values to the table rather than substituing them. Running dbt seed --full-refresh instead will drop the old table and create a new one.
+    - Refer to the seed in our model with the ref() function.
     - More info about seeds in [this link](https://docs.getdbt.com/docs/building-a-dbt-project/seeds).
     - 
-Here's an example of how you would declare a source in a .yml file:
+Here's an example of how we would declare a source in a .yml file:
 
 ```
 sources:
@@ -107,7 +107,7 @@ sources:
             error_after: {count: 6, period: hour}
 ```
 
-And here's how you would reference a source in a FROM clause:
+And here's how we would reference a source in a FROM clause:
 
 ```
 FROM {{ source('staging','yellow_tripdata') }}
@@ -115,7 +115,7 @@ FROM {{ source('staging','yellow_tripdata') }}
 
 - The first argument of the source() function is the source name, and the second is the table name.
 
-In the case of seeds, assuming you've got a taxi_zone_lookup.csv file in your seeds folder which contains locationid, borough, zone and service_zone:
+In the case of seeds, assuming we've got a taxi_zone_lookup.csv file in our seeds folder which contains locationid, borough, zone and service_zone:
 
 ```
 SELECT
@@ -167,7 +167,7 @@ version: 2
 
 sources:
     - name: staging
-      database: your_project
+      database: our_project
       schema: trips_data_all
 
       tables:
@@ -192,7 +192,7 @@ limit 100
 
 The advantage of having the properties in a separate file is that we can easily modify the schema.yml file to change the database details and write to different databases without having to modify our sgt_green_tripdata.sql file.
 
-You may know run the model with the dbt run command, either locally or from dbt Cloud.
+we may know run the model with the dbt run command, either locally or from dbt Cloud.
 
 
 ### Macros
@@ -274,9 +274,9 @@ where vendorid is not null
 
 Macros can be exported to **packages**, similarly to how classes and functions can be exported to libraries in other languages. Packages contain standalone dbt projects with models and macros that tackle a specific problem area.
 
-When you add a package to your project, the package's models and macros become part of your own project. A list of useful packages can be found in the dbt package hub.
+When we add a package to our project, the package's models and macros become part of our own project. A list of useful packages can be found in the dbt package hub.
 
-To use a package, you must first create a packages.yml file in the root of your work directory. Here's an example:
+To use a package, we must first create a packages.yml file in the root of our work directory. Here's an example:
 
 ```
 packages:
@@ -284,9 +284,9 @@ packages:
     version: 0.8.0
 ```
 
-After declaring your packages, you need to install them by running the dbt deps command either locally or on dbt Cloud.
+After declaring our packages, we need to install them by running the dbt deps command either locally or on dbt Cloud.
 
-You may access macros inside a package in a similar way to how Python access class methods:
+we may access macros inside a package in a similar way to how Python access class methods:
 
 ```
 select
@@ -310,10 +310,10 @@ vars:
     payment_type_values: [1, 2, 3, 4, 5, 6]
 ```
 
-- As arguments when building or running your project.
+- As arguments when building or running our project.
 
 ```
-dbt build --m <your-model.sql> --var 'is_test_run: false'
+dbt build --m <our-model.sql> --var 'is_test_run: false'
 ```
 
 Variables can be used with the var() macro. For example:
@@ -332,7 +332,7 @@ Variables can be used with the var() macro. For example:
 
 # Setting up dbt Cloud IDE + GCP BigQuery
 
-You will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to your Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://docs.getdbt.com/guides/bigquery?step=1)
+we will need to create a dbt cloud using [this link](https://www.getdbt.com/signup/) and connect to our Data Warehouse following [these instructions](https://docs.getdbt.com/docs/dbt-cloud/cloud-configuring-dbt-cloud/cloud-setting-up-bigquery-oauth). More detailed instructions available in [this guide](https://docs.getdbt.com/guides/bigquery?step=1)
 
 [My dbt Cloud IDE + BigQuery setup and testing](https://github.com/garjita63/de-zoomcamp-2024/blob/f20803245ace345a017a40736ee02d19d26e285e/learning/module4/dbt-cloud-IDE-setup.md) 
 
