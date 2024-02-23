@@ -7,7 +7,7 @@ In this quickstart guide, we'll learn how to use dbt Cloud with BigQuery. It wil
 - Create a Google Cloud Platform (GCP) project.
 - Connect dbt Cloud to BigQuery.
 - [Clone taxi_rides_ny respository](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/eea22141328d3961aaaec49601598ebaa7a44689/04-analytics-engineering/taxi_rides_ny) into local machine.
-- Delet all files under analyses, macros, models, seeds and snapshots directories in dbt cloud IDE
+- Delete all files under analyses, macros, models, seeds and snapshots directories in dbt cloud IDE
 - Copy all files from repository cloned in local machine to the dbt cloud IDE
 - Modify models as required
 - Run: dbt seed, dbt run, dbt test (or dbt build to execute 3 steps above together)
