@@ -576,8 +576,6 @@ Follow [dbt with BigQuery on Docker](https://github.com/DataTalksClub/data-engin
   -- Generate documentation for the project
   dbt docs generate
 
-
-
   ```
 
   dbt version
@@ -600,5 +598,4 @@ Follow [dbt with BigQuery on Docker](https://github.com/DataTalksClub/data-engin
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/76fc639d-d27f-4d75-9864-cecb0d1c9bed)
 
-  ```
-  
+ 
