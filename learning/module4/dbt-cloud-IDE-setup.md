@@ -407,7 +407,7 @@ Use dbt Cloud's Scheduler to deploy our production jobs confidently and build ob
 - Under Deployment Credentials, enter the name of the dataset  we want to use as the target, such as "Analytics". This will allow dbt to build and work with that dataset. For some data warehouses, the target dataset may be referred to as a "schema".
 - Click Save.
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/de124e55-aab6-4cf3-b54b-66ff21ee34a8)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/de124e55-aab6-4cf3-b54b-66ff21ee34a8)
 
 
 ### Create and run a job
