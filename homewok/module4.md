@@ -71,6 +71,100 @@ Run the dbt model without limits (is_test_run: false).
 
 #### **Answer 3 : 22998722**
 
+**NOTE :**
+
+models/staging/stg_fhv_tripdata.sql
+
+```
+{{
+    config(
+        materialized='view'
+    )
+}}
+
+with tripdata as 
+(
+  select *,
+    row_number() over(partition by dispatching_base_num, pickup_datetime) as rn
+  from {{ source('staging','fhv_tripdata') }}
+)
+select
+    -- identifiers
+    {{ dbt_utils.generate_surrogate_key(['dispatching_base_num', 'pickup_datetime']) }} as tripid,
+    dispatching_base_num as dispatching_base_num,
+    cast(pickup_datetime as timestamp) as pickup_datetime,
+    cast(dropOff_datetime as timestamp) as dropoff_datetime,
+    {{ dbt.safe_cast("PUlocationID", api.Column.translate_type("integer")) }} as pickup_locationid,
+    {{ dbt.safe_cast("DOlocationID", api.Column.translate_type("integer")) }} as dropoff_locationid,
+    SR_Flag as sr_flag,
+    Affiliated_base_number as affiliated_base_number
+from tripdata
+where rn = 1
+
+
+-- dbt build --select <model_name> --vars '{'is_test_run': 'false'}'
+{% if var('is_test_run', default=true) %}
+
+  limit 100
+
+{% endif %}
+```
+
+models/core/fact_fhv_trips.sql
+
+```
+{{
+    config(
+        materialized='table'
+    )
+}}
+
+with fhv_tripdata as (
+    select *, 
+        'fhv' as service_type
+    from {{ ref('stg_fhv_tripdata') }}
+), 
+fhv_trips as (
+    select * from fhv_tripdata
+), 
+dim_zones as (
+    select * from {{ ref('dim_zones') }}
+    where borough != 'Unknown'
+)
+select 
+    fhv_trips.tripid,
+    fhv_trips.dispatching_base_num,
+    fhv_trips.pickup_datetime,
+    fhv_trips.dropoff_datetime,
+    fhv_trips.pickup_locationid,
+    fhv_trips.dropoff_locationid,
+    fhv_trips.sr_flag,
+    fhv_trips.affiliated_base_number
+from fhv_trips
+inner join dim_zones as pickup_zone
+on fhv_trips.pickup_locationid = pickup_zone.locationid
+inner join dim_zones as dropoff_zone
+on fhv_trips.dropoff_locationid = dropoff_zone.locationid
+```
+
+models/staging/schema.yml
+
+```
+name: stg_fhv_tripdata
+      description: >
+        fhv_tripdata
+      columns:
+          - name: tripid
+          - name: dispatching_base_num
+          - name: pickup_datetime 
+          - name: dropoff_datetime 
+          - name: pickup_locationid
+          - name: dropoff_locationid 
+          - name: sr_flag
+          - name: affiliated_base_number
+```
+
+
 
 ### Question 4 (2 points)
 
