@@ -550,6 +550,57 @@ Follow [dbt with BigQuery on Docker](https://github.com/DataTalksClub/data-engin
   docker compose run --workdir="//usr/app/dbt/taxi_rides_ny" dbt-bq-dtc debug
   ```
 
+- Login to container
+
+  ```
+  docker start dbtool-dbt-bq-dtc-run
+  docker ps
+  docker exec -it dbtool-dbt-bq-dtc-run bash
+
+  dbt --version
+
+  cd taxi_rides_ny
+
+  -- Load the CSVs into the database. This materializes the CSVs as tables in target schema
+  dbt seed
+
+  -- Run the models:
+  dbt run
+
+  -- Test data
+  dbt test
+
+  -- Alternative: use dbt build to execute with one command the 3 steps above together
+  dbt buiild
+
+  -- Generate documentation for the project
+  dbt docs generate
+
+
+
+  ```
+
+dbt version
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/01c4db71-2669-4df7-a253-973092c70ca0)
+
+dbt seed
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3017cf96-41a1-406c-a9fa-964367b33ae5)
+
+dbt run
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e5bd1ce9-0016-4b32-b178-165811f39aea)
+
+dbt test
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/641d738b-ffe9-4e4b-98e4-a9f9d466fc06)
+
+dbt docs generate
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/76fc639d-d27f-4d75-9864-cecb0d1c9bed)
+
+  
   
   
   
