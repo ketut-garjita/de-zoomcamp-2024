@@ -418,7 +418,7 @@ Jobs are a set of dbt commands that  we want to run on a schedule. For example, 
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/87ba82c3-986d-41f4-be47-f58562bb1179)
 
-- Click Create one and provide a name, for example, "Taxi-Rides-NY", and link to the Environment  we just created.
+- Click Create one and provide a name, for example, "NY-Taxi-Rides", and link to the Environment  we just created.
 - Scroll down to the Execution Settings section.
 - Under Commands, add this command as part of our job if  we don't see it:
 dbt build
@@ -434,7 +434,8 @@ dbt build
 
 - Click the run and watch its progress under "Run history."
 
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/aef46f7f-8aac-4961-b8d5-6b7a52307220)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/728aaf7a-8050-4a4d-81c7-ebd7cff73576)
+
 
 - Once the run is complete, click View Documentation to see the docs for our project.
 
