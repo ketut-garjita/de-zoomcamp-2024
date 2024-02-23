@@ -350,11 +350,11 @@ Project Models Lineage Graph
 
 - Run dbt build, and confirm that all tests passed.
 
-```
-dbt build
-```
+   ```
+   dbt build
+   ```
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3403ec75-9766-44e4-b416-040062600a09)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3403ec75-9766-44e4-b416-040062600a09)
 
 
 ## 9. Generate Model Documentation for the Project
@@ -377,7 +377,7 @@ dbt docs generate
 
   https://cloud.getdbt.com/accounts/244669/develop/5651504/docs/index.html#!/overview
   
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
 
 
 ## 10. Commit changes
