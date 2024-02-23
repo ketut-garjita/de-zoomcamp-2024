@@ -1,4 +1,4 @@
-# dbt - Data Build Tool Overview
+# dbt (Data Build Tool) Overview
 
 ## What is dbt?
 
