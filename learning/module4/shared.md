@@ -1,4 +1,13 @@
-I have just finished doing hands-on learning and HW4 (Analytics Engineering - DTC DE Zoomcamp Week 4) contains: Intro to Analytics Engineering & dbt,  setting up dbt (Cloud, Core - Docker & non-Docker), developing with dbt, building and documenting dbt models, deployment of a dbt project, and visulization (Looker Studio).
+I have just finished doing hands-on learning and HW4 (Analytics Engineering - DTC DE Zoomcamp Week 4) contains: 
+- Intro to Analytics Engineering & dbt
+- setting up dbt (Cloud , Core - Docker & non-Docker) integrate with GCP BigQuery
+- developing with dbt
+- seed-run-test (build) dbt models
+- documenting dbt models
+- deployment of a dbt project
+- visualization (Looker Studio).
+Datasets : NYC TLC Data (Yellow taxi data - Years 2019 & 2020
+Green taxi data - Years 2019 & 2020, fhv data - Year 2019).
 
 ![dbt1](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/83cc4761-fa29-4cad-8a2f-7fbc21a1bf65)
 
