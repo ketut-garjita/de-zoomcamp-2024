@@ -393,7 +393,7 @@ Now that we've built model, we need to commit the changes we made to the project
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f939c648-7762-4ddd-915d-282e3d018a11)
 
 
-## 12. Visualitation
+## 11. Visualitation
 
 ```
 -- Dashboard
@@ -437,7 +437,7 @@ ORDER BY service_type, PARSE_DATE('%Y-%m', pickup_datetime)
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ee8e6108-6d6d-4181-97b0-50d5320a00ad)
 
   
-## 11. Deploy dbt
+## 12. Deploy dbt
 
 Use dbt Cloud's Scheduler to deploy our production jobs confidently and build observability into our processes.  we'll learn to create a deployment environment and run a job in the following steps.
 
