@@ -83,9 +83,9 @@
 
 - #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/04-analytics-engineering/homework.md)
 
-- #### [Form for Submitting...]()
+- #### [Form for Submitting](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module4.md)
 
-- #### [Solution/Answers...]()
+- #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module4.md)
 
 
 ### Module 5 : Batch
