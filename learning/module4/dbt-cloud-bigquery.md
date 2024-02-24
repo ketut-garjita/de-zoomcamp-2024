@@ -357,43 +357,7 @@ Project Models Lineage Graph
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6dca0875-ef01-4759-a6ef-567558f36685)
 
 
-## 9. Generate Model Documentation for the Project
-
-Adding documentation to project allows us to describe models in rich detail, and share that information with our team. Here, we're going to add some basic documentation to our project.
-
-
-Run **dbt docs generate** to generate the documentation for our project. dbt introspects our project and our warehouse to generate a JSON file with rich documentation about our project.
-
-```
-dbt docs generate
-```
-
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/cbec7fab-7690-4e31-a91d-ce88ef9ab11a)
-
-
-- Click the book icon in the Develop interface to launch documentation in a new tab.
-
-  Example for my doc:
-
-  https://cloud.getdbt.com/accounts/244669/develop/5651504/docs/index.html#!/overview
-  
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
-
-
-## 10. Commit changes
-
-Now that we've built model, we need to commit the changes we made to the project so that the repository has latest code.
-
-- Under Version Control on the left, click Commit and sync and add a message. For example, "Add taxi_rides_ny model, tests, docs."
-
-- Click Merge this branch to main to add these changes to the main branch on our repo.
-
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ad97f10b-70a6-42ba-89e1-d6c03767137d)
-
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f939c648-7762-4ddd-915d-282e3d018a11)
-
-
-## 11. Visualitation
+## 9. Visualitation
 
 ```
 -- Dashboard
@@ -436,7 +400,43 @@ ORDER BY service_type, PARSE_DATE('%Y-%m', pickup_datetime)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ee8e6108-6d6d-4181-97b0-50d5320a00ad)
 
+
+## 10. Generate Model Documentation for the Project
+
+Adding documentation to project allows us to describe models in rich detail, and share that information with our team. Here, we're going to add some basic documentation to our project.
+
+
+Run **dbt docs generate** to generate the documentation for our project. dbt introspects our project and our warehouse to generate a JSON file with rich documentation about our project.
+
+```
+dbt docs generate
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/cbec7fab-7690-4e31-a91d-ce88ef9ab11a)
+
+
+- Click the book icon in the Develop interface to launch documentation in a new tab.
+
+  Example for my doc:
+
+  https://cloud.getdbt.com/accounts/244669/develop/5651504/docs/index.html#!/overview
   
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6499a6cb-980d-4ecb-af7b-92bdb316c832)
+
+
+## 11. Commit changes
+
+Now that we've built model, we need to commit the changes we made to the project so that the repository has latest code.
+
+- Under Version Control on the left, click Commit and sync and add a message. For example, "Add taxi_rides_ny model, tests, docs."
+
+- Click Merge this branch to main to add these changes to the main branch on our repo.
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ad97f10b-70a6-42ba-89e1-d6c03767137d)
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f939c648-7762-4ddd-915d-282e3d018a11)
+
+
 ## 12. Deploy dbt
 
 Use dbt Cloud's Scheduler to deploy our production jobs confidently and build observability into our processes.  we'll learn to create a deployment environment and run a job in the following steps.
