@@ -348,13 +348,13 @@ Project Models Lineage Graph
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6dff6a93-0d9c-42ab-a25e-ff006ae6ceba)
 
-- Run dbt build, and confirm that all tests passed.
+- Run dbt build, and confirm that all tests passed. Ignore is_test_run variable
 
    ```
-   dbt build
+   dbt build --vars '{'is_test_run': 'false'}'
    ```
 
-  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/3403ec75-9766-44e4-b416-040062600a09)
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6dca0875-ef01-4759-a6ef-567558f36685)
 
 
 ## 9. Generate Model Documentation for the Project
@@ -392,7 +392,50 @@ Now that we've built model, we need to commit the changes we made to the project
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f939c648-7762-4ddd-915d-282e3d018a11)
 
-   
+
+## 12. Visualitation
+
+```
+-- Dashboard
+with month_trip as (
+  select 
+    'FHV' as service_type,
+    FORMAT_DATE('%Y-%m', pickup_datetime) pickup_datetime,
+    count(*) amount_trips
+  from dbt_kgarjita.fact_fhv_trips
+  group by 
+    service_type, 
+    FORMAT_DATE('%Y-%m', pickup_datetime)
+  union all
+  select 
+    service_type, 
+    FORMAT_DATE('%Y-%m', pickup_datetime) pickup_datetime,
+    count(*) amount_trips
+  from dbt_kgarjita.fact_trips
+  group by 
+    service_type, 
+    FORMAT_DATE('%Y-%m', pickup_datetime)
+)
+select * from month_trip
+where month_trip.pickup_datetime like '2019%'
+ORDER BY service_type, PARSE_DATE('%Y-%m', pickup_datetime)
+;
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c5a7a6ef-8dd1-4ba6-814f-908d35e10959)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a3e8562a-24b6-402f-94ac-4d47827041fd)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/55095e1a-a56f-4176-a9e5-070da484be2b)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/07b2d74b-5d6d-41a5-afa1-78aa71661c30)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/15ac6ff4-e590-49e1-9b84-4ccfabc4b62b)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1b591876-0a85-45c3-b63d-1fb6998a024f)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ee8e6108-6d6d-4181-97b0-50d5320a00ad)
+
   
 ## 11. Deploy dbt
 
