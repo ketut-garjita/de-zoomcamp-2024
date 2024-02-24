@@ -313,7 +313,7 @@ vars:
 - As arguments when building or running our project.
 
 ```
-dbt build --m <our-model.sql> --var 'is_test_run: false'
+dbt build --m <our-model.sql> --vars 'is_test_run: false'
 ```
 
 Variables can be used with the var() macro. For example:
