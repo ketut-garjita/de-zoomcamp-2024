@@ -27,7 +27,11 @@ You'll need to have completed the ["Build the first dbt models"](https://www.you
 - It applies a _limit 100_ only to our staging models
 - Nothing
 
-#### **Answer 1 : It applies a _limit 100_ to all of our models**
+#### **Answer 1 : It applies a _limit 100_ only to our staging models**
+
+**NOTE :**
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d67da041-45f1-481b-ab3f-d5cd3bb0136e)
 
 
 ### Question 2: 
