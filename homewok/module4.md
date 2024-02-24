@@ -548,6 +548,8 @@ dbt build -m fact_fhv_trips --vars 'is_test_run: false'
 ``` 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/738296ba-7f44-43a9-ac21-95e5a19fa998)
 
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/ae63e60a-e6e9-4ac7-add1-aa3a5a9dffea)
+
 
 ### Question 4 (2 points)
 
