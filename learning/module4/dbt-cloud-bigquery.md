@@ -492,6 +492,9 @@ dbt build
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/2fa06807-1d72-4563-9846-3bc85bc19c7e)
 
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6c757142-97a4-40c3-835d-0f9e8407ab0d)
+
+
 
 **Congratulations 🎉!  we've just deployed our first dbt project!**
 
