@@ -566,9 +566,13 @@ Create a dashboard with some tiles that you find interesting to explore the data
 
 **NOTE :**
 
-https://lookerstudio.google.com/reporting/1e23efd0-d4b3-4362-a555-9cb223dc8e42
+[https://lookerstudio.google.com/reporting/1e23efd0-d4b3-4362-a555-9cb223dc8e42](https://lookerstudio.google.com/s/v3ZJvK3Vdss)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/53eded49-8c6c-4672-b129-be7e0311fa69)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f6cfbfad-b684-4674-bbd9-6d8ef8e074ae)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/82c24e33-1fa6-4884-92e9-60659792697b)
 
 
 ## Submitting the solutions
