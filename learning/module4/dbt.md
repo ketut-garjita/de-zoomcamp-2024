@@ -337,7 +337,7 @@ We will need to create a dbt cloud using [this link](https://www.getdbt.com/sign
 [My dbt Cloud IDE + BigQuery setup and testing](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module4/dbt-cloud-bigquery.md)
 
 
-# Setting up dbt on Docker + BigQuery
+# Setting up dbt on Docker + GCP BigQuery
 
 [My dbt-docker-bigquery link](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module4/dbt-docker-bigquery.md)
 
