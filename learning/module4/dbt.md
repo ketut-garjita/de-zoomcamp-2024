@@ -9,6 +9,8 @@ dbt stands for data build tool. It's a transformation tool that allows us to tra
 2. Test and document models
 3. Deploy models with version control and CI/CD.
 
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/678f89b9-7275-4b19-af7e-ed105da39f50)
+
 
 ### How does dbt work?
 
