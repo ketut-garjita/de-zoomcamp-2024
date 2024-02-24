@@ -7,6 +7,9 @@ I have just finished doing hands-on learning and HW4 (Analytics Engineering - DT
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a8e84e95-089c-46e6-a8e1-09b7c1868ab6)
 
+![dbt1](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d58657d8-916e-4875-a751-8b0371b62036)
+
+
 
 #dezoomcamp
 
