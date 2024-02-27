@@ -83,7 +83,7 @@
 
 - #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/04-analytics-engineering/homework.md)
 
-- #### [Form for Submitting](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module4.md)
+- #### [Form for Submitting]( https://courses.datatalks.club/de-zoomcamp-2024/homework/hw4)
 
 - #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module4.md)
 
