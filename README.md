@@ -22,7 +22,6 @@
   - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw2)
   - [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/homework-02.md)
   
-
 ### Workshop 1: Data Ingestion
 - [Resource](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/workshops/dlt.md)
 - [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/workshop1/data_ingestion.md)
@@ -44,15 +43,22 @@
 - [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/tree/main/learning/module4)
 - Homework
   - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/04-analytics-engineering/homework.md)
-  - [Form for Submitting]( https://courses.datatalks.club/de-zoomcamp-2024/homework/hw4)
+  - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw4)
   - [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module4.md)
 
 ### Module 5 : Batch
 - [Resource](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/05-batch)
 - [Hands-on Learning]()
 - Homework
+  - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/05-batch/homework.md)
+  - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw5)
+  - [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module5.md)
   
 ### Module 6 : Streaming
 - [Resource](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/06-streaming)
 - [Hands-on Learning]()
 - Homework
+  - [Questions]()
+  - [Form for Submitting]()
+  - [Solution/Answers]()
+  
