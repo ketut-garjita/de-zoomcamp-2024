@@ -1,7 +1,13 @@
-## RESOURCES
+## CONTENTS
 
-### [Module 0 : .devcontainer](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/.devcontainer) 
-
+### Module 0 : .devcontainer
+- [Resource](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/.devcontainer)
+- [Hands-on Learning](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/.devcontainer)
+- Howework
+  - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/01-docker-terraform/homework.md)
+  - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
+  - [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/HW-01-solution.ipynb)
+    
 ### [Module 1 : Docker & Terraform](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/01-docker-terraform)
 
 ### [Module 2 : Workflow Orchestration](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/02-workflow-orchestration)
@@ -44,11 +50,7 @@
 
 ### [Module 1 : Docker & Terraform]()
 
-- #### [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/01-docker-terraform/homework.md)
 
-- #### [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw01)
-
-- #### [Solution/Answers](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/HW-01-solution.ipynb)
 
 
 ### [Module 2 : Workflow Orchestartion]()
