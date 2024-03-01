@@ -15,10 +15,10 @@ lsb_release -a
 
 **jdk-11.0.22_linux-x64_bin.tar.gz**
 
-- Untar file: 
-```
-tar –xvzf jdk-11.0.22_linux-x64_bin.tar.gz
-```
+- Unzip (untar) file
+  ```
+  tar –xvzf jdk-11.0.22_linux-x64_bin.tar.gz
+  ```
 
 - Check Java version
   ```
@@ -31,8 +31,30 @@ tar –xvzf jdk-11.0.22_linux-x64_bin.tar.gz
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/937407c0-167a-485a-87bc-b5c5ddaf71e5)
 
 - source ~/.bashrc
+  ```
+  source ~/.bashrc
+  ```
   
 ### 1.2 Apache Spark
+
+- Download Apache Spark
+  
+  We suggest the following location for your download:
+
+  https://dlcdn.apache.org/spark/spark-3.4.2/spark-3.4.2-bin-hadoop3.tgz
+
+- Unzip (untar) file
+
+  tar -xvzf spark-3.4.2-bin-hadoop3.tgz
+
+- Add SPARK_HOME & edit PATH to ~/.bashrc
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c3a72508-ee0c-4abc-96eb-ded67dbea56f)
+ 
+- Check spark version
+  ```
+  spark-shell
+  ```
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6b00f8d8-0749-4baa-b014-4b8cd78cd4b5)
 
 ### 1.3 GCP Cloud
 
