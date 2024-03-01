@@ -224,5 +224,11 @@ lsb_release -a
       
   gcloud compute firewall-rules create allow-7077 --allow=tcp:7077 --description="Allow incoming traffic on TCP port 7077" --direction=INGRESS
   ```
-          
+
+
+## 5.3 Spark SQL and DataFrames
+
+### 5.3.1 First Look at Spark/PySpark
+
+
      
