@@ -333,6 +333,21 @@ df.write.parquet('fhvhv/2021/01/')
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9017838-2674-4c83-af08-9072690ed012)
 
 
+### 5.3.2 Spark DataFrames
+
+Create a dataframe from the parquet files.
+```
+df = spark.read.parquet('fhvhv/2021/01/')
+```
+Check the schema
+```
+df.printSchema()
+```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfc5030f-21da-44bf-88a9-9e899edb7a46)
+
+
+
+
 
 
      
