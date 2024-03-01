@@ -13,7 +13,7 @@ lsb_release -a
 
 - Download the following Java 11.0.22 version from link https://www.oracle.com/id/java/technologies/downloads/#java11/
 
-**jdk-11.0.22_linux-x64_bin.tar.gz**
+  **jdk-11.0.22_linux-x64_bin.tar.gz**
 
 - Unzip (untar) file
   ```
