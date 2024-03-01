@@ -182,7 +182,7 @@ The most common types of batch jobs are either :
  
 - Core Components
   
- The following diagram gives the clear picture of the different components of Spark:
+  The following diagram gives the clear picture of the different components of Spark:
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/67749334-9716-46c9-bb25-0c79ef4b5e8c)
 
