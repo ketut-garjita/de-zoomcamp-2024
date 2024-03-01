@@ -72,7 +72,16 @@ lsb_release -a
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5690c6a5-5a87-46ce-955e-f4bc46f49bf0)
   ``` 
 
-
+  R
+  For sparkR, we have install R language before using sparkR.
+  ```
+  sudo apt install r-base
+  ```
+  Run sparkR
+  ```
+  sparkR
+  ```
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/08f00f2e-5a4e-4a68-890f-1c7f98ab83f5)
 
 
 
