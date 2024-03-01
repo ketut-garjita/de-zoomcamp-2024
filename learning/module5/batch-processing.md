@@ -48,13 +48,38 @@ lsb_release -a
   tar -xvzf spark-3.4.2-bin-hadoop3.tgz
 
 - Add SPARK_HOME & edit PATH to ~/.bashrc
+  
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c3a72508-ee0c-4abc-96eb-ded67dbea56f)
  
-- Check spark version
+- Check spark, pyspark versions
+
+  Scala
   ```
   spark-shell
   ```
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6b00f8d8-0749-4baa-b014-4b8cd78cd4b5)
+
+  Python
+  ```
+  pyspark
+  ```
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/eb49e5fe-97f2-4a35-a026-eab283929b82)
+
+  SQL
+  ```
+  spark-sql
+  ```
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5690c6a5-5a87-46ce-955e-f4bc46f49bf0)
+  ``` 
+
+
+
+
+
+
+
+
+
 
 ### 1.3 GCP Cloud
 
