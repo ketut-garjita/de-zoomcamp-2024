@@ -166,9 +166,25 @@ The most common types of batch jobs are either :
 
 - What is Apache Spark?
 
-  Apache Spark is an open-source, distributed processing system used for big data workloads. It utilizes in-memory caching, and optimized query execution for fast analytic queries against data of any size. It provides development APIs in Java, Scala, Python and R, and supports code reuse across multiple workloads—batch processing, interactive queries, real-time analytics, machine learning, and graph processing. 
+  Apache Spark is an open-source, distributed processing system used for big data workloads. It utilizes in-memory caching, and optimized query execution for fast analytic queries against data of any size. It provides development APIs in Java, Scala, Python and R, and supports code reuse across multiple workloads—batch processing, interactive queries, real-time analytics, machine learning, and graph processing.
 
- ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/67749334-9716-46c9-bb25-0c79ef4b5e8c)
+- Spark Architecture
+  
+ Spark applications run as independent sets of processes on a cluster as described in the below diagram:
+
+ ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/565bc6e3-ba5c-403c-9a1d-907b609fc382)
+
+ These set of processes are coordinated by the SparkContext object in your main program (called the driver program). SparkContext connects to several types of cluster managers (either Spark’s own standalone cluster manager, Mesos or YARN), which allocate resources across applications.
+
+ Once connected, Spark acquires executors on nodes in the cluster, which are processes that run computations and store data for your application.
+
+Next, it sends your application code (defined by JAR or Python files passed to SparkContext) to the executors. Finally, SparkContext sends tasks to the executors to run.
+ 
+- Core Components
+  
+ The following diagram gives the clear picture of the different components of Spark:
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/67749334-9716-46c9-bb25-0c79ef4b5e8c)
 
 
 - How does Apache Spark work?
