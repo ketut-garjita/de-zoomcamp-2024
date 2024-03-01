@@ -70,8 +70,7 @@ lsb_release -a
   spark-sql
   ```
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/5690c6a5-5a87-46ce-955e-f4bc46f49bf0)
-  ``` 
-
+  
   R
   For sparkR, we have install R language before using sparkR.
   ```
