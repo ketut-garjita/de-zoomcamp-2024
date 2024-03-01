@@ -162,11 +162,13 @@ The most common types of batch jobs are either :
 - etc..
 
 
-## 3. Apache Spark?
+## 3. Introduction to Apache Spark
 
 - What is Apache Spark?
 
   Apache Spark is an open-source, distributed processing system used for big data workloads. It utilizes in-memory caching, and optimized query execution for fast analytic queries against data of any size. It provides development APIs in Java, Scala, Python and R, and supports code reuse across multiple workloads—batch processing, interactive queries, real-time analytics, machine learning, and graph processing. 
+
+ ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/67749334-9716-46c9-bb25-0c79ef4b5e8c)
 
 
 - How does Apache Spark work?
