@@ -241,7 +241,7 @@ gcloud compute firewall-rules create allow-7077 --allow=tcp:7077 --description="
 
 Note: if you're running Spark and Jupyter Notebook on a remote machine, you will need to redirect ports 8888 for Jupyter Notebook and 4040 for the Spark UI.
 
-- Creating a Spark session
+**Step 2 : Creating a Spark session**
 
 Import pyspark module
 ```
@@ -270,7 +270,7 @@ Once we've instantiated a session, we can access the Spark UI by browsing to loc
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c1d94b13-e4cc-4cf6-8711-0ceb22518b59)
 
 
-- Reading CSV File
+**Step 2 : Reading CSV File**
 
 Similarlly to Pandas, Spark can read CSV files into dataframes, a tabular data structure. Unlike Pandas, Spark can handle much bigger datasets but it's unable to infer the datatypes of each column.
 ```
@@ -291,9 +291,47 @@ df = spark.read \
 
 Check :
 
-  <code style="color:green">df.show()</code> or <code style="color:green">df.head()</code> --> contents of the dataframe with 
+  <code style="color:green">df.show()</code> or <code style="color:green">df.head()</code> --> contents of the dataframe
 
   <code style="color:green">df.schema</code> or <code style="color:green">df.printSchema()</code> --> dataframe schema
+
+**Step 3 : Check the inferred schema through df.schema**
+
+```
+from pyspark.sql import types
+schema = types.StructType(
+    [
+        types.StructField('hvfhs_license_num', types.StringType(), True),
+        types.StructField('dispatching_base_num', types.StringType(), True),
+        types.StructField('pickup_datetime', types.TimestampType(), True),
+        types.StructField('dropoff_datetime', types.TimestampType(), True),
+        types.StructField('PULocationID', types.IntegerType(), True),
+        types.StructField('DOLocationID', types.IntegerType(), True),
+        types.StructField('SR_Flag', types.IntegerType(), True)
+    ]
+)
+
+df = spark.read \
+    .option("header", "true") \
+    .option("inferSchema",True) \
+    .csv('fhvhv_tripdata_2021-01.csv.gz')
+
+df.schema
+```
+
+**Step 4 : Save DataFrame as parquet**
+
+As explained by the instructor, it is not good to have a smaller number of files than CPUs (because only a subset of CPUs will be used and the remaining will be idle). For such, we first use the repartition method and then save the data as parquet. Suppose we have 8 cores, then we can repartition our dataset into 24 parts.
+
+```
+df = df.repartition(24)
+df.write.parquet('fhvhv/2021/01/')
+```
+```
+!ls -lh fhvhv/2021/01/
+```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9017838-2674-4c83-af08-9072690ed012)
+
 
 
 
