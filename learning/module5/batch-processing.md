@@ -5,7 +5,8 @@ Check Linux version:
 ```
 lsb_release -a
 ```
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/6b23a20e-4add-4fd8-99d6-72afae798a07)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f8baee72-7a37-4310-b432-e0377214ac05)
+
 
 
 ### 1.1 Java
