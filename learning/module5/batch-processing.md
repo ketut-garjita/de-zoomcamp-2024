@@ -239,5 +239,29 @@ gcloud compute firewall-rules create allow-7077 --allow=tcp:7077 --description="
 
 ### 5.3.1 First Look at Spark/PySpark
 
+Note: if you're running Spark and Jupyter Notebook on a remote machine, you will need to redirect ports 8888 for Jupyter Notebook and 4040 for the Spark UI.
+
+#### 5.3.1.1 Creating a Spark session
+
+Import pyspark modeule
+```
+import pyspark
+from pyspark.sql import SparkSession
+```
+
+Instantiate a Spark session, an object that we use to interact with Spark.
+```
+spark = SparkSession.builder \
+    .master("local[*]") \
+    .appName('test') \
+    .getOrCreate()
+```
+
+- SparkSession is the class of the object that we instantiate. builder is the builder method.
+- master() sets the Spark master URL to connect to. The local string means that Spark will run on a local cluster. [*] means that Spark will run with as many CPU cores as possible.
+- appName() defines the name of our application/session. This will show in the Spark UI.
+- getOrCreate() will create the session or recover the object if it was previously created.
+
+Once we've instantiated a session, we can access the Spark UI by browsing to localhost:4040. The UI will display all current jobs. Since we've just created the instance, there should be no jobs currently running.
 
      
