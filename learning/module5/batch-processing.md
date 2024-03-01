@@ -257,10 +257,13 @@ spark = SparkSession.builder \
     .getOrCreate()
 ```
 
-  - <code style="color:green">SparkSession</code> is the class of the object that we instantiate. builder is the builder method.
-  - <code style="color:green">master()</code> sets the Spark master URL to connect to. The local string means that Spark will run on a  local cluster. [*] means that Spark will run with as many CPU cores as possible.
-  - <code style="color:green">appName()</code> defines the name of our application/session. This will show in the Spark UI.
-  - <code style="color:green">getOrCreate()</code> will create the session or recover the object if it was previously created.
+  <code style="color:green">SparkSession</code> is the class of the object that we instantiate. builder is the builder method.
+  
+  <code style="color:green">master()</code> sets the Spark master URL to connect to. The local string means that Spark will run on a  local cluster. [*] means that Spark will run with as many CPU cores as possible.
+  
+  <code style="color:green">appName()</code> defines the name of our application/session. This will show in the Spark UI.
+  
+  <code style="color:green">getOrCreate()</code> will create the session or recover the object if it was previously created.
 
 Once we've instantiated a session, we can access the Spark UI by browsing to localhost:4040. The UI will display all current jobs. Since we've just created the instance, there should be no jobs currently running.
 
@@ -280,15 +283,17 @@ df = spark.read \
     .csv('fhvhv_tripdata_2021-01.csv.gz')
 ```
 
-  - <code style="color:green">read()</code> reads the file.
-  - <code style="color:green">option()</code> contains options for the read method. In this case, we're specifying that the first line of the CSV file contains the column names.
-  - <code style="color:green">csv()</code> is for reading CSV files.
+  <code style="color:green">read()</code> reads the file.
+  
+  <code style="color:green">option()</code> contains options for the read method. In this case, we're specifying that the first line of the CSV file contains the column names.
+  
+  <code style="color:green">csv()</code> is for reading CSV files.
 
 Check :
 
-  - df.show() or df.head() --> contents of the dataframe with 
+  <code style="color:green">df.show()</code> or <code style="color:green">df.head()</code> --> contents of the dataframe with 
 
-  - df.schema or df.printSchema() --> dataframe schema
+  <code style="color:green">df.schema</code> or <code style="color:green">df.printSchema()</code> --> dataframe schema
 
 
 
