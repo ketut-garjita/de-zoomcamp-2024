@@ -88,9 +88,11 @@ lsb_release -a
 
 - Create a project
   - IAM & Admin > New Project
+    
     ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/291a1c47-d692-45eb-a306-594a7c39507f)
 
   - Create Service Account
+    
     ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/aa6511f9-3e60-470f-8b78-ef339b91ccd4)
 
     Region : asia-southeast2
