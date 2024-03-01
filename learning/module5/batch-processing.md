@@ -11,6 +11,12 @@ lsb_release -a
 
 ### 1.1 Java
 
+Download the following Java 11.0.22 versio from link https://www.oracle.com/id/java/technologies/downloads/#java11/
+
+**jdk-11.0.22_linux-x64_bin.tar.gz**
+
+Source : https://www.oracle.com/id/java/technologies/downloads/#license-lightbox
+
 ### 1.2 Apache Spark
 
 ### 1.3 GCP Cloud
