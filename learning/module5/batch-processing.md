@@ -543,7 +543,85 @@ spark.stop()
 15. When the application finishes executing and all of the necessary work is done, the Application Master disconnects itself from the Resource Manager and stops, freeing up its container for other purposes.
 
 
+### 5.4.2 GroupBy in Spark
 
+See:
+
+https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/07_groupby_join.ipynb
+
+
+### 5.4.3 Joins in Spark
+
+See:
+
+https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/07_groupby_join.ipynb
+
+
+## 5.5 (Optional) Resilient Distributed Datasets
+
+See :
+
+https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/08_rdds.ipynb
+
+
+## 5.6 Running Spark in the Cloud
+
+### 5.6.1 Connecting to Google Cloud Storage
+
+See :
+
+https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spark_gcs.ipynb
+
+### 5.6.2 Creating a Local Spark Cluster
+- Stop all kernels icnluding Jupyter Notebook conenctions
+- Star Spark Master
+  ```
+  start-master.sh
+  ```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/64d7a807-2592-451c-9865-e7743ed01ee1)
+
+- Open WebUI : http://localhost:8080/
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1f7da3bd-b035-4e31-b637-76904aa0e686)
+
+- Start Worker
+  ```
+  start-worker.sh spark://Desktop-Gar.:7077
+  ```
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f9c436f5-a775-4a17-91d0-345408158f71)
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d57c38f8-bad4-47e6-9bb7-ed4895003034)
+
+  
+
+- Create script and test
+  ```
+  # Local Spark Cluster
+
+  import pyspark
+  from pyspark.sql import SparkSession
+  from pyspark.conf import SparkConf
+  from pyspark.context import SparkContext
+  
+  conf = SparkConf() \
+      .setMaster('spark://Desktop-Gar.:7077') \
+      .setAppName('test') \
+      .set("spark.jars", "/mnt/d/apache/spark-3.4.2-bin-hadoop3/jars/gcs-connector-hadoop3-latest.jar") \
+      .set("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
+  
+  spark = SparkSession.builder.config(conf=conf).getOrCreate()
+  
+  df_green = spark.read.parquet('gs://nytaxi-dezoomcamp/pq/green/2020/01/', header=True) 
+  
+  df_green.printSchema()
+  df_green.count()
+  #df_green.show()
+  ```
+
+  
+  
 
 
 
