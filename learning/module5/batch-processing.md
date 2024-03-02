@@ -594,36 +594,59 @@ https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spar
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d57c38f8-bad4-47e6-9bb7-ed4895003034)
 
-  
-
-- Create script and test
+  Change :
   ```
-  # Local Spark Cluster
+  # Instance a session
 
-  import pyspark
-  from pyspark.sql import SparkSession
-  from pyspark.conf import SparkConf
-  from pyspark.context import SparkContext
-  
-  conf = SparkConf() \
-      .setMaster('spark://Desktop-Gar.:7077') \
-      .setAppName('test') \
-      .set("spark.jars", "/mnt/d/apache/spark-3.4.2-bin-hadoop3/jars/gcs-connector-hadoop3-latest.jar") \
-      .set("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
-  
-  spark = SparkSession.builder.config(conf=conf).getOrCreate()
-  
-  df_green = spark.read.parquet('gs://nytaxi-dezoomcamp/pq/green/2020/01/', header=True) 
-  
-  df_green.printSchema()
-  df_green.count()
-  #df_green.show()
+  spark = SparkSession.builder \
+    .master("local[*]") \
+    .appName('test') \
+    .getOrCreate()
+  ```
+  into :
+  ```
+  # Instance a session
+
+  spark = SparkSession.builder \
+    .master("spark://Desktop-Gar.:7077") \
+    .appName('test') \
+    .getOrCreate()
   ```
 
+  ```
+  python 10_local_spark_cluster.py
+  ```
+
+  ```
+  python 10_local_spark_cluster.py \
+    --input_green=data/pq/green/2020/*/ \
+    --input_yellow=data/pq/yellow/2020/*/ \
+    --output=data/report-2020
+  ```
+
+  ```
+  export URL="spark://Desktop-Gar.:7077"
+
+  spark-submit \
+    --master="${URL}" \
+    10_local_spark_cluster.py \
+        --input_green=data/pq/green/2021/*/ \
+        --input_yellow=data/pq/yellow/2021/*/ \
+        --output=data/report-2021
+  ```
+
+  ```
+  #  stop worker and master
   
-  
+  ./spark-3.2.1-bin-hadoop3.2/sbin/stop-worker.sh
+  ./spark-3.2.1-bin-hadoop3.2/sbin/stop-master.sh
+  ```
+
+  ### 5.6.3 Setting up a Dataproc Cluster
+
+  Step 1: create cluster
+
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c7e31610-4ef0-4465-a28c-d642cf7b0e8e)
 
 
 
-
-     
