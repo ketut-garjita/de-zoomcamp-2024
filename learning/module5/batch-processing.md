@@ -345,6 +345,54 @@ df.printSchema()
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dfc5030f-21da-44bf-88a9-9e899edb7a46)
 
+select() with filter()
+```
+df.select('pickup_datetime', 'dropoff_datetime', 'PULocationID', 'DOLocationID') \
+    .filter(df.hvfhs_license_num == 'HV0003')
+```
+
+**Actions vs. Transformations**
+
+Action : code that is executed immediately (such as: show(), take(), head(), write(), etc.)
+
+Transformations : code that is lazy, i.e., not executed immediately (suchs as: selecting columns, data filtering, joins and groupby operations)
+
+**Spark SQL Functions**
+
+Spark has many predefined SQL-like functions.
+```
+def crazy_stuff(base_num):
+    num = int(base_num[1:])
+    if num % 7 == 0:
+        return f's/{num:03x}'
+    elif num % 3 == 0:
+        return f'a/{num:03x}'
+    return f'e/{num:03x}'
+
+crazy_stuff_udf = F.udf(crazy_stuff, returnType=types.StringType())
+
+df \
+    .withColumn('pickup_date', F.to_date(df.pickup_datetime)) \
+    .withColumn('dropoff_date', F.to_date(df.dropoff_datetime)) \
+    .withColumn('base_id', crazy_stuff_udf(df.dispatching_base_num)) \
+    .select('base_id', 'pickup_date', 'dropoff_date', 'PULocationID', 'DOLocationID') \
+    .show()
+```
+
+###  5.3.3 (Optional) Preparing Yellow and Green Taxi Data
+
+See : 04_pyspark_yellow.ipynb & 04_pyspark_green.ipynb
+
+
+### 5.3.4 SQL with Spark
+
+Batch jobs can be expressed as SQL queries, and Spark can run them.
+
+#### Combining the 2 datasets
+
+Datasets : 
+
+
 
 
 
