@@ -415,7 +415,7 @@ The components of the spark application are:
 - Spark Context
 - Cluster Resource Manager(aka Cluster Manager)
 - Executors
-- 
+   
 Spark uses a master/slave architecture with a central coordinator called Driver and a set of executable workflows called Executors that are located at various nodes in the cluster.
 
 ##### Driver
