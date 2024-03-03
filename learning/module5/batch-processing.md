@@ -1,6 +1,6 @@
 ## 5.1 Introduction
 
-### 5.1.1 Introduction to Batch Processing
+### Introduction to Batch Processing
 
 Batch jobs are routines that are run in regular intervals. 
 
@@ -12,7 +12,7 @@ The most common types of batch jobs are either :
 - etc..
 
 
-### 5.1.2 Introduction to Apache Spark
+### Introduction to Apache Spark
 
 - What is Spark?
 
