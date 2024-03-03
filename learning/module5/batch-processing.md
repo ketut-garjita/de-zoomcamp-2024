@@ -635,6 +635,5 @@ https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spar
 
   ###  5.6.4 Connecting Spark to Big Query
 
-  Step 1: in this lesson, we are going to write our results to BigQuer
 
   
