@@ -648,18 +648,12 @@ https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spar
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c7e31610-4ef0-4465-a28c-d642cf7b0e8e)
 
-
-
- 
-
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9d5763b6-ab39-4458-837b-1b0d2c804104)
-
-
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/38f5e3a9-7701-4df3-aba5-5a4a50cb7431)
 
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/2763f2b7-6444-4567-957e-18399bbaf541)
 
-  ![image](https://github.c
+  ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4930cf8d-7335-4507-b3cc-443a18be570e)
 
 
