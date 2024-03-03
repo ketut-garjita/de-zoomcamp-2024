@@ -161,13 +161,13 @@ lsb_release -a
 
 ### 5.2.3 GCP Cloud
 
-#### 5.2.3.1 Create a project
+#### Create a project
 
 IAM & Admin > New Project
     
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/291a1c47-d692-45eb-a306-594a7c39507f)
 
-#### 5.2.3.2 Create Service Account
+#### Create Service Account
     
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/aa6511f9-3e60-470f-8b78-ef339b91ccd4)
 
@@ -179,7 +179,7 @@ Assign Roles like this:
     
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a9dcadaa-5aba-491e-bb77-0e884a936f7b)
 
-#### 5.2.3.3 Create Bucket
+#### Create Bucket
      
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/61388a27-3d6c-4042-be22-a97866aa1ed2)
      
@@ -188,7 +188,7 @@ Assign Roles like this:
   gsutil cp green_tripdata_2020-01.csv.gz gs://<bucket name>
   ```
        
-#### 5.2.3.4 Create Dataproc Cluster
+#### Create Dataproc Cluster
     
 Using console:
          
@@ -207,7 +207,7 @@ ZONE=<zone name>
 gcloud dataproc clusters create ${CLUSTER} --project=${PROJECT} --region=${REGION} --zone=${ZONE} --single-node
 ```
 
-#### 5.2.3.5 Create VM Instance
+#### Create VM Instance
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/7134b60c-7206-4ad9-bf71-3f4f9e058f7d)
 
