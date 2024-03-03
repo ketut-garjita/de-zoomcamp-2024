@@ -187,6 +187,8 @@ Assign Roles like this:
   ```
        
 #### Create Dataproc Cluster
+
+*Read also chapter 5.6.3*
     
 Using console:
          
