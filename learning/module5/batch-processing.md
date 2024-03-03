@@ -612,29 +612,7 @@ https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spar
     .appName('test') \
     .getOrCreate()
   ```
-
-  ```
-  python 10_local_spark_cluster.py
-  ```
-
-  ```
-  python 10_local_spark_cluster.py \
-    --input_green=data/pq/green/2020/*/ \
-    --input_yellow=data/pq/yellow/2020/*/ \
-    --output=data/report-2020
-  ```
-
-  ```
-  export URL="spark://Desktop-Gar.:7077"
-
-  spark-submit \
-    --master="${URL}" \
-    10_local_spark_cluster.py \
-        --input_green=data/pq/green/2021/*/ \
-        --input_yellow=data/pq/yellow/2021/*/ \
-        --output=data/report-2021
-  ```
-
+  
   ```
   #  stop spark worker and spark master
   
@@ -657,3 +635,8 @@ https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spar
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4930cf8d-7335-4507-b3cc-443a18be570e)
 
 
+  ###  5.6.4 Connecting Spark to Big Query
+
+  Step 1: in this lesson, we are going to write our results to BigQuer
+
+  
