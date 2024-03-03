@@ -215,7 +215,7 @@ gcloud dataproc clusters create ${CLUSTER} --project=${PROJECT} --region=${REGIO
 
 Start VM Instance, and copy & save External IP. This external IP would be used to open spark master browser in local machine, i.e. https://<VM Instance External IP>:8080
            
-#### 5.2.3.6 Open port 8080 (for spark master), 7077 (for spark worker)
+#### Open port 8080 (for spark master), 7077 (for spark worker)
      
 Using console
       
