@@ -84,7 +84,7 @@ lsb_release -a
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f8baee72-7a37-4310-b432-e0377214ac05)
 
 
-### 5.2.1 Java
+### Java
 
 - Download the following Java 11.0.22 version from link https://www.oracle.com/id/java/technologies/downloads/#java11/
 
@@ -110,7 +110,7 @@ lsb_release -a
   source ~/.bashrc
   ```
   
-### 5.2.2 Apache Spark
+### Apache Spark
 
 - Download Apache Spark
   
@@ -159,7 +159,7 @@ lsb_release -a
   ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/08f00f2e-5a4e-4a68-890f-1c7f98ab83f5)
 
 
-### 5.2.3 GCP Cloud
+### GCP Cloud
 
 #### Create a project
 
