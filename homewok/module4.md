@@ -43,19 +43,7 @@ You'll need to have completed the ["Build the first dbt models"](https://www.you
 - The code from any development branch that has been opened based on main
 - The code from the development branch we are requesting to merge to main
 
-#### **Answer 2 : The code that is behind the creation object on the dbt_cloud_pr_ schema**
-
-**NOTE :** 
-
-**Continuous integration in dbt Cloud**
-
-To implement a continuous integration (CI) workflow in dbt Cloud, you can set up automation that tests code changes by running CI jobs before merging to production. dbt Cloud tracks the state of what’s running in your production environment so, when you run a CI job, only the modified data assets in your pull request (PR) and their downstream dependencies are built and tested in a staging schema. You can also view the status of the CI checks (tests) directly from within the PR; this information is posted to your Git provider as soon as a CI job completes. Additionally, you can enable settings in your Git provider that allow PRs only with successful CI checks be approved for merging.
-
-**How CI works**
-
-When you set up CI jobs, dbt Cloud listens for webhooks from your Git provider indicating that a new PR has been opened or updated with new commits. When dbt Cloud receives one of these webhooks, it enqueues a new run of the CI job.
-
-dbt Cloud builds and tests the models affected by the code change in a temporary schema, unique to the PR. This process ensures that the code builds without error and that it matches the expectations as defined by the project's dbt tests. The unique schema name follows the naming convention dbt_cloud_pr_<job_id>_<pr_id> (for example, dbt_cloud_pr_1862_1704).
+#### **Answer 2 : The code from any development branch that has been opened based on main **
 
 
 ### Question 3 (2 points)
