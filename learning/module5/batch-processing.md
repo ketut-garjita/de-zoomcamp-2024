@@ -796,7 +796,7 @@ https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spar
         .save()
     ```
 
-    - Review BigQuery Dataset
+    - Review BigQuery Dataset Tables
 
       ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/07e6aeb5-81e1-463d-b574-4905b57c76f5)
 
