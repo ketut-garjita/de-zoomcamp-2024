@@ -48,7 +48,7 @@
 
 ### Module 5 : Batch
 - [Resource](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/05-batch)
-- [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/blob/ee0eb47e0f116b76c708ffd8f5087b1e6618d9b6/learning/module5/batch-processing.md)
+- [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/batch-processing.md)
 - Homework
   - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/05-batch/homework.md)
   - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw5)
