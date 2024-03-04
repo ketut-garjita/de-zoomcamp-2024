@@ -715,7 +715,7 @@ https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module5/09_spar
     spark.stop()
     ```
 
-    **Read CSV files and Write to BigQuery : pyspark % sparkSQL**
+    **Read CSV files and Write to BigQuery : pyspark & sparkSQL**
     ```
     import pyspark
     from pyspark.sql import SparkSession
