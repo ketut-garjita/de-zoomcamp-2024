@@ -25,38 +25,6 @@ sleep 5
 psql -c "SELECT COUNT(*) FROM trip_data"
 ```
 
-## Question 0
-
-_This question is just a warm-up to introduce dynamic filter, please attempt it before viewing its solution._
-
-What are the dropoff taxi zones at the latest dropoff times?
-
-For this part, we will use the [dynamic filter pattern](https://docs.risingwave.com/docs/current/sql-pattern-dynamic-filters/).
-
-<details>
-<summary>Solution</summary>
-
-```sql
-CREATE MATERIALIZED VIEW latest_dropoff_time AS
-    WITH t AS (
-        SELECT MAX(tpep_dropoff_datetime) AS latest_dropoff_time
-        FROM trip_data
-    )
-    SELECT taxi_zone.Zone as taxi_zone, latest_dropoff_time
-    FROM t,
-            trip_data
-    JOIN taxi_zone
-        ON trip_data.DOLocationID = taxi_zone.location_id
-    WHERE trip_data.tpep_dropoff_datetime = t.latest_dropoff_time;
-
---    taxi_zone    | latest_dropoff_time
--- ----------------+---------------------
---  Midtown Center | 2022-01-03 17:24:54
--- (1 row)
-```
-
-</details>
-
 ## Question 1
 
 Create a materialized view to compute the average, min and max trip time **between each taxi zone**.
@@ -73,6 +41,9 @@ Options:
 3. East Flatbush/Farragut, East Harlem North
 4. Midtown Center, University Heights/Morris Heights
 
+### Answer 1 : **Yorkville East, Steinway**
+
+
 ## Question 2
 
 Recreate the MV(s) in question 1, to also find the **number of trips** for the pair of taxi zones with the highest average trip time.
@@ -82,6 +53,9 @@ Options:
 2. 3
 3. 10
 4. 1
+
+### Answer 2 : **1**
+
 
 ## Question 3
 
@@ -99,3 +73,6 @@ Options:
 2. LaGuardia Airport, Lincoln Square East, JFK Airport
 3. Midtown Center, Upper East Side South, Upper East Side North
 4. LaGuardia Airport, Midtown Center, Upper East Side North
+
+### Answer 3 : **Midtown Center, Upper East Side South, Upper East Side North**
+
