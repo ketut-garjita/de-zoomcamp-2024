@@ -1,5 +1,7 @@
 # Homework
 
+## Answer
+
 ## Setting up
 
 In order to get a static set of results, we will use historical data from the dataset.
@@ -43,6 +45,38 @@ Options:
 
 ### Answer 1 : **Yorkville East, Steinway**
 
+### Solution
+
+```
+CREATE MATERIALIZED VIEW max_averrage_trip_time AS
+    WITH t AS (
+        SELECT PULocationID, DOLocationID,
+				AVG(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
+        FROM trip_data
+				GROUP BY PULocationID, DOLocationID
+		)
+    SELECT tz1.Zone AS PUZone, tz2.Zone AS DOZone, MAX(t.subtract_dropoff_pickup) AS max_averrage_trip_time
+    FROM t
+    JOIN taxi_zone tz1
+        ON t.PULocationID = tz1.location_id
+		JOIN taxi_zone tz2
+				ON t.DOLocationID = tz2.location_id
+		GROUP BY tz1.Zone, tz2.Zone
+		ORDER BY max_averrage_trip_time DESC
+		LIMIT 1
+;
+```
+```
+CREATE_MATERIALIZED_VIEW
+```
+```
+dev=> select * from max_averrage_trip_time;
+     puzone     |  dozone  | averrage_trip_time 
+----------------+----------+--------------------
+ Yorkville East | Steinway | 23:59:33
+(1 row)
+```
+
 
 ## Question 2
 
@@ -55,6 +89,31 @@ Options:
 4. 1
 
 ### Answer 2 : **1**
+
+### Solution
+```
+CREATE MATERIALIZED VIEW count_max_averrage_trip_time AS
+  WITH t AS (
+        SELECT PULocationID, DOLocationID,
+				MIN(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
+        FROM trip_data
+				GROUP BY PULocationID, DOLocationID
+		)
+    SELECT count(*)
+		FROM t, max_averrage_trip_time
+		WHERE subtract_dropoff_pickup = max_averrage_trip_time
+;
+```
+```
+CREATE_MATERIALIZED_VIEW
+```
+```
+dev=> select * from count_max_averrage_trip_time;
+ count 
+-------
+     1
+(1 row)
+```
 
 
 ## Question 3
