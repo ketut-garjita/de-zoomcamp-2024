@@ -688,7 +688,38 @@ CREATE MATERIALIZED VIEW total_airport_pickups AS
     GROUP BY taxi_zone.Zone;
 ```
 
-3. jfk_pickups_1hr_before
+3. airport_pu
+   
+ ```
+CREATE MATERIALIZED VIEW airport_pu as
+SELECT
+    tpep_pickup_datetime,
+    pulocationid
+FROM
+    trip_data
+        JOIN taxi_zone
+            ON trip_data.PULocationID = taxi_zone.location_id
+WHERE
+        taxi_zone.Borough = 'Queens'
+  AND taxi_zone.Zone = 'JFK Airport';
+```
+
+4. latest_jfk_pickup
+   
+```
+CREATE MATERIALIZED VIEW latest_jfk_pickup AS
+    SELECT
+        max(tpep_pickup_datetime) AS latest_pickup_time
+    FROM
+        trip_data
+            JOIN taxi_zone
+                ON trip_data.PULocationID = taxi_zone.location_id
+    WHERE
+        taxi_zone.Borough = 'Queens'
+      AND taxi_zone.Zone = 'JFK Airport';
+```
+
+5. jfk_pickups_1hr_before
 
 ```
 CREATE MATERIALIZED VIEW jfk_pickups_1hr_before AS
@@ -705,7 +736,7 @@ CREATE MATERIALIZED VIEW jfk_pickups_1hr_before AS
       AND taxi_zone.Zone = 'JFK Airport';
 ```
 
-4. busiest_zones_1_min
+6. busiest_zones_1_min
 
 ```
 CREATE MATERIALIZED VIEW busiest_zones_1_min AS SELECT
@@ -723,7 +754,7 @@ ORDER BY last_1_min_dropoff_cnt DESC
     LIMIT 10;
 ```
 
-5. longest_trip_1_min
+7. longest_trip_1_min
 
 ```
 CREATE MATERIALIZED VIEW longest_trip_1_min AS SELECT
@@ -761,6 +792,8 @@ GROUP BY
 ORDER BY
     num_rides_per_min ASC;
 ```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/1ad92c5b-6281-4fc7-aa4f-5fe6f5ef57fc)
 
 
 # What's next?
