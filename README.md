@@ -55,7 +55,7 @@
   - [Answer/Solution](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module5.md)
 
 ### Workshop 2 : Stream processing with SQL (RisingWave)
-- [Source]([https://github.com/risingwavelabs/risingwave](https://github.com/risingwavelabs/risingwave-data-talks-workshop-2024-03-04/tree/main)
+- [Source](https://github.com/risingwavelabs/risingwave-data-talks-workshop-2024-03-04/tree/main)
 - [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/workshop2/risingwave.md)
 - Homework
   - [Questions](https://github.com/risingwavelabs/risingwave-data-talks-workshop-2024-03-04/blob/main/homework.md#setting-up)
