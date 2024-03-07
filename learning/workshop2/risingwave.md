@@ -524,6 +524,26 @@ CREATE MATERIALIZED VIEW longest_trip_1_min AS SELECT
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c14278c0-3e8b-44f0-a1f8-cb6dbfc49a54)
 
+After this, you may run the visualization dashboard to see the data in real-time.
+
+Start the backend which queries RisingWave:
+```
+./server.py
+```
+
+## Visualize Data from Materialized View 3 and 4
+
+Start the frontend, in a separate terminal, if you're on OSX:
+
+```
+open index.html
+```
+
+Start the frontend, in a separate terminal, if you're on linux:
+
+```
+xdg-open index.html
+```
 
 ## Materialized View 5: Average Fare Amount vs Number of rides
 
