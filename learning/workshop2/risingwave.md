@@ -642,7 +642,7 @@ In this workshop you have learnt:
 
 # Materialized Views List Created
 
-- latest_1min_trip_data
+1. latest_1min_trip_data
 
 ```
 CREATE MATERIALIZED VIEW latest_1min_trip_data AS
@@ -653,8 +653,8 @@ CREATE MATERIALIZED VIEW latest_1min_trip_data AS
  WHERE tpep_dropoff_datetime > now() - interval '1 minute';
 ```
 
-- total_airport_pickups
-
+2. total_airport_pickups
+   
 ```
 CREATE MATERIALIZED VIEW total_airport_pickups AS
     SELECT
@@ -668,7 +668,7 @@ CREATE MATERIALIZED VIEW total_airport_pickups AS
     GROUP BY taxi_zone.Zone;
 ```
 
-- jfk_pickups_1hr_before
+3. jfk_pickups_1hr_before
 
 ```
 CREATE MATERIALIZED VIEW jfk_pickups_1hr_before AS
@@ -685,8 +685,8 @@ CREATE MATERIALIZED VIEW jfk_pickups_1hr_before AS
       AND taxi_zone.Zone = 'JFK Airport';
 ```
 
+4. busiest_zones_1_min
 
-- busiest_zones_1_min
 ```
 CREATE MATERIALIZED VIEW busiest_zones_1_min AS SELECT
     taxi_zone.Zone AS dropoff_zone,
@@ -703,7 +703,7 @@ ORDER BY last_1_min_dropoff_cnt DESC
     LIMIT 10;
 ```
 
-- longest_trip_1_min
+5. longest_trip_1_min
 
 ```
 CREATE MATERIALIZED VIEW longest_trip_1_min AS SELECT
@@ -725,7 +725,7 @@ CREATE MATERIALIZED VIEW longest_trip_1_min AS SELECT
     LIMIT 10;
 ```
 
-- avg_fare_amt
+6. avg_fare_amt
 
 ```
 CREATE MATERIALIZED VIEW avg_fare_amt AS
