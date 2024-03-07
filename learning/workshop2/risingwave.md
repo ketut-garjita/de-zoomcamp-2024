@@ -776,7 +776,7 @@ CREATE MATERIALIZED VIEW longest_trip_1_min AS SELECT
     LIMIT 10;
 ```
 
-6. avg_fare_amt
+8. avg_fare_amt
 
 ```
 CREATE MATERIALIZED VIEW avg_fare_amt AS
