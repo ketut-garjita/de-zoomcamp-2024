@@ -50,25 +50,74 @@ Options:
 ```
 CREATE MATERIALIZED VIEW max_averrage_trip_time AS
     WITH t AS (
-        SELECT PULocationID, DOLocationID,
-				AVG(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
+        SELECT
+			PULocationID,
+			DOLocationID,
+			AVG(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
         FROM trip_data
-				GROUP BY PULocationID, DOLocationID
-		)
+		GROUP BY PULocationID, DOLocationID
+	)
     SELECT tz1.Zone AS PUZone, tz2.Zone AS DOZone, MAX(t.subtract_dropoff_pickup) AS max_averrage_trip_time
     FROM t
-    JOIN taxi_zone tz1
-        ON t.PULocationID = tz1.location_id
+    	JOIN taxi_zone tz1
+       		ON t.PULocationID = tz1.location_id
 		JOIN taxi_zone tz2
-				ON t.DOLocationID = tz2.location_id
-		GROUP BY tz1.Zone, tz2.Zone
-		ORDER BY max_averrage_trip_time DESC
-		LIMIT 1
+			ON t.DOLocationID = tz2.location_id
+	GROUP BY tz1.Zone, tz2.Zone
+	ORDER BY max_averrage_trip_time DESC
+	LIMIT 1
 ;
 ```
 ```
 CREATE_MATERIALIZED_VIEW
 ```
+
+```
+CREATE MATERIALIZED VIEW max_trip_time AS
+    WITH t AS (
+        SELECT
+			PULocationID,
+			DOLocationID,
+			MAX(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
+        FROM trip_data
+		GROUP BY PULocationID, DOLocationID
+	)
+    SELECT tz1.Zone AS PUZone, tz2.Zone AS DOZone, MAX(t.subtract_dropoff_pickup) AS max_trip_time
+    FROM t
+    JOIN taxi_zone tz1
+        ON t.PULocationID = tz1.location_id
+	JOIN taxi_zone tz2
+		ON t.DOLocationID = tz2.location_id
+	GROUP BY tz1.Zone, tz2.Zone
+	ORDER BY max_trip_time DESC
+	LIMIT 1
+;
+CREATE_MATERIALIZED_VIEW
+```
+
+```
+CREATE MATERIALIZED VIEW min_trip_time AS
+    WITH t AS (
+        SELECT
+			PULocationID,
+			DOLocationID,
+			MIN(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
+        FROM trip_data
+		GROUP BY PULocationID, DOLocationID
+	)
+    SELECT tz1.Zone AS PUZone, tz2.Zone AS DOZone, MAX(t.subtract_dropoff_pickup) AS min_trip_time
+    FROM t
+    JOIN taxi_zone tz1
+        ON t.PULocationID = tz1.location_id
+	JOIN taxi_zone tz2
+		ON t.DOLocationID = tz2.location_id
+	GROUP BY tz1.Zone, tz2.Zone
+	ORDER BY min_trip_time ASC
+	LIMIT 1
+;
+CREATE_MATERIALIZED_VIEW
+```
+
 ```
 dev=> select * from max_averrage_trip_time;
      puzone     |  dozone  | averrage_trip_time 
@@ -94,14 +143,16 @@ Options:
 ```
 CREATE MATERIALIZED VIEW count_max_averrage_trip_time AS
   WITH t AS (
-        SELECT PULocationID, DOLocationID,
-				MIN(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
+        SELECT
+			PULocationID,
+			DOLocationID,
+			MIN(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
         FROM trip_data
-				GROUP BY PULocationID, DOLocationID
-		)
-    SELECT count(*)
-		FROM t, max_averrage_trip_time
-		WHERE subtract_dropoff_pickup = max_averrage_trip_time
+		GROUP BY PULocationID, DOLocationID
+	)
+	SELECT count(*)
+	FROM t, max_averrage_trip_time
+	WHERE subtract_dropoff_pickup = max_averrage_trip_time
 ;
 ```
 ```
