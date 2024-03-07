@@ -161,12 +161,23 @@ source .venv/bin/activate
 ```
 source commands.sh
 ```
+
+# Starts the risingwave cluster
+   start-cluster() {
+   	docker-compose -f docker/docker-compose.yml up -d
+   }
+
 ```
 start-cluster
 ```
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/303d5627-3a9b-417b-9e3e-1e40ce662546)
 
+# Seed trip data from the parquet file
+   stream-kafka() {
+   	./seed_kafka.py update
+   }
+   
 ```
 stream-kafka
 ```
