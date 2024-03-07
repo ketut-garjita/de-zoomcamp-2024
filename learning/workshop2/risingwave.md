@@ -637,13 +637,13 @@ Run some queries in Clickhouse
 select max(avg_fare_amount_per_min) from avg_fare_amt;
 ```
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c315ebb0-e853-4aae-8f31-81efe6af22ec)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b7f15b29-c7a7-492e-9b32-178022450426)
 
 ```
 select min(avg_fare_amount_per_min) from avg_fare_amt;
 ```
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9c4521d-2801-43bc-becb-f00e39809f18)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9d3a3181-b55f-453b-89ab-f914d42936d2)
 
 
 # Summary
