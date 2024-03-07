@@ -146,9 +146,9 @@ CREATE MATERIALIZED VIEW count_max_averrage_trip_time AS
         SELECT
 			PULocationID,
 			DOLocationID,
-			MIN(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
+			MAX(tpep_dropoff_datetime - tpep_pickup_datetime) AS subtract_dropoff_pickup
         FROM trip_data
-		GROUP BY PULocationID, DOLocationID
+	GROUP BY PULocationID, DOLocationID
 	)
 	SELECT count(*)
 	FROM t, max_averrage_trip_time
