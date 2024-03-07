@@ -57,7 +57,7 @@
 ### Workshop 2 : Stream processing with SQL (RisingWave)
 - [Source](https://github.com/risingwavelabs/risingwave)
 - [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/workshop2/risingwave.md)
-- [Homework]
+- Homework
   - [Questions](https://github.com/risingwavelabs/risingwave-data-talks-workshop-2024-03-04/blob/main/homework.md#setting-up)
   - [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/workshop2/risingwave.md)
   - [Answer/Solution](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/workshop2.md)
