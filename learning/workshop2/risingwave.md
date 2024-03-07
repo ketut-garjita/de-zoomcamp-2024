@@ -1,4 +1,4 @@
-# Envronment
+# Environments
 1. Github Codespace
 2. GCP VM Instance
 
@@ -414,5 +414,230 @@ CREATE MATERIALIZED VIEW jfk_pickups_1hr_before AS
 ```
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/98dd3578-1792-43c3-ac10-f6a4992a49f3)
+
+Simplified query plan:
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/0ccd79d9-2c8a-4a63-9726-0681faa3ef0d)
+
+
+## Materialized View 3: Top 10 busiest zones in the last 1 minute
+
+First we can write a query to get the counts of the pickups from each zone.
+
+```
+SELECT
+    taxi_zone.Zone AS dropoff_zone,
+    count(*) AS last_1_min_dropoff_cnt
+FROM
+    trip_data
+        JOIN taxi_zone
+            ON trip_data.DOLocationID = taxi_zone.location_id
+GROUP BY
+    taxi_zone.Zone
+ORDER BY last_1_min_dropoff_cnt DESC
+    LIMIT 10;
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f7a8969f-c468-42f1-80a1-e6368483a39e)
+
+Next, we can create a temporal filter to get the counts of the pickups from each zone in the last 1 minute.
+
+That has the form:
+
+```
+CREATE MATERIALIZED VIEW busiest_zones_1_min AS SELECT
+    taxi_zone.Zone AS dropoff_zone,
+    count(*) AS last_1_min_dropoff_cnt
+FROM
+    trip_data
+        JOIN taxi_zone
+            ON trip_data.DOLocationID = taxi_zone.location_id
+WHERE
+    trip_data.tpep_dropoff_datetime > (NOW() - INTERVAL '1' MINUTE)
+GROUP BY
+    taxi_zone.Zone
+ORDER BY last_1_min_dropoff_cnt DESC
+    LIMIT 10;
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/80f0bf0e-4e1b-4821-a60c-a938024d7269)
+
+
+## Materialized View 4: Longest trips
+
+Here, the concept is similar as the previous MV, but we are interested in the top 10 longest trips for the last 5 min.
+
+First we create the query to get the longest trips:
+
+```
+SELECT
+    tpep_pickup_datetime,
+    tpep_dropoff_datetime,
+    taxi_zone_pu.Zone as pickup_zone,
+    taxi_zone_do.Zone as dropoff_zone,
+    trip_distance
+FROM
+    trip_data
+        JOIN taxi_zone as taxi_zone_pu
+             ON trip_data.PULocationID = taxi_zone_pu.location_id
+        JOIN taxi_zone as taxi_zone_do
+             ON trip_data.DOLocationID = taxi_zone_do.location_id
+ORDER BY
+    trip_distance DESC
+    LIMIT 10;
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/caeaeac6-3217-4107-9d59-2b7fef708a5b)
+
+Then we can create a temporal filter to get the longest trips for the last 5 minutes:
+
+```
+CREATE MATERIALIZED VIEW longest_trip_1_min AS SELECT
+        tpep_pickup_datetime,
+        tpep_dropoff_datetime,
+        taxi_zone_pu.Zone as pickup_zone,
+        taxi_zone_do.Zone as dropoff_zone,
+        trip_distance
+    FROM
+        trip_data
+    JOIN taxi_zone as taxi_zone_pu
+        ON trip_data.PULocationID = taxi_zone_pu.location_id
+    JOIN taxi_zone as taxi_zone_do
+        ON trip_data.DOLocationID = taxi_zone_do.location_id
+    WHERE
+        trip_data.tpep_pickup_datetime > (NOW() - INTERVAL '5' MINUTE)
+    ORDER BY
+        trip_distance DESC
+    LIMIT 10;
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c14278c0-3e8b-44f0-a1f8-cb6dbfc49a54)
+
+
+## Materialized View 5: Average Fare Amount vs Number of rides
+
+How does avg_fare_amt change relative to number of pickups per minute?
+
+We use something known as a [tumble window function](https://docs.risingwave.com/docs/current/sql-function-time-window/#tumble-time-window-function), to compute this.
+
+```
+CREATE MATERIALIZED VIEW avg_fare_amt AS
+SELECT
+    avg(fare_amount) AS avg_fare_amount_per_min,
+    count(*) AS num_rides_per_min,
+    window_start,
+    window_end
+FROM
+    TUMBLE(trip_data, tpep_pickup_datetime, INTERVAL '1' MINUTE)
+GROUP BY
+    window_start, window_end
+ORDER BY
+    num_rides_per_min ASC;
+```
+
+For each window we compute the average fare amount and the number of rides.
+
+That's all for the materialized views!
+
+Now we will see how to sink the data out from RisingWave.
+
+
+# How to sink data from RisingWave to Clickhouse
+
+Reference:
+
+- https://docs.risingwave.com/docs/current/data-delivery/
+- https://docs.risingwave.com/docs/current/sink-to-clickhouse/
+  
+We have done some simple analytics and processing of the data in RisingWave.
+
+Now we want to sink the data out to Clickhouse, for further analysis.
+
+We will create a Clickhouse table to store the data from the materialized views.
+
+Open n anew termina.
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/2cf3ec21-d18b-407e-820e-d49cd51bc5c6)
+
+```
+source commands.sh
+clickhouse-client-term
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4c9cfb2f-bacc-4b25-a17e-a38bbe1ca799)
+
+```
+CREATE TABLE avg_fare_amt(
+    avg_fare_amount_per_min numeric,
+    num_rides_per_min Int64,
+) ENGINE = ReplacingMergeTree
+PRIMARY KEY (avg_fare_amount_per_min, num_rides_per_min);
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8aa3a27b-70b7-47c6-be3c-5fb8a0c47fb8)
+
+We will create a Clickhouse sink to sink the data from the materialized views to the Clickhouse table.
+
+```
+CREATE SINK IF NOT EXISTS avg_fare_amt_sink AS SELECT avg_fare_amount_per_min, num_rides_per_min FROM avg_fare_amt
+WITH (
+    connector = 'clickhouse',
+    type = 'append-only',
+    clickhouse.url = 'http://clickhouse:8123',
+    clickhouse.user = '',
+    clickhouse.password = '',
+    clickhouse.database = 'default',
+    clickhouse.table='avg_fare_amt',
+    force_append_only = 'true'
+);
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dafd0cd4-8398-4b62-80f1-362a65743898)
+
+Now we can run queries on the data ingested into clickhouse:
+
+```
+clickhouse-client-term
+```
+
+Run some queries in Clickhouse
+
+```
+select max(avg_fare_amount_per_min) from avg_fare_amt;
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/c315ebb0-e853-4aae-8f31-81efe6af22ec)
+
+```
+select min(avg_fare_amount_per_min) from avg_fare_amt;
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b9c4521d-2801-43bc-becb-f00e39809f18)
+
+
+# Summary
+
+In this workshop you have learnt:
+
+- How to ingest data into RisingWave using Kafka
+- How to process the data using Materialized Views
+   - Using Aggregations
+   - Using Temporal Filters
+   - Using Window Functions (Tumble)
+   - Using Joins
+   - Layering MVs to build a stream pipeline
+- How to sink the data out from RisingWave to Clickhouse
+
+# What's next?
+
+https://tutorials.risingwave.com/docs/category/basics
+
+
+# Homework
+
+To further understand the concepts, please try the [Homework](https://github.com/risingwavelabs/risingwave-data-talks-workshop-2024-03-04/blob/main/homework.md).
+
+
+
 
 
