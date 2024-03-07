@@ -640,7 +640,7 @@ In this workshop you have learnt:
 - How to sink the data out from RisingWave to Clickhouse
 
 
-# Materialzed Views List Created
+# Materialized Views List Created
 
 - latest_1min_trip_data
 
