@@ -43,10 +43,11 @@ Options:
 3. East Flatbush/Farragut, East Harlem North
 4. Midtown Center, University Heights/Morris Heights
 
-### Answer 1 : **Yorkville East, Steinway**
+### Answer 1
 
-### Solution
+**Yorkville East, Steinway**
 
+### Solution 1
 ```
 CREATE MATERIALIZED VIEW max_averrage_trip_time AS
     WITH t AS (
@@ -119,7 +120,7 @@ CREATE_MATERIALIZED_VIEW
 ```
 
 ```
-dev=> select * from max_averrage_trip_time;
+dev=> SELECT * FROM max_averrage_trip_time;
      puzone     |  dozone  | averrage_trip_time 
 ----------------+----------+--------------------
  Yorkville East | Steinway | 23:59:33
@@ -137,9 +138,11 @@ Options:
 3. 10
 4. 1
 
-### Answer 2 : **1**
+### Answer 2 
 
-### Solution
+**1**
+
+### Solution 2
 ```
 CREATE MATERIALIZED VIEW count_max_averrage_trip_time AS
   WITH t AS (
@@ -159,7 +162,7 @@ CREATE MATERIALIZED VIEW count_max_averrage_trip_time AS
 CREATE_MATERIALIZED_VIEW
 ```
 ```
-dev=> select * from count_max_averrage_trip_time;
+dev=> SELECT * FROM count_max_averrage_trip_time;
  count 
 -------
      1
@@ -210,6 +213,9 @@ GROUP BY
 ORDER BY cnt DESC
 LIMIT 3
 ;
+```
+```
+SELECT * FROM busiest_zones_7_hours;
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/80f5749e-f8f3-4a6c-a763-dda7b57e69d1)
 
