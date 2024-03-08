@@ -184,6 +184,32 @@ Options:
 3. Midtown Center, Upper East Side South, Upper East Side North
 4. LaGuardia Airport, Midtown Center, Upper East Side North
 
-### Answer 3 : **Midtown Center, Upper East Side South, Upper East Side North**
+### Answer 3 
 
+**Midtown Center, Upper East Side South, Upper East Side North**
+
+### Solution 3
+```
+CREATE MATERIALIZED VIEW busiest_zones_7_hours AS 
+WITH t1 AS (
+    SELECT max(tpep_pickup_datetime) AS last_pickup_datetime
+    FROM trip_data
+) 
+SELECT
+    substring(Zone, 1, 23) AS Zone,
+    count(*) AS cnt
+FROM
+    t1,
+    trip_data
+    JOIN taxi_zone
+    ON trip_data.DOLocationID = taxi_zone.LocationID
+WHERE
+    trip_data.tpep_pickup_datetime > (t1.last_pickup_datetime - INTERVAL '17' HOUR)
+GROUP BY
+    Zone
+ORDER BY cnt DESC
+LIMIT 3
+;
+```
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/80f5749e-f8f3-4a6c-a763-dda7b57e69d1)
 
