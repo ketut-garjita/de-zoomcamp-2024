@@ -372,6 +372,8 @@ EXPLAIN CREATE MATERIALIZED VIEW total_airport_pickups AS
 
 Go to your local [RisingWave Dashboard](http://localhost:5691/) to see the query plan.
 
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/26539db1-7eee-4b9e-9ebe-1d0b5d92c37f)
+
 Provided a simplified a simpler version here:
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/717a5962-1097-495c-a46b-95b0ca2e41c2)
@@ -652,6 +654,25 @@ select min(avg_fare_amount_per_min) from avg_fare_amt;
 ```
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9d3a3181-b55f-453b-89ab-f914d42936d2)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/838f7243-273d-4f5d-880c-bc40c38d5158)
+
+
+# RisingWave Dashboard
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/26539db1-7eee-4b9e-9ebe-1d0b5d92c37f)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/bd26612a-f81a-49b3-9d2a-79f5abb9f286)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e3bade38-f9a9-4bfa-be55-a6b24e18f6ea)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b2de7275-1e13-405c-acca-b90b1482eac4)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/9dfade2a-3768-486b-a40f-8252d36f733b)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/d2853595-47df-45a1-9b3a-fd63c153e614)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/37d396d7-027f-41a5-bfa2-0531756282fc)
 
 
 # Summary
