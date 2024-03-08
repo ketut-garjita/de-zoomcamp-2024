@@ -61,7 +61,7 @@
 - [Hands-on Learning](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/workshop2/risingwave.md)
 - Homework
   - [Questions](https://github.com/risingwavelabs/risingwave-data-talks-workshop-2024-03-04/blob/main/homework.md#setting-up)
-  - [Form for Submitting](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/workshops/rising-wave.md)
+  - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/workshop2)
   - [Answer/Solution](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/workshop2.md)
 
 ### Module 6 : Streaming
