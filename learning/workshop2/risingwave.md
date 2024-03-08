@@ -3,7 +3,7 @@
 2. GCP VM Instance
 
 # Prerequisites
-1. Docker and Docker Compose
+- Docker and Docker Compose
    ```
    @garjita63 ➜ ~/risingwave-data-talks-workshop-2024-03-04 (main) $ docker version
    Client:
@@ -33,23 +33,27 @@
       docker-init:
        Version:          0.19.0
        GitCommit:        de40ad0
-    ```
-3. Python 3.7 or later
+   ```
+
+- Python 3.7 or later
    ```
    @garjita63 ➜ ~/risingwave-data-talks-workshop-2024-03-04 (main) $ python --version
    Python 3.10.13
    ```
-4. pip and virtualenv for Python
+
+- pip and virtualenv for Python
    ```
    @garjita63 ➜ ~/risingwave-data-talks-workshop-2024-03-04 (main) $ pip --version
    pip 24.0 from /usr/local/python/3.10.13/lib/python3.10/site-packages/pip (python 3.10)
    ```
-6. psql (I use PostgreSQL-14.9)
+
+- psql (I use PostgreSQL-14.9)
    ```
    @garjita63 ➜ ~/risingwave-data-talks-workshop-2024-03-04 (main) $ psql -V
    psql (PostgreSQL) 16.2 (Ubuntu 16.2-1.pgdg20.04+1)
    ```
-7. Clone this repository:
+
+- Clone this repository:
    ```
    git clone git@github.com:risingwavelabs/risingwave-data-talks-workshop-2024-03-04.git
    cd risingwave-data-talks-workshop-2024-03-04
@@ -146,6 +150,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
 commands.sh contains several commands to operate the cluster. You may reference it to see what commands are available.
 
 # Workshop (Stream Processing in SQL with RisingWave)
@@ -158,6 +163,7 @@ These two commands shoudl be run every time opening a new terminal.
 ```
 source .venv/bin/activate
 ```
+
 ```
 source commands.sh
 ```
@@ -342,6 +348,7 @@ We can now query the MV to see the latest data:
 ```
 SELECT * FROM total_airport_pickups;
 ```
+
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/fcb763ac-0289-4772-af8a-5e62eff6b95b)
 
 So what actually happens for the MV?
@@ -527,6 +534,7 @@ CREATE MATERIALIZED VIEW longest_trip_1_min AS SELECT
 After this, you may run the visualization dashboard to see the data in real-time.
 
 Start the backend which queries RisingWave:
+
 ```
 ./server.py
 ```
@@ -804,8 +812,3 @@ https://tutorials.risingwave.com/docs/category/basics
 # Homework
 
 To further understand the concepts, please try the [Homework](https://github.com/risingwavelabs/risingwave-data-talks-workshop-2024-03-04/blob/main/homework.md).
-
-
-
-
-
