@@ -14,7 +14,7 @@ docker ps
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f821864c-101f-4957-9e6c-0d2ac02e4e89)
 
-Question 1: Redpanda version
+# Question 1: Redpanda version
 
 ```
 rpk help
