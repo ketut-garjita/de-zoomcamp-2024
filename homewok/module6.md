@@ -327,7 +327,6 @@ print(f'Flusing took {(t1 - t01):.2f} seconds')
 
 ```
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/58b92716-fd99-414d-b4c4-5831330e3eec)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b1e009ec-1d77-4d13-99ed-741884904e30)
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/075fe454-110e-4854-b041-0c942efe7495)
 
