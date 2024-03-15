@@ -1,6 +1,6 @@
 # Answers : Module 6 Homework
 
-# Start Red Panda
+## Start Red Panda
 
 ```
 linux $ pwd
@@ -14,7 +14,8 @@ docker ps
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/f821864c-101f-4957-9e6c-0d2ac02e4e89)
 
-# Question 1: Redpanda version
+
+## Question 1: Redpanda version
 
 ```
 rpk help
@@ -26,24 +27,24 @@ rpk version
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8c1ca47f-8306-4e69-8bbe-2573682f8b4e)
 
-Answer : 
+### Answer : 
 ```
 v22.3.5 (rev 28b2443)
 ```
 
-Question 2. Creating a topic
+## Question 2. Creating a topic
 ```
 rpk topic create test-topic
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/59cd7e81-1d30-4d54-81ca-e21afe5a1d61)
 
-Answer : 
+### Answer : 
 ```
 TOPIC       STATUS
 test-topic  OK
 ```
 
-Question 3. Connecting to the Kafka server
+## Question 3. Connecting to the Kafka server
 
 ```
 pip install kafka-python
@@ -57,12 +58,18 @@ python3
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a017a135-258d-4512-a0f9-23bd7e49af0a)
 
-Answer : 
+### Answer : 
 ```
 True
 ```
 
-Question 4. Sending data to the stream
+## Question 4. Sending data to the stream
+
+How much time did it take? Where did it spend most of the time?
+
+- Sending the messages
+- Flushing
+- Both took approximately the same amount of time
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/74cc9296-def0-49dd-8b20-5b6e4365672a)
 
@@ -142,6 +149,11 @@ redpanda@fc5d6c5222a8:/$ rpk topic consume test-topic
 ```
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/16d54ee0-4b8d-401b-aaf6-0e3ba87bc5ca)
+
+### Answer :
+```
+Sending the messages
+```
 
 
 # Question 5: Sending the Trip Data
