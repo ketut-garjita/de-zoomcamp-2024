@@ -282,9 +282,7 @@ import pandas as pd
 print(pd.__version__)
 ```
 
-```
 2.2.0
-```
 
 ```
 df_green = df.toPandas()
@@ -307,6 +305,28 @@ producer.flush()
 
 t1 = time.time()
 print(f'Flusing took {(t1 - t01):.2f} seconds')
+```
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a908127b-601a-4430-96bf-2df5dd251a69)
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/523d46c1-c7e8-4b5c-867c-a5e29d1e0969)
+
+```
+{'lpep_pickup_datetime': '2019-10-01 00:26:02', 'lpep_dropoff_datetime': '2019-10-01 00:39:58', 'PULocationID': '112', 'DOLocationID': '196', 'passenger_count': '1', 'trip_distance': '5.88', 'tip_amount': '0'}
+{'lpep_pickup_datetime': '2019-10-01 00:18:11', 'lpep_dropoff_datetime': '2019-10-01 00:22:38', 'PULocationID': '43', 'DOLocationID': '263', 'passenger_count': '1', 'trip_distance': '.80', 'tip_amount': '0'}
+.......
+.......
+{'lpep_pickup_datetime': '2019-10-23 22:41:48', 'lpep_dropoff_datetime': '2019-10-23 22:45:12', 'PULocationID': '97', 'DOLocationID': '49', 'passenger_count': '1', 'trip_distance': '.65', 'tip_amount': '0'}
+{'lpep_pickup_datetime': '2019-10-23 22:00:07', 'lpep_dropoff_datetime': '2019-10-23 22:06:24', 'PULocationID': '82', 'DOLocationID': '83', 'passenger_count': '1', 'trip_distance': '.90', 'tip_amount': '0'}
+{'lpep_pickup_datetime': '2019-10-23 22:37:45', 'lpep_dropoff_datetime': '2019-10-23 22:44:53', 'PULocationID': '129', 'DOLocationID': '260', 'passenger_count': '1', 'trip_distance': '1.00', 'tip_amount': '0'}
+{'lpep_pickup_datetime': '2019-10-23 22:19:02', 'lpep_dropoff_datetime': '2019-10-23 22:43:36', 'PULocationID': '41', 'DOLocationID': '48', 'passenger_count': '1', 'trip_distance': '4.39', 'tip_amount': '4.61'}
+{'lpep_pickup_datetime': '2019-10-23 22:21:12', 'lpep_dropoff_datetime': '2019-10-23 22:27:26', 'PULocationID': '260', 'DOLocationID': '260', 'passenger_count': '6', 'trip_distance': '.74', 'tip_amount': '0'}
+{'lpep_pickup_datetime': '2019-10-23 22:51:11', 'lpep_dropoff_datetime': '2019-10-23 23:01:28', 'PULocationID': '260', 'DOLocationID': '160', 'passenger_count': '6', 'trip_distance': '2.38', 'tip_amount': '2.26'}
+{'lpep_pickup_datetime': '2019-10-23 22:32:21', 'lpep_dropoff_datetime': '2019-10-23 22:42:13', 'PULocationID': '92', 'DOLocationID': '53', 'passenger_count': '1', 'trip_distance': '2.69', 'tip_amount': '0'}
+{'lpep_pickup_datetime': '2019-10-23 22:27:41', 'lpep_dropoff_datetime': '2019-10-23 22:38:52', 'PULocationID': '74', 'DOLocationID': '239', 'passenger_count': '1', 'trip_distance': '2.77', 'tip_amount': '0'}
+{'lpep_pickup_datetime': '2019-10-23 22:22:10', 'lpep_dropoff_datetime': '2019-10-23 22:39:22', 'PULocationID': '97', 'DOLocationID': '61', 'passenger_count': '1', 'trip_distance': '2.39', 'tip_amount': '2.86'}
+{'lpep_pickup_datetime': '2019-10-23 22:42:33', 'lpep_dropoff_datetime': '2019-10-23 22:50:48', 'PULocationID': '179', 'DOLocationID': '193', 'passenger_count': '1', 'trip_distance': '2.02', 'tip_amount': '0'}
+
 ```
 
 
