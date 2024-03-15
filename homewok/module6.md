@@ -1,6 +1,6 @@
 # Answers : Module 6 Homework
 
-## Start Red Panda
+# Start Red Panda
 
 ```
 linux $ pwd
