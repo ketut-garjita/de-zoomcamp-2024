@@ -309,8 +309,6 @@ print(f'Flusing took {(t1 - t01):.2f} seconds')
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a908127b-601a-4430-96bf-2df5dd251a69)
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/523d46c1-c7e8-4b5c-867c-a5e29d1e0969)
-
 ```
 {'lpep_pickup_datetime': '2019-10-01 00:26:02', 'lpep_dropoff_datetime': '2019-10-01 00:39:58', 'PULocationID': '112', 'DOLocationID': '196', 'passenger_count': '1', 'trip_distance': '5.88', 'tip_amount': '0'}
 {'lpep_pickup_datetime': '2019-10-01 00:18:11', 'lpep_dropoff_datetime': '2019-10-01 00:22:38', 'PULocationID': '43', 'DOLocationID': '263', 'passenger_count': '1', 'trip_distance': '.80', 'tip_amount': '0'}
