@@ -1,3 +1,7 @@
+# Answers : Module 6 Homework
+
+## Start Red Panda
+
 ```
 linux $ pwd
 /mnt/d/zde/data-engineering-zoomcamp/cohorts/2024/06-streaming
