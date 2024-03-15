@@ -330,3 +330,5 @@ print(f'Flusing took {(t1 - t01):.2f} seconds')
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b1e009ec-1d77-4d13-99ed-741884904e30)
 
 
+## Question 6. Parsing the data
+
