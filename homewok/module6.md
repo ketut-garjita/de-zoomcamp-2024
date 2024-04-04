@@ -2,6 +2,13 @@
 
 ## Start Red Panda
 
+Via VS Code or server host.
+
+```
+cd /mnt/d/zde/data-engineering-zoomcamp/cohorts/2024/06-streaming
+code .
+```
+
 ```
 linux $ pwd
 /mnt/d/zde/data-engineering-zoomcamp/cohorts/2024/06-streaming
