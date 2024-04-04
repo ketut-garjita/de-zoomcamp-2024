@@ -56,7 +56,7 @@ TOPIC       STATUS
 test-topic  OK
 ```
 
-*Note: don't exit from this creationg topic session !!!*
+*Note: don't exit from this creation topic session !!!*
 
 
 ## Question 3. Connecting to the Kafka server
@@ -108,9 +108,13 @@ How much time did it take? Where did it spend most of the time?
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/74cc9296-def0-49dd-8b20-5b6e4365672a)
 
+redpanda@fc5d6c5222a8:/$
 
 ```
-redpanda@fc5d6c5222a8:/$ rpk topic consume test-topic
+rpk topic consume test-topic
+```
+
+```
 {
   "topic": "test-topic",
   "value": "{\"number\": 0}",
