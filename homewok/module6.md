@@ -78,6 +78,12 @@ python3
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/69c3c3b8-fbf4-4c1a-b294-27334ad3e43f)
 
+Start Jupyter Notebook
+
+```
+jupyter-notebook --allow-root
+```
+
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/dab7d288-cfa1-4164-b630-fad730b40f31)
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a017a135-258d-4512-a0f9-23bd7e49af0a)
