@@ -369,3 +369,6 @@ print(f'Flusing took {(t1 - t01):.2f} seconds')
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8ce9ab71-02d7-440c-a242-07e10bcdeab0)
 
+
+## Question 7: Most popular destination
+
