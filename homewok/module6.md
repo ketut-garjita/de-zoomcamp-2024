@@ -56,13 +56,12 @@ TOPIC       STATUS
 test-topic  OK
 ```
 
-Exit from redpanda container
+*Note: don't exit from this creationg topic session !!!*
 
-```
-exit
-```
 
 ## Question 3. Connecting to the Kafka server
+
+Open another terminal session.
 
 Install kafka-python (if not installed yet)
 
@@ -74,6 +73,7 @@ Check kafka version
 
 ```
 python3
+
 ```
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/69c3c3b8-fbf4-4c1a-b294-27334ad3e43f)
