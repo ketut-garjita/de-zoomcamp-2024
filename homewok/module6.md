@@ -18,8 +18,13 @@ docker ps
 ## Question 1: Redpanda version
 
 ```
+sudo docker exec -it redpanda-1 bash
+```
+
+```
 rpk help
 ```
+
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/e6dcfa78-e033-4ec5-a69f-8b3d0e418c48)
 
 ```
