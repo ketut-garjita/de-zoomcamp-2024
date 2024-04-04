@@ -68,9 +68,9 @@
 - [Source](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/06-streaming)
 - [Hands-on Learning]()
 - Homework
-  - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/191d9fe23d4dd729c2a1b2b4042e86cb12a390ed/cohorts/2024/06-streaming/homework.md)
-  - [Form for Submitting](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/191d9fe23d4dd729c2a1b2b4042e86cb12a390ed/cohorts/2024/06-streaming/homework.md)
-  - [Answer/Solution](https://github.com/garjita63/de-zoomcamp-2024/edit/main/homewok/module6.md)
+  - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/06-streaming/homework.md)
+  - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw6)
+  - [Answer/Solution](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module6.md)
   
 
 ### CSV Datasets List
