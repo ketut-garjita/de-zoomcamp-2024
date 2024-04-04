@@ -79,7 +79,6 @@ python3
 import kafka
 kafka.__version__
 ```
-'2.0.2'
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/69c3c3b8-fbf4-4c1a-b294-27334ad3e43f)
 
