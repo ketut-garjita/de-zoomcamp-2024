@@ -39,7 +39,7 @@ rpk version
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8c1ca47f-8306-4e69-8bbe-2573682f8b4e)
 
-### Answer : 
+### Answer 1 : 
 ```
 v22.3.5 (rev 28b2443)
 ```
@@ -50,7 +50,7 @@ rpk topic create test-topic
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/59cd7e81-1d30-4d54-81ca-e21afe5a1d61)
 
-### Answer : 
+### Answer 2 : 
 ```
 TOPIC       STATUS
 test-topic  OK
@@ -73,7 +73,11 @@ Check kafka version
 
 ```
 python3
+```
 
+```
+import kafka
+kafka.__version__
 ```
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/69c3c3b8-fbf4-4c1a-b294-27334ad3e43f)
@@ -89,7 +93,7 @@ jupyter-notebook --allow-root
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a017a135-258d-4512-a0f9-23bd7e49af0a)
 
 
-### Answer : 
+### Answer 3 : 
 ```
 True
 ```
