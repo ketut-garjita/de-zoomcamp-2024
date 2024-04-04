@@ -191,7 +191,7 @@ rpk topic consume test-topic
 
 ### Answer :
 ```
-Sending the messages
+Spend most of the time : Sending the messages
 ```
 
 
