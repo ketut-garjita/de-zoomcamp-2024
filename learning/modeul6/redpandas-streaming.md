@@ -42,7 +42,7 @@ services:
       - ./producer.properties:/etc/kafka/producer.properties
 ```
 
-- Goto the <some directory> where docker-compose.yml created
+- Goto the directory where is docker-compose.yml created
 
 - Start docker container (redpanda-a)
 ```
