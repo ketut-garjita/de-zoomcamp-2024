@@ -273,7 +273,13 @@ pyhton kafka-consumer-step.py
 
 - The screem will show data sent from consumer --> broker --> consumer.
 
-  
+
+## Check (Review) Output
+
+- Check Session Termiinal 1 (Preparation Session - green-trips topic)
+- Check Session Termiinal 2 (Producer Session - sending data)
+- Check Session Termiinal 3 (Consumer Session - receiving data)
+    
 
 
 
