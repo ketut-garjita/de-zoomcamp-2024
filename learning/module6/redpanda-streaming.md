@@ -1,17 +1,10 @@
 # Table of Contents  
 
-- [Redpanda Demo Project Architecture](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#redpanda-demo-project-architecture)
-- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#session-terminal-1-preparations)
-- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#session-terminal-2-kafka-producer)
-- [Check (Review) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#check-review-output)
-
-# Table of Contents  
-
-- [Redpanda Demo Project Architecture](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#redpanda-demo-project-architecture)
-- [Session Terminal 1 (Preparations)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-1-preparations)
-- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-2-kafka-producer)
-- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-3-kafka-consumer)
-- [Check (Monitor) Output](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#check-monitor-output)
+- [Overview](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#overview)
+- [Redpanda Demo Project Architecture](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#redpanda-demo-project-architecture)
+- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#session-terminal-1-preparations)
+- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#session-terminal-3-kafka-consumer)
+- [Check (Review) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#check-monitor-output)
 
 
 ## Overview
