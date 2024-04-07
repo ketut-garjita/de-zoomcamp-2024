@@ -5,6 +5,9 @@
 - [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#session-terminal-2-kafka-producer)
 - [Check (Review) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#check-review-output)
 
+*Note:* 
+
+**Don't run these all steps on Jupyter Notebook. Otherwise the ipynb script file will grow very quickly when running the producer and consumer steps. Please run on terminal
 
 ## Redpanda Demo Project Architecture
 
