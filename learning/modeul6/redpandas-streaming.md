@@ -271,7 +271,7 @@ popular_destinations.awaitTermination()
 pyhton kafka-consumer-step.py
 ```
 
-- The screem will show data sent from consumer --> broker --> consumer.
+- The screem will show data sent from producer --> broker --> consumer.
 
 
 ## Check (Review) Output
