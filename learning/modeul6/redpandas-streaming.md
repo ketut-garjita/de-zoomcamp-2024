@@ -1,4 +1,4 @@
-## Session Terminal 1
+## Session Terminal 1 (Preparations)
 
 - Open Operating System terminal
 
@@ -78,12 +78,8 @@ pip install kafka-python
 ```
 import kafka
 kafka.__version__
+exit()
 ```
-
-
-## Session Terminal 2
-
-- Open Operating System terminal
 
 - Goto to the container
 ```
@@ -101,7 +97,12 @@ rpk version
 rpk topic consume green-trips
 ```
 
-## Open Session Terminal 3
+- The screen will show *no activity yet* . Awaiting sending data started (see session terminal 2 below)
+
+  *Don't close session terminal 1 !!*
+
+  
+## Open Session Terminal 2 (Kafka Producer)
 
 - Open Operating System terminal
 
@@ -124,7 +125,6 @@ producer = KafkaProducer(
 )
 
 producer.bootstrap_connected()
-
 
 # Read dataset and define dataFrame
 import pandas as pd
@@ -156,6 +156,18 @@ for row in df_green.itertuples(index=False):
 
     producer.flush()
 ```
+
+- Run **kafka-producer-step.py** script
+```
+pyhton kafka-producer-step.py
+```
+
+- The screen will show data being transmitted.....
+  
+
+## Open Session Terminal 3 (Kafka Consumer)
+
+- Open Operating System terminal
 
 - Create **kafka-consumer-step.py**
 ```
@@ -248,6 +260,14 @@ popular_destinations = df_green_stream \
 popular_destinations.awaitTermination()
 ```
 
+- Run kafka-consumer-step.py
+```
+pyhton kafka-consumer-step.py
+```
+
+- The screem will show data sent from consumer --> broker --> consumer.
+
+  
 
 
 
