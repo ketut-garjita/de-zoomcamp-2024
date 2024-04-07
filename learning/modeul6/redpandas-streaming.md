@@ -105,7 +105,7 @@ rpk topic consume green-trips
 
 - Open Operating System terminal
 
-- Create kafka-producer-step.py
+- Create **kafka-producer-step.py**
 ```
 # connecting-to-kafka-server
 import json
@@ -157,7 +157,7 @@ for row in df_green.itertuples(index=False):
     producer.flush()
 ```
 
-- Create kafka-consumer-step.py
+- Create **kafka-consumer-step.py**
 ```
 # connecting-to-kafka-server
 import json
