@@ -1,9 +1,9 @@
 ##### Table of Contents  
 
-[Redpanda Demo Project Architecture](#Redpanda Demo Project Architecture)
-[Session Terminal 2 (Kafka Producer)](#Session Terminal 2 (Kafka Producer))
-[Session Terminal 3 (Kafka Consumer](#Session Terminal 3 (Kafka Consumer)
-[Check (Review) Output](#Check (Review) Output)
+- [Redpanda Demo Project Architecture](#Redpanda Demo Project Architecture)
+- [Session Terminal 2 (Kafka Producer)](#Session Terminal 2 (Kafka Producer))
+- [Session Terminal 3 (Kafka Consumer](#Session Terminal 3 (Kafka Consumer)
+- [Check (Review) Output](#Check (Review) Output)
 
 
 
