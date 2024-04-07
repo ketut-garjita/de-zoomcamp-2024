@@ -1,3 +1,9 @@
+
+## Redpanda Demo Project Architecture
+
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4e738fff-48b2-43ad-bc3a-5daf084c0e5e)
+
+
 ## Session Terminal 1 (Preparations)
 
 - Open Operating System terminal
