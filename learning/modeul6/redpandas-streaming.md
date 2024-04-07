@@ -108,7 +108,7 @@ rpk topic consume green-trips
   *Don't close session terminal 1 !!*
 
   
-## Open Session Terminal 2 (Kafka Producer)
+## Session Terminal 2 (Kafka Producer)
 
 - Open Operating System terminal
 
@@ -171,7 +171,7 @@ pyhton kafka-producer-step.py
 - The screen will show data being transmitted.....
   
 
-## Open Session Terminal 3 (Kafka Consumer)
+## Session Terminal 3 (Kafka Consumer)
 
 - Open Operating System terminal
 
