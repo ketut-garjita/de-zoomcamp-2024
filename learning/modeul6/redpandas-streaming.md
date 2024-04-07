@@ -1,6 +1,6 @@
-## Session Terminal 2
+## Session Terminal 1
 
-- Open session terminal (<terminal-1>
+- Open Operating System terminal
 
 - Create docker-compose.yml
 ```
@@ -83,7 +83,7 @@ kafka.__version__
 
 ## Session Terminal 2
 
-- Open other session terminal (<terminal-2>
+- Open Operating System terminal
 
 - Goto to the container
 ```
@@ -101,7 +101,9 @@ rpk version
 rpk topic consume green-trips
 ```
 
-## Open Session Terminal 3 (<terminal-3>)
+## Open Session Terminal 3
+
+- Open Operating System terminal
 
 - Create kafka-producer-step.py
 ```
