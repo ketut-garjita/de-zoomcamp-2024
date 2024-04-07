@@ -54,12 +54,12 @@ docker compose up -d
 docker ps
 ```
 
-- Create download-green-taxi.py script for downloading the [green_tripdata_2019-10.csv.gz](https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz)
+- Create **download-green-taxi.py** script for downloading the [green_tripdata_2019-10.csv.gz](https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz)
 ```
 !wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz
 ```
 
-- Run download-green-taxi.py script from OS prompt
+- Run **download-green-taxi.py** script from OS prompt
 ```
 python download-green-taxi.py
 ```
@@ -260,7 +260,7 @@ popular_destinations = df_green_stream \
 popular_destinations.awaitTermination()
 ```
 
-- Run kafka-consumer-step.py
+- Run **kafka-consumer-step.py**
 ```
 pyhton kafka-consumer-step.py
 ```
