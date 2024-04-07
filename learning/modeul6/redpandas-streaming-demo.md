@@ -5,11 +5,35 @@
 - [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#session-terminal-2-kafka-producer)
 - [Check (Review) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/modeul6/redpandas-streaming.md#check-review-output)
 
+# Table of Contents  
+
+- [Redpanda Demo Project Architecture](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#redpanda-demo-project-architecture)
+- [Session Terminal 1 (Preparations)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-1-preparations)
+- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-2-kafka-producer)
+- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-3-kafka-consumer)
+- [Check (Monitor) Output](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#check-monitor-output)
+
+
+## Overview
+
+This repository contains some homework solutions from module 6 (Streaming) in DTC Data Engineering Zoomcamp 2024.
+
+Instead of Kafka, here will use [Red Panda](https://redpanda.com/), which is a drop-in replacement for Kafka.
+
+Ensure we have the following set up :
+- Docker (module 1)
+- PySpark (module 5)
+
+For this homework we will be using the files from Module 5 homework i.e. :
+
+Green 2019-10 data from [here](https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz)
+
 *Note:* 
 
 *Don't run these all steps on Jupyter Notebook. Otherwise the ipynb script file will grow very quickly when running the producer and consumer steps. Please run on terminal.*
 
 *All scripts created using pyhton (.py) extention*
+
 
 ## Redpanda Demo Project Architecture
 
@@ -286,19 +310,11 @@ pyhton kafka-consumer-step.py
 - The screem will show data sent from producer --> broker --> consumer.
 
 
-## Check (Review) Output
+## Check (Monitor) Output
 
 - Check Session Termiinal 1 (Preparation Session - green-trips topic)
 - Check Session Termiinal 2 (Producer Session - sending data)
 - Check Session Termiinal 3 (Consumer Session - receiving data)
-    
 
-
-
-
-
-
-
-
-
+We can Ctril-C to stop process.
 
