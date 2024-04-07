@@ -4,7 +4,7 @@
 - [Redpanda Demo Project Architecture](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#redpanda-demo-project-architecture)
 - [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#session-terminal-1-preparations)
 - [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#session-terminal-3-kafka-consumer)
-- [Check (Review) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#check-monitor-output)
+- [Check (Monitor) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#check-monitor-output)
 
 
 ## Overview
