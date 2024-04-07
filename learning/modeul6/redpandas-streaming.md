@@ -7,7 +7,7 @@
 
 *Note:* 
 
-**Don't run these all steps on Jupyter Notebook. Otherwise the ipynb script file will grow very quickly when running the producer and consumer steps. Please run on terminal
+*Don't run these all steps on Jupyter Notebook. Otherwise the ipynb script file will grow very quickly when running the producer and consumer steps. Please run on terminal.*
 
 ## Redpanda Demo Project Architecture
 
