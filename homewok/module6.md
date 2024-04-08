@@ -39,7 +39,7 @@ rpk version
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8c1ca47f-8306-4e69-8bbe-2573682f8b4e)
 
-### Answer 1 : 
+### Answer 1
 ```
 v22.3.5 (rev 28b2443)
 ```
@@ -50,7 +50,7 @@ rpk topic create test-topic
 ```
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/59cd7e81-1d30-4d54-81ca-e21afe5a1d61)
 
-### Answer 2 : 
+### Answer 2
 ```
 TOPIC       STATUS
 test-topic  OK
@@ -93,7 +93,7 @@ jupyter-notebook --allow-root
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/a017a135-258d-4512-a0f9-23bd7e49af0a)
 
 
-### Answer 3 : 
+### Answer 3
 ```
 True
 ```
@@ -189,7 +189,7 @@ rpk topic consume test-topic
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/16d54ee0-4b8d-401b-aaf6-0e3ba87bc5ca)
 
-### Answer 4 :
+### Answer 4
 ```
 Spend most of the time : Sending the messages
 ```
@@ -367,20 +367,20 @@ print(f'Flusing took {(t1 - t01):.2f} seconds')
 
 ```
 
-### Answer 5 :
+### Answer 5
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b1e009ec-1d77-4d13-99ed-741884904e30)
 
 
 ## Question 6. Parsing the data
 
-### Answer 6 :
+### Answer 6
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8ce9ab71-02d7-440c-a242-07e10bcdeab0)
 
 
 ## Question 7: Most popular destination
 
-### Answer 7 :
+### Answer 7
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/17439ea3-0278-41d9-9552-0e542f6131a4)
