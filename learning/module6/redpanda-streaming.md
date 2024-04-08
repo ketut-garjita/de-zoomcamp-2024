@@ -1,10 +1,10 @@
 # Table of Contents  
 
-- [Redpanda Demo Project Architecture](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#redpanda-demo-project-architecture)
-- [Session Terminal 1 (Preparations)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-1-preparations)
-- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-2-kafka-producer)
-- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-3-kafka-consumer)
-- [Check (Monitor) Output](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#check-monitor-output)
+- [Redpanda Demo Project Architecture](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#redpanda-demo-project-architecture)
+- [Session Terminal 1 (Preparations)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#session-terminal-1-preparations)
+- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#session-terminal-2-kafka-producer)
+- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#session-terminal-3-kafka-consumer)
+- [Check (Monitor) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#check-monitor-output)
 
 
 ## Overview
@@ -30,8 +30,7 @@ Green 2019-10 data from [here](https://github.com/DataTalksClub/nyc-tlc-data/rel
 
 ## Redpanda Streaming Demo Architecture
 
-![image](https://github.com/garjita63/redpanda-streaming-demo1/assets/77673886/878c6013-ffe4-4a34-b387-dba995659ca6)
-
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/56d15461-cb2a-4cfb-8373-b0cd6e14327e)
 
 
 ## Session Terminal 1 (Preparations)
@@ -312,9 +311,9 @@ pyhton kafka-consumer-step.py
 
 Screen output would be like files below:
 
-[sending data vs consumer](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/sending-data-vs-consumer.mp4)
+[sending data vs consumer](https://github.com/garjita63/de-zoomcamp-2024/blob/main/sending-data-vs-consumer.mp4)
 
-[topic vs consumer](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/topic-vs-consumer.mp4)
+[topic vs consumer](https://github.com/garjita63/de-zoomcamp-2024/blob/main/topic-vs-consumer.mp4)
 
 We can press Ctril-C to stop process.
 
