@@ -1,8 +1,8 @@
 # Answers : Module 6 Homework
 
-## Start Red Panda
+**Start Red Panda**
 
-Via VS Code or server host.
+Using VS Code or server terminal.
 
 ```
 cd /mnt/d/zde/data-engineering-zoomcamp/cohorts/2024/06-streaming
