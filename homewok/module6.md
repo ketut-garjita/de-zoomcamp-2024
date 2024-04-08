@@ -367,9 +367,9 @@ print(f'Flusing took {(t1 - t01):.2f} seconds')
 
 ```
 
-### Answer 5
+### Answer 5 : 7.32 seconds
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b1e009ec-1d77-4d13-99ed-741884904e30)
+![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/563142f3-ac24-4d0e-b7d7-83486c9945f0)
 
 
 ## Question 6. Parsing the data
