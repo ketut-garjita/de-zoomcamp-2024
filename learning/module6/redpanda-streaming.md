@@ -1,11 +1,10 @@
 # Table of Contents  
 
-- [Overview](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#overview)
-- [Redpanda Demo Project Architecture](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#redpanda-demo-project-architecture)
-- [Session Terminal 1 (Preparations)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#session-terminal-1-preparations)
-- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#session-terminal-2-kafka-producer)
-- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#session-terminal-3-kafka-consumer)
-- [Check (Monitor) Output](https://github.com/garjita63/de-zoomcamp-2024/blob/main/learning/module6/redpanda-streaming.md#check-monitor-output)
+- [Redpanda Demo Project Architecture](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#redpanda-demo-project-architecture)
+- [Session Terminal 1 (Preparations)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-1-preparations)
+- [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-2-kafka-producer)
+- [Session Terminal 3 (Kafka Consumer)](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#session-terminal-3-kafka-consumer)
+- [Check (Monitor) Output](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/README.md#check-monitor-output)
 
 
 ## Overview
@@ -29,9 +28,10 @@ Green 2019-10 data from [here](https://github.com/DataTalksClub/nyc-tlc-data/rel
 *All scripts created using pyhton (.py) extention*
 
 
-## Redpanda Demo Project Architecture
+## Redpanda Streaming Demo Architecture
 
-![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/4e738fff-48b2-43ad-bc3a-5daf084c0e5e)
+![image](https://github.com/garjita63/redpanda-streaming-demo1/assets/77673886/878c6013-ffe4-4a34-b387-dba995659ca6)
+
 
 
 ## Session Terminal 1 (Preparations)
@@ -78,7 +78,7 @@ services:
       - ./producer.properties:/etc/kafka/producer.properties
 ```
 
-- Goto the directory where is docker-compose.yml created
+- Goto the directory where docker-compose.yml is created
 
 - Start docker container (redpanda-a)
 ```
@@ -310,6 +310,11 @@ pyhton kafka-consumer-step.py
 - Check Session Termiinal 2 (Producer Session - sending data)
 - Check Session Termiinal 3 (Consumer Session - receiving data)
 
-We can Ctril-C to stop process.
+Screen output would be like files below:
 
+[sending data vs consumer](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/sending-data-vs-consumer.mp4)
+
+[topic vs consumer](https://github.com/garjita63/redpanda-streaming-demo1/blob/main/topic-vs-consumer.mp4)
+
+We can press Ctril-C to stop process.
 
