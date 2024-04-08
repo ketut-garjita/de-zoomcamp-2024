@@ -195,8 +195,9 @@ Spend most of the time : Sending the messages
 ```
 
 
-# Question 5: Sending the Trip Data
-## Sending the taxi data
+## Question 5: Sending the Trip Data
+
+**Sending the taxi data**
 
 ```
 import pyspark
@@ -366,20 +367,20 @@ print(f'Flusing took {(t1 - t01):.2f} seconds')
 
 ```
 
-**Answer 5 :**
+### Answer 5 :
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/b1e009ec-1d77-4d13-99ed-741884904e30)
 
 
 ## Question 6. Parsing the data
 
-**Answer 6 :**
+### Answer 6 :
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/8ce9ab71-02d7-440c-a242-07e10bcdeab0)
 
 
 ## Question 7: Most popular destination
 
-**Answer 7 :**
+### Answer 7 :
 
 ![image](https://github.com/garjita63/de-zoomcamp-2024/assets/77673886/17439ea3-0278-41d9-9552-0e542f6131a4)
