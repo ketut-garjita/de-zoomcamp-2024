@@ -66,7 +66,7 @@
 
 ### Module 6 : Streaming
 - [Source](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/06-streaming)
-- [Hands-on Learning]()
+- [Hands-on Learning](https://github.com/garjita63/redpanda-streaming-demo1)
 - Homework
   - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/06-streaming/homework.md)
   - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw6)
