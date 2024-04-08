@@ -1,5 +1,6 @@
 # Table of Contents  
 
+- [Overview](
 - [Redpanda Demo Project Architecture](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#redpanda-demo-project-architecture)
 - [Session Terminal 1 (Preparations)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#session-terminal-1-preparations)
 - [Session Terminal 2 (Kafka Producer)](https://github.com/garjita63/de-zoomcamp-2024/blob/main/README.md#session-terminal-2-kafka-producer)
