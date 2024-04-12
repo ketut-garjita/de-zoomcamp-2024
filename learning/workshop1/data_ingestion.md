@@ -193,7 +193,9 @@ The duckdb destination used duckdb:////mnt/e/dlt/taxi_incremental_loading.duckdb
 Load package 1707887509.7438598 is LOADED and contains no failed jobs
 ```
 
+```
 dlt pipeline taxi_incremental_loading show
+```
 
 Found pipeline taxi_incremental_loading in /var/dlt/pipelines
 
