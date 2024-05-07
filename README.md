@@ -71,7 +71,10 @@
   - [Questions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/06-streaming/homework.md)
   - [Form for Submitting](https://courses.datatalks.club/de-zoomcamp-2024/homework/hw6)
   - [Answer/Solution](https://github.com/garjita63/de-zoomcamp-2024/blob/main/homewok/module6.md)
-  
+
+### PROJECT
+
+https://github.com/garjita63/dezoomcamp2024-project1
 
 ### CSV Datasets List
 [NYC TLC Data](https://github.com/DataTalksClub/nyc-tlc-data/?tab=readme-ov-file)
